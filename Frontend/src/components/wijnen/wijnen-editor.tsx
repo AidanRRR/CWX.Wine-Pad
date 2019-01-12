@@ -1,6 +1,13 @@
 import React, {Component} from 'react';
-import { EditingState } from '@devexpress/dx-react-grid';
-import { Grid, Table, TableHeaderRow, TableEditRow, TableEditColumn } from '@devexpress/dx-react-grid-bootstrap4';
+import {EditingState, FilteringState, IntegratedFiltering} from '@devexpress/dx-react-grid';
+import {
+    Grid,
+    Table,
+    TableHeaderRow,
+    TableEditRow,
+    TableEditColumn,
+    TableFilterRow
+} from '@devexpress/dx-react-grid-bootstrap4';
 import {editColumnMessages, headerRowMessages, tableMessages} from "../ui/react-grid/Localization";
 
 const getRowId = row => row.id;
@@ -18,6 +25,7 @@ class WijnenEditor extends React.Component<IProps, IState> {
         this.state = {
             columns: [
                 {name: 'title', title: 'Naam'},
+                {name: 'type', title: 'Type'},
                 {name: 'region', title: 'Regio'},
                 {name: 'price', title: 'Prijs'},
                 {name: 'description', title: 'Omschrijving'},
@@ -55,8 +63,11 @@ class WijnenEditor extends React.Component<IProps, IState> {
 
         return (
             <Grid rows={rows} columns={columns} getRowId={getRowId}>
+                <FilteringState defaultFilters={[]} />
+                <IntegratedFiltering />
                 <EditingState onCommitChanges={this.commitChanges} />
                 <Table messages={tableMessages} />
+                <TableFilterRow />
                 <TableHeaderRow messages={headerRowMessages} />
                 <TableEditRow />
                 <TableEditColumn messages={editColumnMessages} showAddCommand showEditCommand showDeleteCommand />
