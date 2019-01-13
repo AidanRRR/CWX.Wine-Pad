@@ -124,7 +124,6 @@ class KaartenEditor extends Component<IProps, IState> {
                 <br />
                 <div className="row">
                     <div className="col-sm-4">
-                        <h4>Beschikbare wijnen</h4>
                         <Droppable droppableId="droppable">
                             {(provided, snapshot) => (
                                 <div
