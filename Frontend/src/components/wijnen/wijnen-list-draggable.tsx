@@ -7,31 +7,27 @@ interface IState {
 }
 
 interface IProps {
+    id: string,
     wines: IWijn[]
 }
 
 class WijnenListDraggable extends Component<IProps, IState> {
-    onDragEnd = result => {
-    };
-
     render() {
-        const {wines} = this.props;
+        const { wines, id } = this.props;
 
         return (
             <Fragment>
-                <DragDropContext onDragEnd={this.onDragEnd}>
-                    <Droppable droppableId={"wijnen-list"}>
-                        {provided => (
-                            <div ref={provided.innerRef} style={{}}>
-                                {wines.map((wine, i) => {
-                                    return (
-                                        <WijnItemDraggable key={i} wine={wine} index={i} />
-                                    )
-                                })}
-                            </div>
-                        )}
-                    </Droppable>
-                </DragDropContext>
+                <Droppable droppableId={id}>
+                    {provided => (
+                        <div ref={provided.innerRef} style={{}}>
+                            {wines.map((wine, i) => {
+                                return (
+                                    <WijnItemDraggable key={i} wine={wine} index={i}/>
+                                )
+                            })}
+                        </div>
+                    )}
+                </Droppable>
             </Fragment>
         );
     }

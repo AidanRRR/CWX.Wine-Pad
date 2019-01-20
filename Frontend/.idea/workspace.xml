@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen">
-      <change afterPath="$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/kaarten/kaarten-editor.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijn.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wijnen/wijn.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaart-droppable.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+            <state relative-caret-position="92">
+              <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -35,23 +28,33 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/kaart.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+            <state relative-caret-position="477">
+              <caret line="45" column="64" lean-forward="true" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#856#926#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaarten-tabs.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/dragndrop/dragndrop-helper.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
+            <state relative-caret-position="408">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="335">
+              <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="e#0#49#0" expanded="true" />
               </folding>
@@ -60,22 +63,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaartForm.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaarten-tabs.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            <state relative-caret-position="23">
+              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#49#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijn.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -106,6 +100,7 @@
       <find>columnwidth</find>
       <find>wines.json</find>
       <find>beschikbar</find>
+      <find>&lt;KaartDropp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -142,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/components/kaarten/forms/kaartForm.ts" />
         <option value="$PROJECT_DIR$/src/components/ui/modals/modalconfirm.tsx" />
         <option value="$PROJECT_DIR$/src/components/kaarten/forms/kaartFormSetup.ts" />
-        <option value="$PROJECT_DIR$/src/components/kaarten/kaarten-tabs.tsx" />
         <option value="$PROJECT_DIR$/src/components/kaarten/forms/kaartForm.tsx" />
         <option value="$PROJECT_DIR$/src/components/kaarten/kaarten-editor.tsx" />
         <option value="$PROJECT_DIR$/src/scenes/kaarten.tsx" />
@@ -150,16 +144,19 @@
         <option value="$PROJECT_DIR$/src/components/wijnen/wines-list-draggable.tsx" />
         <option value="$PROJECT_DIR$/src/components/wijnen/wijnen.json" />
         <option value="$PROJECT_DIR$/src/components/wijnen/wijn.ts" />
-        <option value="$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx" />
         <option value="$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx" />
-        <option value="$PROJECT_DIR$/src/scenes/kaart.tsx" />
+        <option value="$PROJECT_DIR$/src/components/ui/dragndrop/helper.js" />
+        <option value="$PROJECT_DIR$/src/components/kaarten/kaarten-tabs.tsx" />
+        <option value="$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx" />
         <option value="$PROJECT_DIR$/src/components/kaarten/kaart-droppable.tsx" />
+        <option value="$PROJECT_DIR$/src/components/ui/dragndrop/dragndrop-helper.js" />
+        <option value="$PROJECT_DIR$/src/scenes/kaart.tsx" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1738" />
+    <option name="width" value="1737" />
     <option name="height" value="1398" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -192,7 +189,16 @@
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="dragndrop" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -253,7 +259,8 @@
       <workItem from="1547146389101" duration="7476000" />
       <workItem from="1547238844322" duration="6747000" />
       <workItem from="1547253187402" duration="14867000" />
-      <workItem from="1547588514759" duration="20614000" />
+      <workItem from="1547588514759" duration="20667000" />
+      <workItem from="1547978906636" duration="4732000" />
     </task>
     <task id="LOCAL-00001" summary="Added wine types">
       <created>1547244494395</created>
@@ -273,13 +280,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55117000" />
+    <option name="totallyTimeSpent" value="59902000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1390" height="1118" extended-state="0" />
+    <frame x="-6" y="0" width="1389" height="1118" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25203252" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17603551" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -309,7 +316,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added wijnen" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/preloader.ts" />
     <entry file="file://$PROJECT_DIR$/src/assets/icons/themify-icons/ie7/ie7.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -520,19 +526,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaart.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaartenFormValues.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaartenForm.ts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaart.tsx" />
+    <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaartenFormValues.ts" />
+    <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaartenForm.ts" />
     <entry file="file://$PROJECT_DIR$/src/components/ui/modals/modalconfirm.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -562,16 +558,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaarten-editor.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaarten-editor.tsx" />
     <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijn-type.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="201">
@@ -586,26 +573,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="565">
           <caret line="124" column="13" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -626,16 +593,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaarten-tabs.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="26" column="51" lean-forward="true" selection-start-line="26" selection-start-column="51" selection-end-line="26" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/kaarten/forms/kaartForm.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -649,26 +606,64 @@
     <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijn.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/kaart.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="54" column="40" lean-forward="true" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+        <state relative-caret-position="442">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaarten-tabs.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="335">
+          <caret line="17" column="16" lean-forward="true" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/kaarten/kaart-droppable.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="53" selection-start-line="17" selection-start-column="53" selection-end-line="17" selection-end-column="53" />
+        <state relative-caret-position="92">
+          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/dragndrop/dragndrop-helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/kaart.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="45" column="64" lean-forward="true" selection-start-line="45" selection-start-column="64" selection-end-line="45" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#856#926#0" />
           </folding>
         </state>
       </provider>

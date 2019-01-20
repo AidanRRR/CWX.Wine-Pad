@@ -17,13 +17,9 @@ class WijnItemDraggable extends Component<IProps, IState> {
         return (
             <Draggable draggableId={wine.id.toString()} index={this.props.index}>
                 {provided => (
-                    <div className="card card-body"
-                         ref={provided.innerRef}
-                         {...provided.draggableProps}
-                         {...provided.dragHandleProps}
-                    >
+                    <div className="card card-body" ref={provided.innerRef}
+                         {...provided.draggableProps} {...provided.dragHandleProps}>
                         {wine.title}
-                        <br/>
                     </div>
                 )}
             </Draggable>
