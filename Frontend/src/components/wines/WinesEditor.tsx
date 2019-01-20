@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {
-    CustomGrouping,
+    CustomGrouping, CustomTreeData,
     EditingState,
     FilteringState, GroupingState,
     IntegratedFiltering,
     IntegratedPaging,
-    PagingState
+    PagingState, TreeDataState
 } from '@devexpress/dx-react-grid';
 import {
     Grid,
@@ -15,7 +15,7 @@ import {
     TableEditColumn,
     TableFilterRow,
     PagingPanel,
-    TableGroupRow
+    TableGroupRow, TableTreeColumn
 } from '@devexpress/dx-react-grid-bootstrap4';
 import {editColumnMessages, headerRowMessages, tableMessages} from "../ui/react-grid/Localization";
 import Wines from './Wines.json';
@@ -30,6 +30,12 @@ const getChildGroups = groups => groups
             }
         )
     );
+const getChildRows = (row, rootRows) => {
+    if (row) {
+        console.log(row.items);
+    }
+    return (row ? row.items : rootRows);
+};
 
 const CommandButton = ({onExecute, icon, text, hint, color}) => (
     <button type="button" className="btn btn-link" style={{padding: 11}}
@@ -85,29 +91,64 @@ interface IState {
     columns: any,
     pageSizes: any,
     grouping: any,
-    data: any
+    data: any,
+    tableColumnExtensions: any
 }
 
 class WinesEditor extends React.Component<IProps, IState> {
     constructor(props) {
         super(props);
 
+        const data = [{
+            name: 'Sandra',
+            sex: 'Female',
+            city: 'Las Vegas',
+            car: 'Audi A4',
+            items: [{
+                name: 'Sandra a',
+                sex: 'Male',
+                city: 'Las Vegas',
+                car: 'VW Beetle'
+            }]
+        }, {
+            name: 'Bert',
+            sex: 'Male',
+            city: 'Las Vegas',
+            car: 'Audi BA',
+        }];
+
         const parsedRows: IWineDataTable[] = Wines.Wines;
-        const data = parsedRows.map((wine) => {
-            return ({
-                key: wine.title,
-                items: wine.years
-            });
-        });
+        // const data = parsedRows.map((wine) => {
+        //     return ({
+        //         title: wine.title,
+        //         items: [{title: 'a'}]
+        //     });
+        // });
+
+        // const data = parsedRows.map((wine) => {
+        //     return ({
+        //         key: wine.title,
+        //         items: wine.years
+        //     });
+        // });
 
         this.state = {
+            // columns: [
+            //     {name: 'title', title: 'Naam'},
+            //     {name: 'type', title: 'Type'},
+            //     {name: 'region', title: 'Regio'},
+            //     {name: 'price', title: 'Prijs'},
+            //     {name: 'year', title: 'Jaar'},
+            //     {name: 'description', title: 'Omschrijving'},
+            // ],
             columns: [
-                {name: 'title', title: 'Naam'},
-                {name: 'type', title: 'Type'},
-                {name: 'region', title: 'Regio'},
-                {name: 'price', title: 'Prijs'},
-                {name: 'year', title: 'Jaar'},
-                {name: 'description', title: 'Omschrijving'},
+                {name: 'name', title: ''},
+                {name: 'sex', title: ''},
+                {name: 'city', title: ''},
+                {name: 'car', title: ''}
+            ],
+            tableColumnExtensions: [
+                {columnName: 'title', width: 300}
             ],
             grouping: [{columnName: 'title'}],
             pageSizes: [5, 10, 15, 0],
@@ -141,28 +182,32 @@ class WinesEditor extends React.Component<IProps, IState> {
     }
 
     render() {
-        const {data, columns, pageSizes} = this.state;
+        const {data, columns, tableColumnExtensions, pageSizes} = this.state;
 
         return (
             <Grid rows={data} columns={columns} getRowId={getRowId}>
-                <PagingState defaultCurrentPage={0} pageSize={10}/>
-                <FilteringState defaultFilters={[]}/>
-                <EditingState onCommitChanges={this.commitChanges}/>
-                <GroupingState grouping={[{columnName: 'title'}]}/>
-                <CustomGrouping getChildGroups={getChildGroups}/>
-                <IntegratedFiltering/>
-                <IntegratedPaging/>
-                <Table messages={tableMessages}/>
-                <TableFilterRow />
+                {/*<PagingState defaultCurrentPage={0} pageSize={10}/>*/}
+                {/*<FilteringState defaultFilters={[]}/>*/}
+                {/*<EditingState onCommitChanges={this.commitChanges}/>*/}
+                {/*<GroupingState grouping={[{columnName: 'title'}]}/>*/}
+                {/*<CustomGrouping getChildGroups={getChildGroups}/>*/}
+                {/*<IntegratedFiltering/>*/}
+                {/*<IntegratedPaging/>*/}
+                <TreeDataState/>
+                <CustomTreeData getChildRows={getChildRows} />
+                <Table messages={tableMessages} columnExtensions={tableColumnExtensions}/>
+                {/*<TableFilterRow />*/}
                 <TableHeaderRow messages={headerRowMessages}/>
-                <TableGroupRow/>
-                <TableEditRow />
-                <TableEditColumn messages={editColumnMessages}
-                                 commandComponent={Command}
-                                 showAddCommand
-                                 showEditCommand
-                                 showDeleteCommand />
-                <PagingPanel pageSizes={pageSizes}/>
+                <TableTreeColumn for="name"/>
+
+                {/*<TableGroupRow/>*/}
+                {/*<TableEditRow />*/}
+                {/*<TableEditColumn messages={editColumnMessages}*/}
+                {/*commandComponent={Command}*/}
+                {/*showAddCommand*/}
+                {/*showEditCommand*/}
+                {/*showDeleteCommand />*/}
+                {/*<PagingPanel pageSizes={pageSizes}/>*/}
             </Grid>
         );
     }
