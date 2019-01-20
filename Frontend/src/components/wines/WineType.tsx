@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import WijnenEditor from "./wijnen-editor";
+import WinesEditor from "./WinesEditor";
 
 interface IState {}
 interface IProps {
@@ -7,7 +7,7 @@ interface IProps {
     omschrijving?: string;
 }
 
-class WijnType extends Component<IProps, IState> {
+class WineType extends Component<IProps, IState> {
     render() {
         const { soort, omschrijving } = this.props;
 
@@ -15,10 +15,10 @@ class WijnType extends Component<IProps, IState> {
             <div>
                 <h5 className="header-title">{soort}</h5>
                 {omschrijving && (<p className="text-muted">{omschrijving}</p>)}
-                <WijnenEditor/>
+                <WinesEditor />
             </div>
         );
     }
 }
 
-export default WijnType;
+export default WineType;

@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Field, Formik} from "formik";
-import {initialValues, IValues, validations} from "./kaartFormSetup";
+import {initialValues, IValues, validations} from "./CardFormConfig";
 
 interface IState {}
 interface IProps {
     onComplete: () => void
 }
 
-class KaartForm extends Component<IProps, IState> {
+class CardForm extends Component<IProps, IState> {
     render() {
         return (
             <Formik initialValues={initialValues} validationSchema={validations} onSubmit={() => {
@@ -35,4 +35,4 @@ class KaartForm extends Component<IProps, IState> {
     }
 }
 
-export default KaartForm;
+export default CardForm;

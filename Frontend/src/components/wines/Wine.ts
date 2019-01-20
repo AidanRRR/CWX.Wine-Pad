@@ -1,4 +1,4 @@
-export interface IWijn {
+export interface IWine {
     id: number,
     title: string,
     region: string,

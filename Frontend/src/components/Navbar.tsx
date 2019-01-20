@@ -14,13 +14,13 @@ class Navbar extends Component {
                                 {/*</a>*/}
                             {/*</li>*/}
                             <li className="has-submenu">
-                                <a href="wijnen">
+                                <a href="wines">
                                     <i className="mdi mdi-airplay"/>
                                     Wijnen
                                 </a>
                             </li>
                             <li className="has-submenu">
-                                <a href="kaarten">
+                                <a href="cards">
                                     <i className="mdi mdi-airplay"/>
                                     Kaarten
                                 </a>

@@ -1,14 +1,14 @@
 import React, {Component} from 'react';
-import {IWijn} from "./wijn";
 import {Draggable} from "react-beautiful-dnd";
+import {IWine} from "./Wine";
 
 interface IState {}
 interface IProps {
-    wine: IWijn,
+    wine: IWine,
     index: number
 }
 
-class WijnItemDraggable extends Component<IProps, IState> {
+class WineItemDraggable extends Component<IProps, IState> {
     render() {
         const { wine, index } = this.props;
 
@@ -37,4 +37,4 @@ class WijnItemDraggable extends Component<IProps, IState> {
     }
 }
 
-export default WijnItemDraggable;
+export default WineItemDraggable;

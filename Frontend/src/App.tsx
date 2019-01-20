@@ -4,10 +4,10 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import '@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css';
 
-import Footer from "./components/footer";
-import Header from "./components/header";
-import Wijnen from "./scenes/wijnen";
-import Kaart from "./scenes/kaart";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Wines from "./scenes/Wines";
+import Card from "./scenes/Card";
 
 class App extends Component {
     render() {
@@ -19,8 +19,8 @@ class App extends Component {
                         <Router>
                             <div>
                                 {/*<Route path={"/restaurants"} exact component={Restaurants} />*/}
-                                <Route path={"/kaarten"} exact component={Kaart} />
-                                <Route path={"/wijnen"} exact component={Wijnen} />
+                                <Route path={"/cards"} exact component={Card} />
+                                <Route path={"/wines"} exact component={Wines} />
                             </div>
                         </Router>
                     </div>

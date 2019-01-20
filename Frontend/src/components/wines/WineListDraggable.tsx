@@ -1,16 +1,16 @@
 import React, {Component, Fragment} from 'react';
 import {Droppable} from "react-beautiful-dnd";
-import {IWijn} from "./wijn";
 import {Table} from "@devexpress/dx-react-grid-bootstrap4";
-import WijnItemDraggable from "./wijn-item-draggable";
+import {IWine} from "./Wine";
+import WineItemDraggable from "./WineItemDraggable";
 
 interface IState {}
 interface IProps {
     id: string,
-    wines: IWijn[]
+    wines: IWine[]
 }
 
-class WijnenListDraggable extends Component<IProps, IState> {
+class WineListDraggable extends Component<IProps, IState> {
     render() {
         const { wines, id } = this.props;
 
@@ -21,7 +21,7 @@ class WijnenListDraggable extends Component<IProps, IState> {
                         <div ref={provided.innerRef} style={{}}>
                             {wines.map((wine, i) => {
                                 return (
-                                    <WijnItemDraggable key={i} wine={wine} index={i}/>
+                                    <WineItemDraggable key={i} wine={wine} index={i}/>
                                 )
                             })}
                         </div>
@@ -32,4 +32,4 @@ class WijnenListDraggable extends Component<IProps, IState> {
     }
 }
 
-export default WijnenListDraggable;
+export default WineListDraggable;

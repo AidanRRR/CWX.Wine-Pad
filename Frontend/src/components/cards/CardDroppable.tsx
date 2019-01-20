@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
 import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd";
-import {IWijn} from "../wijnen/wijn";
-import WijnItemDraggable from "../wijnen/wijn-item-draggable";
 import {getListStyle} from "../ui/dragndrop/dragndrop-helper";
+import {IWine} from "../wines/Wine";
+import WineItemDraggable from "../wines/WineItemDraggable";
 
-
-interface IState {
-}
-
+interface IState {}
 interface IProps {
     id: string,
-    wines: IWijn[]
+    wines: IWine[]
 }
 
-class KaartDroppable extends Component<IProps, IState> {
+class CardDroppable extends Component<IProps, IState> {
     render() {
         const { wines, id} = this.props;
 
@@ -23,7 +20,7 @@ class KaartDroppable extends Component<IProps, IState> {
                     {(provided, snapshot) => (
                         <div ref={provided.innerRef} style={getListStyle(snapshot.isDraggingOver)}>
                             {wines.map((wine, i) => (
-                                <WijnItemDraggable key={i} wine={wine} index={i}/>
+                                <WineItemDraggable key={i} wine={wine} index={i}/>
                             ))}
                             {provided.placeholder}
                         </div>
@@ -34,4 +31,4 @@ class KaartDroppable extends Component<IProps, IState> {
     }
 }
 
-export default KaartDroppable;
+export default CardDroppable;

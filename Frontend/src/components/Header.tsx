@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
-import logo from './../assets/images/logo.png';
-import Topnav from "./topnav";
-import Navbar from "./navbar";
+import Topnav from "./Topnav";
+import Navbar from "./Navbar";
 
 class Header extends Component {
     render() {

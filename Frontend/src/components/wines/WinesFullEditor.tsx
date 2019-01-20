@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 
 
-class WijnenFullEditor extends Component {
+class WinesFullEditor extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ class WijnenFullEditor extends Component {
     }
 }
 
-export default WijnenFullEditor;
+export default WinesFullEditor;

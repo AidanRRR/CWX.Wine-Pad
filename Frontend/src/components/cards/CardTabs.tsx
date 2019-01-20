@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
-import ModalConfirm from "../ui/modals/modalconfirm";
-import KaartForm from "./forms/kaartForm";
+import CardForm from "./forms/CardForm";
+import ModalConfirm from "../ui/modals/ModalConfirm";
 
 interface IState {
     showAddCard: boolean
@@ -11,7 +11,7 @@ interface IProps {
     setActiveTab: (id) => void
 }
 
-class KaartenTabs extends Component<IProps, IState> {
+class CardTabs extends Component<IProps, IState> {
     state = {
         showAddCard: false
     };
@@ -24,8 +24,8 @@ class KaartenTabs extends Component<IProps, IState> {
             <Fragment>
                 {showAddCard && (
                     <ModalConfirm toggle={this.handleToggleModal}
-                                  content={<KaartForm onComplete={this.refresh} />}
-                                  title={"Onderdeel toevoegen"}
+                       content={<CardForm onComplete={this.refresh} />}
+                       title={"Onderdeel toevoegen"}
                     />
                 )}
 
@@ -66,4 +66,4 @@ class KaartenTabs extends Component<IProps, IState> {
     refresh = async () => {}
 }
 
-export default KaartenTabs;
+export default CardTabs;

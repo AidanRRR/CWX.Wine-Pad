@@ -1,22 +1,8 @@
 import React, {Component} from 'react';
-import {
-    EditingState,
-    FilteringState,
-    IntegratedFiltering,
-    IntegratedPaging,
-    PagingState
-} from '@devexpress/dx-react-grid';
-import {
-    Grid,
-    Table,
-    TableHeaderRow,
-    TableEditRow,
-    TableEditColumn,
-    TableFilterRow,
-    PagingPanel, TableColumnResizing
-} from '@devexpress/dx-react-grid-bootstrap4';
+import { EditingState, FilteringState, IntegratedFiltering, IntegratedPaging, PagingState } from '@devexpress/dx-react-grid';
+import { Grid, Table, TableHeaderRow, TableEditRow, TableEditColumn, TableFilterRow, PagingPanel, TableColumnResizing } from '@devexpress/dx-react-grid-bootstrap4';
 import {editColumnMessages, headerRowMessages, tableMessages} from "../ui/react-grid/Localization";
-import Wijnen from './wijnen.json';
+import Wines from './Wines.json';
 
 const getRowId = row => row.id;
 
@@ -78,7 +64,7 @@ interface IState {
     minColumnWidths: any
 }
 
-class WijnenEditor extends React.Component<IProps, IState> {
+class WinesEditor extends React.Component<IProps, IState> {
     constructor(props) {
         super(props);
 
@@ -106,7 +92,7 @@ class WijnenEditor extends React.Component<IProps, IState> {
                 {columnName: 'description', width: '30%'}
             ],
             pageSizes: [5, 10, 15, 0],
-            rows: Wijnen.Wines
+            rows: Wines.Wines
         };
 
         this.commitChanges = this.commitChanges.bind(this);
@@ -160,4 +146,4 @@ class WijnenEditor extends React.Component<IProps, IState> {
     }
 }
 
-export default WijnenEditor;
+export default WinesEditor;

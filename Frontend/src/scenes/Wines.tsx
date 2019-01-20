@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import WijnenEditor from "../components/wijnen/wijnen-editor";
+import WinesEditor from "../components/wines/WinesEditor";
 
-class Wijnen extends Component {
+class Wines extends Component {
     render() {
         return (
             <div>
@@ -15,7 +15,7 @@ class Wijnen extends Component {
                 <div className="row">
                     <div className="card">
                         <div className="card-body">
-                            <WijnenEditor/>
+                            <WinesEditor />
                         </div>
                     </div>
                 </div>
@@ -24,5 +24,5 @@ class Wijnen extends Component {
     }
 }
 
-export default Wijnen;
+export default Wines;
 
