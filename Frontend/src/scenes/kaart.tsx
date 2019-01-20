@@ -1,8 +1,10 @@
 import React, { Component } from "react";
-import KaartenEditor from "../components/kaarten/kaarten-editor";
 import KaartenTabs from "../components/kaarten/kaarten-tabs";
+import WijnenListDraggable from "../components/wijnen/wijnen-list-draggable";
+import wines from "./../components/wijnen/wijnen.json";
+import KaartDroppable from "../components/kaarten/kaart-droppable";
 
-class Kaarten extends Component {
+class Kaart extends Component {
     state = {
         tabs: [{
             id: 0,
@@ -22,6 +24,7 @@ class Kaarten extends Component {
 
     render() {
         const {tabs, activeTabId} = this.state;
+        const currentTab = tabs.filter(x => x.id === activeTabId)[0];
 
         return (
             <div>
@@ -36,8 +39,7 @@ class Kaarten extends Component {
                     <div className="col-sm-4">
                         <div className="card">
                             <div className="card-body">
-                                <h5>Beschikbare wijnen</h5>
-                                <KaartenEditor/>
+                                <WijnenListDraggable wines={wines.Wines}/>
                             </div>
                         </div>
                     </div>
@@ -46,6 +48,11 @@ class Kaarten extends Component {
                             <div className="card-body">
                                 <h5>Kaart aanpassen</h5>
                                 <KaartenTabs activeTabId={activeTabId} tabs={tabs} setActiveTab={this.setActiveTabId} />
+                                <br />
+                                { currentTab.wines.length===0 && (
+                                    <p>Sleep wijnen naar hier om ze toe te voegen aan de kaart!</p>
+                                )}
+                                <KaartDroppable/>
                             </div>
                         </div>
                     </div>
@@ -60,4 +67,4 @@ class Kaarten extends Component {
 }
 
 
-export default Kaarten;
+export default Kaart;

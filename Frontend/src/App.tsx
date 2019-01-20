@@ -7,8 +7,7 @@ import '@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css';
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Wijnen from "./scenes/wijnen";
-import Restaurants from "./scenes/restaurants";
-import Kaarten from "./scenes/kaarten";
+import Kaart from "./scenes/kaart";
 
 class App extends Component {
     render() {
@@ -20,7 +19,7 @@ class App extends Component {
                         <Router>
                             <div>
                                 {/*<Route path={"/restaurants"} exact component={Restaurants} />*/}
-                                <Route path={"/kaarten"} exact component={Kaarten} />
+                                <Route path={"/kaarten"} exact component={Kaart} />
                                 <Route path={"/wijnen"} exact component={Wijnen} />
                             </div>
                         </Router>
