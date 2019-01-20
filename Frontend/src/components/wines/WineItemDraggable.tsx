@@ -22,12 +22,12 @@ class WineItemDraggable extends Component<IProps, IState> {
                                 {wine.title} ∙ {wine.region}
                             </div>
                             <div className="col-sm-2">
-                                {wine.price}
+                                {/*{wine.price}*/}
                             </div>
                         </div>
                         <div className={"row"}>
                             <div className="col-sm-10">
-                                {wine.description}
+                                {/*{wine.description}*/}
                             </div>
                         </div>
                     </div>

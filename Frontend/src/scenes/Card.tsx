@@ -11,8 +11,8 @@ import CardDroppable from "../components/cards/CardDroppable";
 interface IState {
     tabs: any,
     activeTabId: number,
-    allWines: IWine[],
-    addedWines: IWine[]
+    allWines: any[],
+    addedWines: any[]
 }
 interface IProps {}
 
@@ -98,7 +98,7 @@ class Card extends Component<IProps, IState> {
                                         name: 'title',
                                         title: 'title'
                                     }]}>
-                                        <WineListDraggable id={this.ids.allWines} wines={allWines}/>
+                                        {/*<WineListDraggable id={this.ids.allWines} wines={allWines}/>*/}
                                     </Grid>
                                 </div>
                             </div>

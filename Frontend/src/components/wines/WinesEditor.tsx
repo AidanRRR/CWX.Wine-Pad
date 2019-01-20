@@ -1,13 +1,38 @@
 import React, {Component} from 'react';
-import { EditingState, FilteringState, IntegratedFiltering, IntegratedPaging, PagingState } from '@devexpress/dx-react-grid';
-import { Grid, Table, TableHeaderRow, TableEditRow, TableEditColumn, TableFilterRow, PagingPanel, TableColumnResizing } from '@devexpress/dx-react-grid-bootstrap4';
+import {
+    CustomGrouping,
+    EditingState,
+    FilteringState, GroupingState,
+    IntegratedFiltering,
+    IntegratedPaging,
+    PagingState
+} from '@devexpress/dx-react-grid';
+import {
+    Grid,
+    Table,
+    TableHeaderRow,
+    TableEditRow,
+    TableEditColumn,
+    TableFilterRow,
+    PagingPanel,
+    TableGroupRow
+} from '@devexpress/dx-react-grid-bootstrap4';
 import {editColumnMessages, headerRowMessages, tableMessages} from "../ui/react-grid/Localization";
 import Wines from './Wines.json';
+import {IWineDataTable} from "./Wine";
 
 const getRowId = row => row.id;
+const getChildGroups = groups => groups
+    .map(group => (
+            {
+                key: group.key,
+                childRows: group.items
+            }
+        )
+    );
 
-const CommandButton = ({ onExecute, icon, text, hint, color }) => (
-    <button type="button" className="btn btn-link" style={{ padding: 11 }}
+const CommandButton = ({onExecute, icon, text, hint, color}) => (
+    <button type="button" className="btn btn-link" style={{padding: 11}}
             onClick={(e) => {
                 onExecute();
                 e.stopPropagation();
@@ -15,7 +40,7 @@ const CommandButton = ({ onExecute, icon, text, hint, color }) => (
             title={hint}>
 
     <span className={color || 'undefined'}>
-        {icon ? <i className={`ti-${icon}`} style={{ marginRight: text ? 5 : 0 }} /> : null}
+        {icon ? <i className={`ti-${icon}`} style={{marginRight: text ? 5 : 0}}/> : null}
         {text}
     </span>
     </button>
@@ -48,25 +73,32 @@ const commandComponentProps = {
     },
 };
 
-const Command = ({ id, onExecute }) => (
-    <CommandButton
-        {...commandComponentProps[id]}
-        onExecute={onExecute}
-    />
+const Command = ({id, onExecute}) => (
+    <CommandButton {...commandComponentProps[id]} onExecute={onExecute}/>
 );
 
-interface IProps {}
+interface IProps {
+}
+
 interface IState {
     rows: any,
     columns: any,
     pageSizes: any,
-    defaultColumnWidths: any,
-    minColumnWidths: any
+    grouping: any,
+    data: any
 }
 
 class WinesEditor extends React.Component<IProps, IState> {
     constructor(props) {
         super(props);
+
+        const parsedRows: IWineDataTable[] = Wines.Wines;
+        const data = parsedRows.map((wine) => {
+            return ({
+                key: wine.title,
+                items: wine.years
+            });
+        });
 
         this.state = {
             columns: [
@@ -74,32 +106,20 @@ class WinesEditor extends React.Component<IProps, IState> {
                 {name: 'type', title: 'Type'},
                 {name: 'region', title: 'Regio'},
                 {name: 'price', title: 'Prijs'},
+                {name: 'year', title: 'Jaar'},
                 {name: 'description', title: 'Omschrijving'},
             ],
-            // minColumnWidths: [
-            //     {columnName: 'title', width: 275},
-            //     {columnName: 'type', width: 100},
-            //     {columnName: 'region', width: 275},
-            //     {columnName: 'price', width: 100},
-            //     {columnName: 'description', width: 350}
-            // ],
-            minColumnWidths: [],
-            defaultColumnWidths: [
-                {columnName: 'title', width: '25%'},
-                {columnName: 'type', width: '5%'},
-                {columnName: 'region', width: '30%'},
-                {columnName: 'price', width: '10%'},
-                {columnName: 'description', width: '30%'}
-            ],
+            grouping: [{columnName: 'title'}],
             pageSizes: [5, 10, 15, 0],
+            data: data,
             rows: Wines.Wines
         };
 
         this.commitChanges = this.commitChanges.bind(this);
     }
 
-    commitChanges({ added, changed, deleted }: any) {
-        let { rows } = this.state;
+    commitChanges({added, changed, deleted}: any) {
+        let {rows} = this.state;
         if (added) {
             const startingAddedId = rows.length > 0 ? rows[rows.length - 1].id + 1 : 0;
             rows = [
@@ -111,36 +131,38 @@ class WinesEditor extends React.Component<IProps, IState> {
             ];
         }
         if (changed) {
-            rows = rows.map(row => (changed[row.id] ? { ...row, ...changed[row.id] } : row));
+            rows = rows.map(row => (changed[row.id] ? {...row, ...changed[row.id]} : row));
         }
         if (deleted) {
             const deletedSet = new Set(deleted);
             rows = rows.filter(row => !deletedSet.has(row.id));
         }
-        this.setState({ rows });
+        this.setState({rows});
     }
 
     render() {
-        const { rows, columns, pageSizes, minColumnWidths, defaultColumnWidths } = this.state;
+        const {data, columns, pageSizes} = this.state;
 
         return (
-            <Grid rows={rows} columns={columns} getRowId={getRowId}>
-                <PagingState defaultCurrentPage={0} pageSize={10} />
-                <FilteringState defaultFilters={[]} />
-                <EditingState onCommitChanges={this.commitChanges} />
-                <IntegratedFiltering />
-                <IntegratedPaging />
-                <Table messages={tableMessages} />
-                <TableColumnResizing minColumnWidth={minColumnWidths} defaultColumnWidths={defaultColumnWidths} />
+            <Grid rows={data} columns={columns} getRowId={getRowId}>
+                <PagingState defaultCurrentPage={0} pageSize={10}/>
+                <FilteringState defaultFilters={[]}/>
+                <EditingState onCommitChanges={this.commitChanges}/>
+                <GroupingState grouping={[{columnName: 'title'}]}/>
+                <CustomGrouping getChildGroups={getChildGroups}/>
+                <IntegratedFiltering/>
+                <IntegratedPaging/>
+                <Table messages={tableMessages}/>
                 <TableFilterRow />
-                <TableHeaderRow messages={headerRowMessages} />
+                <TableHeaderRow messages={headerRowMessages}/>
+                <TableGroupRow/>
                 <TableEditRow />
                 <TableEditColumn messages={editColumnMessages}
                                  commandComponent={Command}
                                  showAddCommand
                                  showEditCommand
                                  showDeleteCommand />
-                <PagingPanel pageSizes={pageSizes} />
+                <PagingPanel pageSizes={pageSizes}/>
             </Grid>
         );
     }

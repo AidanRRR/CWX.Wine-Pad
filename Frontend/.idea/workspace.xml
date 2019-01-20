@@ -5,25 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen">
+      <change afterPath="$PROJECT_DIR$/src/components/wines/WinesOG.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wines/WinesOG2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/wines/WinesOG3.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/kaarten/forms/kaartForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/forms/CardForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/kaarten/forms/kaartFormSetup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/forms/CardFormConfig.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/kaarten/kaart-droppable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/cards/CardDroppable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/topnav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Topnav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/modals/modalconfirm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/modals/ModalConfirm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijn-type-menu-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WineTypeMenuItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijn-type.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WineType.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijn.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/Wine.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijnen-editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WinesEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijnen-full-editor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WinesFullEditor.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WineListDraggable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wijnen/wijnen.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/Wines.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/restaurants.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Restaurants.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/wijnen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Wines.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Card.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,112 +23,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/Card.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/cards/CardTabs.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="43" column="60" lean-forward="true" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/wines/WinesEditor.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="97">
+              <caret line="104" column="47" lean-forward="true" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/Header.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/react-grid/Localization.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/wines/WinesFullEditor.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/wines/WineType.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/wines/WineTypeMenuItem.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="26" column="22" lean-forward="true" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/scenes/Wines.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#784#943#0" />
+                <element signature="e#1003#1066#0" />
+                <element signature="e#1078#1167#0" />
+                <element signature="e#1181#1268#0" />
+                <element signature="e#1282#1368#0" />
+                <element signature="e#1382#1469#0" />
+                <element signature="e#3125#3431#0" />
+                <element signature="e#3234#3420#0" />
+                <element signature="e#3307#3403#0" />
+                <element signature="e#3453#3558#0" />
+                <element signature="e#3580#3704#0" />
               </folding>
             </state>
           </provider>
@@ -182,6 +81,12 @@
       <find>Localization</find>
       <find>local</find>
       <find>&lt;route</find>
+      <find>Lafage</find>
+      <find>years</find>
+      <find>group</find>
+      <find>columnname</find>
+      <find>grouping</find>
+      <find>custom</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,10 +95,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/scenes/restaurants.tsx" />
-        <option value="$PROJECT_DIR$/tsconfig.json" />
-        <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/src/components/ui/react-grid/Localization.js" />
         <option value="$PROJECT_DIR$/src/components/navbar.tsx" />
         <option value="$PROJECT_DIR$/src/components/kaarten/kaarten.tsx" />
         <option value="$PROJECT_DIR$/src/components/wijnen/wijn-type-menu-item.tsx" />
@@ -228,19 +129,23 @@
         <option value="$PROJECT_DIR$/src/components/ui/modals/ModalConfirm.tsx" />
         <option value="$PROJECT_DIR$/src/components/wijnen/WineItemDraggable.tsx" />
         <option value="$PROJECT_DIR$/src/components/wijnen/WineType.tsx" />
-        <option value="$PROJECT_DIR$/src/components/wines/Wine.ts" />
         <option value="$PROJECT_DIR$/src/components/header.tsx" />
         <option value="$PROJECT_DIR$/src/components/cards/forms/CardForm.tsx" />
         <option value="$PROJECT_DIR$/src/components/cards/CardDroppable.tsx" />
-        <option value="$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx" />
         <option value="$PROJECT_DIR$/src/components/wines/WineListDraggable.tsx" />
         <option value="$PROJECT_DIR$/src/components/wines/WineType.tsx" />
         <option value="$PROJECT_DIR$/src/scenes/Wines.tsx" />
-        <option value="$PROJECT_DIR$/src/components/wines/WinesEditor.tsx" />
         <option value="$PROJECT_DIR$/src/components/Header.tsx" />
-        <option value="$PROJECT_DIR$/src/scenes/Card.tsx" />
         <option value="$PROJECT_DIR$/src/components/cards/CardTabs.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
+        <option value="$PROJECT_DIR$/src/components/wines/WinesOG.json" />
+        <option value="$PROJECT_DIR$/src/components/wines/WinesOG2.json" />
+        <option value="$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx" />
+        <option value="$PROJECT_DIR$/src/scenes/Card.tsx" />
+        <option value="$PROJECT_DIR$/src/components/wines/WinesOG3.json" />
+        <option value="$PROJECT_DIR$/src/components/wines/Wine.ts" />
+        <option value="$PROJECT_DIR$/src/components/wines/Wines.json" />
+        <option value="$PROJECT_DIR$/src/components/wines/WinesEditor.tsx" />
       </list>
     </option>
   </component>
@@ -401,7 +306,7 @@
       <workItem from="1547238844322" duration="6747000" />
       <workItem from="1547253187402" duration="14867000" />
       <workItem from="1547588514759" duration="20667000" />
-      <workItem from="1547978906636" duration="12736000" />
+      <workItem from="1547978906636" duration="24957000" />
     </task>
     <task id="LOCAL-00001" summary="Added wine types">
       <created>1547244494395</created>
@@ -421,13 +326,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67906000" />
+    <option name="totallyTimeSpent" value="80127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="1389" height="1118" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17603551" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17603551" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -442,7 +347,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30425963" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30527383" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -457,22 +362,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added wijnen" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/icons/themify-icons/ie7/ie7.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/icons/themify-icons/ie7/ie7.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/images/logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/js/bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -681,23 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/Wine.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" selection-start-column="22" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-259">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/wines/WineListDraggable.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="529">
@@ -705,13 +577,6 @@
           <folding>
             <element signature="e#0#49#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/Wines.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
         </state>
       </provider>
     </entry>
@@ -739,16 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Wines.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/react-grid/Localization.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
@@ -756,30 +611,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesEditor.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Header.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Card.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -798,10 +633,401 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
+        <state relative-caret-position="143">
+          <caret line="18" column="32" lean-forward="true" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="867" column="1" selection-start-line="867" selection-start-column="1" selection-end-line="867" selection-end-column="1" />
+          <folding>
+            <element signature="e#13#20795#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG2.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="1189" column="1" selection-start-line="1189" selection-start-column="1" selection-end-line="1189" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Card.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="100" column="40" lean-forward="true" selection-start-line="100" selection-end-line="101" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="20" column="55" lean-forward="true" selection-start-line="20" selection-start-column="55" selection-end-line="20" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Wines.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG3.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="1440" column="1" selection-start-line="1440" selection-start-column="1" selection-end-line="1440" selection-end-column="1" />
+          <folding>
+            <element signature="e#571#753#0" />
+            <element signature="e#581#745#0" />
+            <element signature="e#905#1072#0" />
+            <element signature="e#915#1064#0" />
+            <element signature="e#1232#1786#0" />
+            <element signature="e#1242#1414#0" />
+            <element signature="e#1424#1596#0" />
+            <element signature="e#1606#1778#0" />
+            <element signature="e#1947#2112#0" />
+            <element signature="e#1957#2104#0" />
+            <element signature="e#2276#2448#0" />
+            <element signature="e#2286#2440#0" />
+            <element signature="e#2482#2819#0" />
+            <element signature="e#2605#2791#0" />
+            <element signature="e#2615#2783#0" />
+            <element signature="e#2825#3307#0" />
+            <element signature="e#2932#3279#0" />
+            <element signature="e#2942#3101#0" />
+            <element signature="e#3111#3271#0" />
+            <element signature="e#3313#3611#0" />
+            <element signature="e#3416#3583#0" />
+            <element signature="e#3426#3575#0" />
+            <element signature="e#3617#3881#0" />
+            <element signature="e#3745#3854#0" />
+            <element signature="e#3755#3846#0" />
+            <element signature="e#3887#4150#0" />
+            <element signature="e#4014#4123#0" />
+            <element signature="e#4024#4115#0" />
+            <element signature="e#4156#4404#0" />
+            <element signature="e#4268#4377#0" />
+            <element signature="e#4278#4369#0" />
+            <element signature="e#4410#4677#0" />
+            <element signature="e#4541#4650#0" />
+            <element signature="e#4551#4642#0" />
+            <element signature="e#4683#5254#0" />
+            <element signature="e#4812#5227#0" />
+            <element signature="e#4822#4913#0" />
+            <element signature="e#4923#5015#0" />
+            <element signature="e#5025#5117#0" />
+            <element signature="e#5127#5219#0" />
+            <element signature="e#5260#5496#0" />
+            <element signature="e#5360#5469#0" />
+            <element signature="e#5370#5461#0" />
+            <element signature="e#5502#5752#0" />
+            <element signature="e#5616#5725#0" />
+            <element signature="e#5626#5717#0" />
+            <element signature="e#5758#6000#0" />
+            <element signature="e#5864#5973#0" />
+            <element signature="e#5874#5965#0" />
+            <element signature="e#6006#6240#0" />
+            <element signature="e#6104#6213#0" />
+            <element signature="e#6114#6205#0" />
+            <element signature="e#6246#6460#0" />
+            <element signature="e#6348#6433#0" />
+            <element signature="e#6358#6425#0" />
+            <element signature="e#6466#6733#0" />
+            <element signature="e#6596#6705#0" />
+            <element signature="e#6606#6697#0" />
+            <element signature="e#6739#7000#0" />
+            <element signature="e#6863#6972#0" />
+            <element signature="e#6873#6964#0" />
+            <element signature="e#7006#7272#0" />
+            <element signature="e#7135#7244#0" />
+            <element signature="e#7145#7236#0" />
+            <element signature="e#7278#7544#0" />
+            <element signature="e#7407#7516#0" />
+            <element signature="e#7417#7508#0" />
+            <element signature="e#7550#7810#0" />
+            <element signature="e#7673#7782#0" />
+            <element signature="e#7683#7774#0" />
+            <element signature="e#7816#8063#0" />
+            <element signature="e#7926#8035#0" />
+            <element signature="e#7936#8027#0" />
+            <element signature="e#8069#8321#0" />
+            <element signature="e#8184#8293#0" />
+            <element signature="e#8194#8285#0" />
+            <element signature="e#8327#8586#0" />
+            <element signature="e#8449#8558#0" />
+            <element signature="e#8459#8550#0" />
+            <element signature="e#8592#8829#0" />
+            <element signature="e#8716#8801#0" />
+            <element signature="e#8726#8793#0" />
+            <element signature="e#8835#9090#0" />
+            <element signature="e#8953#9062#0" />
+            <element signature="e#8963#9054#0" />
+            <element signature="e#9096#9346#0" />
+            <element signature="e#9209#9318#0" />
+            <element signature="e#9219#9310#0" />
+            <element signature="e#9352#9609#0" />
+            <element signature="e#9472#9581#0" />
+            <element signature="e#9482#9573#0" />
+            <element signature="e#9615#9884#0" />
+            <element signature="e#9747#9856#0" />
+            <element signature="e#9757#9848#0" />
+            <element signature="e#9890#10153#0" />
+            <element signature="e#10016#10125#0" />
+            <element signature="e#10026#10117#0" />
+            <element signature="e#10159#10416#0" />
+            <element signature="e#10279#10388#0" />
+            <element signature="e#10289#10380#0" />
+            <element signature="e#10422#10686#0" />
+            <element signature="e#10549#10658#0" />
+            <element signature="e#10559#10650#0" />
+            <element signature="e#10692#10946#0" />
+            <element signature="e#10809#10918#0" />
+            <element signature="e#10819#10910#0" />
+            <element signature="e#10952#11211#0" />
+            <element signature="e#11073#11183#0" />
+            <element signature="e#11083#11175#0" />
+            <element signature="e#11217#11485#0" />
+            <element signature="e#11348#11457#0" />
+            <element signature="e#11358#11449#0" />
+            <element signature="e#11491#11762#0" />
+            <element signature="e#11625#11734#0" />
+            <element signature="e#11635#11726#0" />
+            <element signature="e#11768#12022#0" />
+            <element signature="e#11885#11994#0" />
+            <element signature="e#11895#11986#0" />
+            <element signature="e#12028#12262#0" />
+            <element signature="e#12125#12234#0" />
+            <element signature="e#12135#12226#0" />
+            <element signature="e#12268#12518#0" />
+            <element signature="e#12381#12490#0" />
+            <element signature="e#12391#12482#0" />
+            <element signature="e#12524#12771#0" />
+            <element signature="e#12634#12743#0" />
+            <element signature="e#12644#12735#0" />
+            <element signature="e#12777#13027#0" />
+            <element signature="e#12890#12999#0" />
+            <element signature="e#12900#12991#0" />
+            <element signature="e#13033#13295#0" />
+            <element signature="e#13158#13267#0" />
+            <element signature="e#13168#13259#0" />
+            <element signature="e#13301#13547#0" />
+            <element signature="e#13410#13519#0" />
+            <element signature="e#13420#13511#0" />
+            <element signature="e#13553#13804#0" />
+            <element signature="e#13667#13773#0" />
+            <element signature="e#13677#13765#0" />
+            <element signature="e#13810#14045#0" />
+            <element signature="e#13908#14014#0" />
+            <element signature="e#13918#14006#0" />
+            <element signature="e#14051#14413#0" />
+            <element signature="e#14149#14382#0" />
+            <element signature="e#14159#14374#0" />
+            <element signature="e#14419#14868#0" />
+            <element signature="e#14532#14837#0" />
+            <element signature="e#14542#14829#0" />
+            <element signature="e#14874#15310#0" />
+            <element signature="e#14993#15279#0" />
+            <element signature="e#15003#15271#0" />
+            <element signature="e#15316#15622#0" />
+            <element signature="e#15418#15591#0" />
+            <element signature="e#15428#15583#0" />
+            <element signature="e#15628#15897#0" />
+            <element signature="e#15756#15866#0" />
+            <element signature="e#15766#15858#0" />
+            <element signature="e#15903#16179#0" />
+            <element signature="e#16038#16148#0" />
+            <element signature="e#16048#16140#0" />
+            <element signature="e#16185#16459#0" />
+            <element signature="e#16318#16428#0" />
+            <element signature="e#16328#16420#0" />
+            <element signature="e#16465#16731#0" />
+            <element signature="e#16590#16700#0" />
+            <element signature="e#16600#16692#0" />
+            <element signature="e#16737#17011#0" />
+            <element signature="e#16870#16980#0" />
+            <element signature="e#16880#16972#0" />
+            <element signature="e#17017#17288#0" />
+            <element signature="e#17147#17257#0" />
+            <element signature="e#17157#17249#0" />
+            <element signature="e#17294#17563#0" />
+            <element signature="e#17422#17532#0" />
+            <element signature="e#17432#17524#0" />
+            <element signature="e#17569#17839#0" />
+            <element signature="e#17698#17808#0" />
+            <element signature="e#17708#17800#0" />
+            <element signature="e#17845#18121#0" />
+            <element signature="e#17979#18090#0" />
+            <element signature="e#17989#18082#0" />
+            <element signature="e#18127#18404#0" />
+            <element signature="e#18264#18373#0" />
+            <element signature="e#18274#18365#0" />
+            <element signature="e#18410#18667#0" />
+            <element signature="e#18526#18636#0" />
+            <element signature="e#18536#18628#0" />
+            <element signature="e#18673#18942#0" />
+            <element signature="e#18801#18911#0" />
+            <element signature="e#18811#18903#0" />
+            <element signature="e#18948#19215#0" />
+            <element signature="e#19074#19184#0" />
+            <element signature="e#19084#19176#0" />
+            <element signature="e#19221#19445#0" />
+            <element signature="e#19308#19418#0" />
+            <element signature="e#19318#19410#0" />
+            <element signature="e#19451#19697#0" />
+            <element signature="e#19560#19670#0" />
+            <element signature="e#19570#19662#0" />
+            <element signature="e#19703#19949#0" />
+            <element signature="e#19812#19922#0" />
+            <element signature="e#19822#19914#0" />
+            <element signature="e#19955#20201#0" />
+            <element signature="e#20063#20173#0" />
+            <element signature="e#20073#20165#0" />
+            <element signature="e#20207#20463#0" />
+            <element signature="e#20326#20435#0" />
+            <element signature="e#20336#20427#0" />
+            <element signature="e#20469#20713#0" />
+            <element signature="e#20575#20685#0" />
+            <element signature="e#20585#20677#0" />
+            <element signature="e#20719#20963#0" />
+            <element signature="e#20825#20935#0" />
+            <element signature="e#20835#20927#0" />
+            <element signature="e#20969#21213#0" />
+            <element signature="e#21075#21185#0" />
+            <element signature="e#21085#21177#0" />
+            <element signature="e#21219#21465#0" />
+            <element signature="e#21327#21437#0" />
+            <element signature="e#21337#21429#0" />
+            <element signature="e#21471#21722#0" />
+            <element signature="e#21584#21694#0" />
+            <element signature="e#21594#21686#0" />
+            <element signature="e#21728#21981#0" />
+            <element signature="e#21843#21953#0" />
+            <element signature="e#21853#21945#0" />
+            <element signature="e#22096#22206#0" />
+            <element signature="e#22106#22198#0" />
+            <element signature="e#22349#22459#0" />
+            <element signature="e#22359#22451#0" />
+            <element signature="e#22602#22712#0" />
+            <element signature="e#22612#22704#0" />
+            <element signature="e#22855#22965#0" />
+            <element signature="e#22865#22957#0" />
+            <element signature="e#23115#23225#0" />
+            <element signature="e#23125#23217#0" />
+            <element signature="e#23375#23485#0" />
+            <element signature="e#23385#23477#0" />
+            <element signature="e#23625#23734#0" />
+            <element signature="e#23635#23726#0" />
+            <element signature="e#23873#23983#0" />
+            <element signature="e#23883#23975#0" />
+            <element signature="e#24122#24232#0" />
+            <element signature="e#24132#24224#0" />
+            <element signature="e#24378#24488#0" />
+            <element signature="e#24388#24480#0" />
+            <element signature="e#24627#24738#0" />
+            <element signature="e#24637#24730#0" />
+            <element signature="e#24880#24990#0" />
+            <element signature="e#24890#24982#0" />
+            <element signature="e#25130#25240#0" />
+            <element signature="e#25140#25232#0" />
+            <element signature="e#25380#25490#0" />
+            <element signature="e#25390#25482#0" />
+            <element signature="e#25630#25740#0" />
+            <element signature="e#25640#25732#0" />
+            <element signature="e#25880#25990#0" />
+            <element signature="e#25890#25982#0" />
+            <element signature="e#26137#26247#0" />
+            <element signature="e#26147#26239#0" />
+            <element signature="e#26387#26497#0" />
+            <element signature="e#26397#26489#0" />
+            <element signature="e#26637#26747#0" />
+            <element signature="e#26647#26739#0" />
+            <element signature="e#26894#27004#0" />
+            <element signature="e#26904#26996#0" />
+            <element signature="e#27145#27256#0" />
+            <element signature="e#27155#27248#0" />
+            <element signature="e#27397#27508#0" />
+            <element signature="e#27407#27500#0" />
+            <element signature="e#27649#27760#0" />
+            <element signature="e#27659#27752#0" />
+            <element signature="e#27907#28018#0" />
+            <element signature="e#27917#28010#0" />
+            <element signature="e#28163#28273#0" />
+            <element signature="e#28173#28265#0" />
+            <element signature="e#28430#28540#0" />
+            <element signature="e#28440#28532#0" />
+            <element signature="e#28686#28796#0" />
+            <element signature="e#28696#28788#0" />
+            <element signature="e#28942#29052#0" />
+            <element signature="e#28952#29044#0" />
+            <element signature="e#29198#29308#0" />
+            <element signature="e#29208#29300#0" />
+            <element signature="e#29428#29538#0" />
+            <element signature="e#29438#29530#0" />
+            <element signature="e#29658#29768#0" />
+            <element signature="e#29668#29760#0" />
+            <element signature="e#29888#29998#0" />
+            <element signature="e#29898#29990#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/Wine.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="18" column="18" lean-forward="true" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/Wines.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding>
+            <element signature="e#594#776#0" />
+            <element signature="e#604#768#0" />
+            <element signature="e#928#1095#0" />
+            <element signature="e#938#1087#0" />
+            <element signature="e#1255#1809#0" />
+            <element signature="e#1265#1437#0" />
+            <element signature="e#1447#1619#0" />
+            <element signature="e#1629#1801#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesEditor.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="104" column="47" lean-forward="true" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#784#943#0" />
+            <element signature="e#1003#1066#0" />
+            <element signature="e#1078#1167#0" />
+            <element signature="e#1181#1268#0" />
+            <element signature="e#1282#1368#0" />
+            <element signature="e#1382#1469#0" />
+            <element signature="e#3125#3431#0" />
+            <element signature="e#3234#3420#0" />
+            <element signature="e#3307#3403#0" />
+            <element signature="e#3453#3558#0" />
+            <element signature="e#3580#3704#0" />
           </folding>
         </state>
       </provider>
