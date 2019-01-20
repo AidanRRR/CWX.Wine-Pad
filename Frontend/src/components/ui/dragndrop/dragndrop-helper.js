@@ -15,8 +15,7 @@ export const getItemStyle = (isDragging, draggableStyle) => ({
 
 export const getListStyle = isDraggingOver => ({
     background: isDraggingOver ? 'lightblue' : 'lightgrey',
-    padding: grid,
-    width: 250
+    padding: grid
 });
 
 // A little function to help us with reordering the result
@@ -30,7 +29,6 @@ export const reorder = (list, startIndex, endIndex) => {
 
 // Moves an item from one list to another list
 export const move = (source, destination, droppableSource, droppableDestination) => {
-    debugger;
     const sourceClone = Array.from(source);
     const destClone = Array.from(destination);
     const [removed] = sourceClone.splice(droppableSource.index, 1);

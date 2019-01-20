@@ -4,9 +4,19 @@ import WijnenListDraggable from "../components/wijnen/wijnen-list-draggable";
 import wines from "./../components/wijnen/wijnen.json";
 import KaartDroppable from "../components/kaarten/kaart-droppable";
 import {DragDropContext} from "react-beautiful-dnd";
-import {move} from "../components/ui/dragndrop/dragndrop-helper";
+import {move, reorder} from "../components/ui/dragndrop/dragndrop-helper";
+import {IWijn} from "../components/wijnen/wijn";
+import { Grid, Table, TableHeaderRow } from '@devexpress/dx-react-grid-bootstrap4';
 
-class Kaart extends Component {
+interface IState {
+    tabs: any,
+    activeTabId: number,
+    allWines: IWijn[],
+    addedWines: IWijn[]
+}
+interface IProps {}
+
+class Kaart extends Component<IProps, IState> {
     state = {
         tabs: [{
             id: 0,
@@ -35,17 +45,31 @@ class Kaart extends Component {
     onDragEnd = result => {
         const {source, destination} = result;
 
-        // dropped outside the list
+        // Cancel drag to another list
         if (!destination) {
             return;
         }
 
-        // re-order items, because it is dragged in the same list
-        if (source.droppableId === destination.droppableId) {
-        } else {
-            const sourceList = this.getList(source.droppableId);
-            const destinationList = this.getList(destination.droppableId);
+        const sourceList = this.getList(source.droppableId);
+        const destinationList = this.getList(destination.droppableId);
 
+        // Re-order items
+        if (source.droppableId === destination.droppableId) {
+            let items: any = reorder(sourceList, source.index, destination.index);
+
+            let state = this.state;
+
+            if (source.droppableId === this.ids.addedWines) {
+                state.addedWines = items;
+            }
+
+            if (source.droppableId === this.ids.allWines) {
+                state.allWines = items;
+            }
+
+            this.setState(state);
+        } else {
+            // Move to another list
             const result = move(sourceList, destinationList, source, destination);
 
             this.setState({allWines: result.allWines, addedWines: result.addedWines});
@@ -67,14 +91,19 @@ class Kaart extends Component {
                 </div>
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <div className="row">
-                        <div className="col-sm-4">
+                        <div className="col-sm-6">
                             <div className="card">
                                 <div className="card-body">
-                                    <WijnenListDraggable id={this.ids.allWines} wines={allWines}/>
+                                    <Grid rows={allWines} columns={[{
+                                        name: 'title',
+                                        title: 'title'
+                                    }]}>
+                                        <WijnenListDraggable id={this.ids.allWines} wines={allWines}/>
+                                    </Grid>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-sm-8">
+                        <div className="col-sm-6">
                             <div className="card">
                                 <div className="card-body">
                                     <h5>Kaart aanpassen</h5>

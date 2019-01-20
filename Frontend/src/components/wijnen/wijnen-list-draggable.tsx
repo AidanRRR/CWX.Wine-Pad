@@ -1,11 +1,10 @@
 import React, {Component, Fragment} from 'react';
-import {DragDropContext, Droppable} from "react-beautiful-dnd";
+import {Droppable} from "react-beautiful-dnd";
 import {IWijn} from "./wijn";
+import {Table} from "@devexpress/dx-react-grid-bootstrap4";
 import WijnItemDraggable from "./wijn-item-draggable";
 
-interface IState {
-}
-
+interface IState {}
 interface IProps {
     id: string,
     wines: IWijn[]
