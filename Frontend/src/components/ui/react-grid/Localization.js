@@ -2,8 +2,16 @@ export const tableMessages = {
     noData: 'Geen wijnen',
 };
 
+export const pagingMessages = {
+    showAll: 'Alles',
+};
+
 export const headerRowMessages = {
     sortingHint: ''
+};
+
+export const searchMessages = {
+    searchPlaceholder: 'Zoeken...'
 };
 
 export const editColumnMessages = {

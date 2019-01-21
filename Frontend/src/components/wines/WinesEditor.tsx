@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import {
-    CustomGrouping, CustomTreeData,
     EditingState,
-    FilteringState, GroupingState,
     IntegratedFiltering,
     IntegratedPaging,
-    PagingState, TreeDataState
+    IntegratedSorting,
+    PagingState,
+    SearchState,
+    SortingState
 } from '@devexpress/dx-react-grid';
 import {
     Grid,
@@ -13,75 +14,19 @@ import {
     TableHeaderRow,
     TableEditRow,
     TableEditColumn,
-    TableFilterRow,
     PagingPanel,
-    TableGroupRow, TableTreeColumn
+    SearchPanel,
+    Toolbar
 } from '@devexpress/dx-react-grid-bootstrap4';
-import {editColumnMessages, headerRowMessages, tableMessages} from "../ui/react-grid/Localization";
+import {
+    editColumnMessages,
+    headerRowMessages,
+    pagingMessages,
+    searchMessages,
+    tableMessages
+} from "../ui/react-grid/Localization";
 import Wines from './Wines.json';
-import {IWineDataTable} from "./Wine";
-
-const getRowId = row => row.id;
-const getChildGroups = groups => groups
-    .map(group => (
-            {
-                key: group.key,
-                childRows: group.items
-            }
-        )
-    );
-const getChildRows = (row, rootRows) => {
-    if (row) {
-        console.log(row.items);
-    }
-    return (row ? row.items : rootRows);
-};
-
-const CommandButton = ({onExecute, icon, text, hint, color}) => (
-    <button type="button" className="btn btn-link" style={{padding: 11}}
-            onClick={(e) => {
-                onExecute();
-                e.stopPropagation();
-            }}
-            title={hint}>
-
-    <span className={color || 'undefined'}>
-        {icon ? <i className={`ti-${icon}`} style={{marginRight: text ? 5 : 0}}/> : null}
-        {text}
-    </span>
-    </button>
-);
-
-const commandComponentProps = {
-    add: {
-        icon: 'plus',
-        hint: 'Nieuwe toevoegen',
-    },
-    edit: {
-        icon: 'pencil',
-        hint: 'Aanpassen',
-        color: 'text-warning',
-    },
-    delete: {
-        icon: 'trash',
-        hint: 'Verwijder',
-        color: 'text-danger',
-    },
-    commit: {
-        icon: 'check',
-        hint: 'Opslaan',
-        color: 'text-success',
-    },
-    cancel: {
-        icon: 'close',
-        hint: 'Annuleren',
-        color: 'text-danger',
-    },
-};
-
-const Command = ({id, onExecute}) => (
-    <CommandButton {...commandComponentProps[id]} onExecute={onExecute}/>
-);
+import {Command, getRowId} from "../ui/react-grid/Helpers";
 
 interface IProps {
 }
@@ -91,27 +36,12 @@ interface IState {
     columns: any,
     pageSizes: any,
     grouping: any,
-    data: any,
     tableColumnExtensions: any
 }
 
 class WinesEditor extends React.Component<IProps, IState> {
     constructor(props) {
         super(props);
-
-        // const parsedRows: IWineDataTable[] = Wines.Wines;
-        const parsedRows: any = Wines.Wines;
-        const data = parsedRows.map((wine) => {
-            return ({
-                title: wine.title,
-                type: wine.type,
-                items: wine.years,
-                region: wine.region,
-                year: wine.year,
-                price: wine.price,
-                description: wine.description
-            });
-        });
 
         this.state = {
             columns: [
@@ -127,7 +57,6 @@ class WinesEditor extends React.Component<IProps, IState> {
             ],
             grouping: [{columnName: 'title'}],
             pageSizes: [5, 10, 15, 0],
-            data: data,
             rows: Wines.Wines
         };
 
@@ -157,32 +86,27 @@ class WinesEditor extends React.Component<IProps, IState> {
     }
 
     render() {
-        const {data, columns, tableColumnExtensions, pageSizes} = this.state;
+        const {rows, columns, tableColumnExtensions, pageSizes} = this.state;
 
         return (
-            <Grid rows={data} columns={columns} getRowId={getRowId}>
-                {/*<PagingState defaultCurrentPage={0} pageSize={10}/>*/}
-                {/*<FilteringState defaultFilters={[]}/>*/}
-                {/*<EditingState onCommitChanges={this.commitChanges}/>*/}
-                {/*<GroupingState grouping={[{columnName: 'title'}]}/>*/}
-                {/*<CustomGrouping getChildGroups={getChildGroups}/>*/}
-                {/*<IntegratedFiltering/>*/}
-                {/*<IntegratedPaging/>*/}
-                <TreeDataState/>
-                <CustomTreeData getChildRows={getChildRows} />
+            <Grid rows={rows} columns={columns} getRowId={getRowId}>
+                <SearchState defaultValue={""}/>
+                <SortingState/>
+                <PagingState defaultCurrentPage={5} defaultPageSize={10} />
+                <EditingState onCommitChanges={this.commitChanges}/>
+                <IntegratedPaging/>
+                <IntegratedSorting/>
+                <IntegratedFiltering/>
                 <Table messages={tableMessages} columnExtensions={tableColumnExtensions}/>
-                {/*<TableFilterRow />*/}
-                <TableHeaderRow messages={headerRowMessages}/>
-                <TableTreeColumn for="title"/>
-
-                {/*<TableGroupRow/>*/}
-                {/*<TableEditRow />*/}
-                {/*<TableEditColumn messages={editColumnMessages}*/}
-                {/*commandComponent={Command}*/}
-                {/*showAddCommand*/}
-                {/*showEditCommand*/}
-                {/*showDeleteCommand />*/}
-                {/*<PagingPanel pageSizes={pageSizes}/>*/}
+                <TableHeaderRow messages={headerRowMessages} showSortingControls/>
+                <TableEditRow/>
+                <Toolbar/>
+                <TableEditColumn messages={editColumnMessages}
+                                 commandComponent={Command}
+                                 showAddCommand
+                                 showEditCommand
+                                 showDeleteCommand/>
+                <PagingPanel messages={pagingMessages} pageSizes={pageSizes}/>
             </Grid>
         );
     }
