@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
 import {Draggable} from "react-beautiful-dnd";
 import {IWine} from "./Wine";
+import './WineItemDraggable.scss';
 
-interface IState {}
+interface IState {
+}
+
 interface IProps {
     wine: IWine,
     index: number
@@ -10,24 +13,24 @@ interface IProps {
 
 class WineItemDraggable extends Component<IProps, IState> {
     render() {
-        const { wine, index } = this.props;
+        const {wine, index} = this.props;
 
         return (
             <Draggable draggableId={wine.id.toString()} index={index}>
                 {provided => (
-                    <div className="card card-body" ref={provided.innerRef}
-                          {...provided.draggableProps} {...provided.dragHandleProps}>
+                    <div className="card card-body card-slim scrollbar" ref={provided.innerRef}
+                         {...provided.draggableProps} {...provided.dragHandleProps}>
                         <div className={"row"}>
                             <div className="col-sm-10">
-                                {wine.title} ∙ {wine.region}
+                                {wine.title} {wine.year} ∙ <b>{wine.region}</b>
                             </div>
                             <div className="col-sm-2">
-                                {/*{wine.price}*/}
+                                {wine.price}
                             </div>
                         </div>
                         <div className={"row"}>
                             <div className="col-sm-10">
-                                {/*{wine.description}*/}
+                                <span className={"text-muted"}>{wine.description}</span>
                             </div>
                         </div>
                     </div>

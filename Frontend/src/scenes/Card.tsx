@@ -1,18 +1,18 @@
 import React, {Component} from "react";
 import {DragDropContext} from "react-beautiful-dnd";
 import {move, reorder} from "../components/ui/dragndrop/dragndrop-helper";
-import { Grid, Table, TableHeaderRow } from '@devexpress/dx-react-grid-bootstrap4';
-import {IWine} from "../components/wines/Wine";
+import { Grid } from '@devexpress/dx-react-grid-bootstrap4';
 import Wines from "../components/wines/Wines.json";
 import WineListDraggable from "../components/wines/WineListDraggable";
 import CardTabs from "../components/cards/CardTabs";
 import CardDroppable from "../components/cards/CardDroppable";
+import {IWine} from "../components/wines/Wine";
 
 interface IState {
     tabs: any,
     activeTabId: number,
-    allWines: any[],
-    addedWines: any[]
+    allWines: IWine[],
+    addedWines: IWine[]
 }
 interface IProps {}
 
@@ -98,7 +98,7 @@ class Card extends Component<IProps, IState> {
                                         name: 'title',
                                         title: 'title'
                                     }]}>
-                                        {/*<WineListDraggable id={this.ids.allWines} wines={allWines}/>*/}
+                                        <WineListDraggable id={this.ids.allWines} wines={allWines}/>
                                     </Grid>
                                 </div>
                             </div>
@@ -106,7 +106,6 @@ class Card extends Component<IProps, IState> {
                         <div className="col-sm-6">
                             <div className="card">
                                 <div className="card-body">
-                                    <h5>Kaart aanpassen</h5>
                                     <CardTabs activeTabId={activeTabId} tabs={tabs}
                                               setActiveTab={this.setActiveTabId}/>
                                     <br/>
@@ -127,6 +126,5 @@ class Card extends Component<IProps, IState> {
         this.setState({activeTabId: id});
     }
 }
-
 
 export default Card;

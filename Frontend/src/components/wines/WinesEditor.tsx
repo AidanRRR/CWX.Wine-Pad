@@ -101,6 +101,7 @@ class WinesEditor extends React.Component<IProps, IState> {
                 <TableHeaderRow messages={headerRowMessages} showSortingControls/>
                 <TableEditRow/>
                 <Toolbar/>
+                <SearchPanel messages={searchMessages} />
                 <TableEditColumn messages={editColumnMessages}
                                  commandComponent={Command}
                                  showAddCommand
