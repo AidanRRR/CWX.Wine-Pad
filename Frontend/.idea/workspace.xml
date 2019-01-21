@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen">
+      <change afterPath="$PROJECT_DIR$/src/components/wines/WinesOG4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/wines/WinesOG.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WinesOG.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,43 +21,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/components/wines/WinesEditor.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="116" column="25" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
-              <folding>
-                <element signature="e#687#736#0" />
-                <element signature="e#571#957#0" />
-                <element signature="e#784#943#0" />
-                <element signature="e#1003#1066#0" />
-                <element signature="e#1078#1167#0" />
-                <element signature="e#1181#1268#0" />
-                <element signature="e#1282#1368#0" />
-                <element signature="e#1382#1469#0" />
-                <element signature="e#3125#3431#0" />
-                <element signature="e#3234#3420#0" />
-                <element signature="e#3307#3403#0" />
-                <element signature="e#3453#3558#0" />
-                <element signature="e#3580#3704#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/wines/Wines.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            <state relative-caret-position="460">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/wines/Wine.ts">
+        <entry file="file://$PROJECT_DIR$/src/components/wines/WinesEditor.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+            <state relative-caret-position="322">
+              <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -152,21 +130,21 @@
         <option value="$PROJECT_DIR$/src/components/Header.tsx" />
         <option value="$PROJECT_DIR$/src/components/cards/CardTabs.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
-        <option value="$PROJECT_DIR$/src/components/wines/WinesOG.json" />
         <option value="$PROJECT_DIR$/src/components/wines/WinesOG2.json" />
         <option value="$PROJECT_DIR$/src/components/wines/WineItemDraggable.tsx" />
         <option value="$PROJECT_DIR$/src/scenes/Card.tsx" />
         <option value="$PROJECT_DIR$/src/components/wines/WinesOG3.json" />
         <option value="$PROJECT_DIR$/src/components/wines/Wine.ts" />
-        <option value="$PROJECT_DIR$/src/components/wines/Wines.json" />
+        <option value="$PROJECT_DIR$/src/components/wines/WinesOG.json" />
         <option value="$PROJECT_DIR$/src/components/wines/WinesEditor.tsx" />
+        <option value="$PROJECT_DIR$/src/components/wines/Wines.json" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="width" value="1737" />
-    <option name="height" value="1398" />
+    <option name="x" value="-9" />
+    <option name="width" value="1738" />
+    <option name="height" value="1399" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -193,6 +171,13 @@
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="wines" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -260,7 +245,8 @@
       <workItem from="1547238844322" duration="6747000" />
       <workItem from="1547253187402" duration="14867000" />
       <workItem from="1547588514759" duration="20667000" />
-      <workItem from="1547978906636" duration="27793000" />
+      <workItem from="1547978906636" duration="27862000" />
+      <workItem from="1548053551059" duration="1148000" />
     </task>
     <task id="LOCAL-00001" summary="Added wine types">
       <created>1547244494395</created>
@@ -280,13 +266,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82963000" />
+    <option name="totallyTimeSpent" value="84180000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="1389" height="1118" extended-state="0" />
+    <frame x="-7" y="0" width="1390" height="1119" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17603551" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17590539" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -301,7 +287,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30527383" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.30496454" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -316,15 +302,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added wijnen" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/js/bootstrap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/assets/css/icons.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -595,16 +572,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="867" column="1" selection-start-line="867" selection-start-column="1" selection-end-line="867" selection-end-column="1" />
-          <folding>
-            <element signature="e#13#20795#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
@@ -632,10 +599,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Wines.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/Wine.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG4.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG3.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="1440" column="1" selection-start-line="1440" selection-start-column="1" selection-end-line="1440" selection-end-column="1" />
+        <state relative-caret-position="316">
+          <caret line="1233" column="41" lean-forward="true" selection-end-line="1440" selection-end-column="1" />
           <folding>
             <element signature="e#571#753#0" />
             <element signature="e#581#745#0" />
@@ -931,49 +918,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Wines.tsx">
+    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/Wine.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/Wines.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="23" lean-forward="true" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        <state relative-caret-position="1564">
+          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/wines/WinesEditor.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="116" column="25" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
-          <folding>
-            <element signature="e#687#736#0" />
-            <element signature="e#571#957#0" />
-            <element signature="e#784#943#0" />
-            <element signature="e#1003#1066#0" />
-            <element signature="e#1078#1167#0" />
-            <element signature="e#1181#1268#0" />
-            <element signature="e#1282#1368#0" />
-            <element signature="e#1382#1469#0" />
-            <element signature="e#3125#3431#0" />
-            <element signature="e#3234#3420#0" />
-            <element signature="e#3307#3403#0" />
-            <element signature="e#3453#3558#0" />
-            <element signature="e#3580#3704#0" />
-          </folding>
+        <state relative-caret-position="322">
+          <caret line="110" column="34" selection-start-line="110" selection-start-column="34" selection-end-line="110" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/Wines.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>

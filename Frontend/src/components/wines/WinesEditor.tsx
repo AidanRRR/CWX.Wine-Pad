@@ -99,53 +99,28 @@ class WinesEditor extends React.Component<IProps, IState> {
     constructor(props) {
         super(props);
 
-        const data = [{
-            name: 'Sandra',
-            sex: 'Female',
-            city: 'Las Vegas',
-            car: 'Audi A4',
-            items: [{
-                name: 'Sandra a',
-                sex: 'Male',
-                city: 'Las Vegas',
-                car: 'VW Beetle'
-            }]
-        }, {
-            name: 'Bert',
-            sex: 'Male',
-            city: 'Las Vegas',
-            car: 'Audi BA',
-        }];
-
-        const parsedRows: IWineDataTable[] = Wines.Wines;
-        // const data = parsedRows.map((wine) => {
-        //     return ({
-        //         title: wine.title,
-        //         items: [{title: 'a'}]
-        //     });
-        // });
-
-        // const data = parsedRows.map((wine) => {
-        //     return ({
-        //         key: wine.title,
-        //         items: wine.years
-        //     });
-        // });
+        // const parsedRows: IWineDataTable[] = Wines.Wines;
+        const parsedRows: any = Wines.Wines;
+        const data = parsedRows.map((wine) => {
+            return ({
+                title: wine.title,
+                type: wine.type,
+                items: wine.years,
+                region: wine.region,
+                year: wine.year,
+                price: wine.price,
+                description: wine.description
+            });
+        });
 
         this.state = {
-            // columns: [
-            //     {name: 'title', title: 'Naam'},
-            //     {name: 'type', title: 'Type'},
-            //     {name: 'region', title: 'Regio'},
-            //     {name: 'price', title: 'Prijs'},
-            //     {name: 'year', title: 'Jaar'},
-            //     {name: 'description', title: 'Omschrijving'},
-            // ],
             columns: [
-                {name: 'name', title: ''},
-                {name: 'sex', title: ''},
-                {name: 'city', title: ''},
-                {name: 'car', title: ''}
+                {name: 'title', title: 'Naam'},
+                {name: 'year', title: 'Jaar'},
+                {name: 'type', title: 'Type'},
+                {name: 'region', title: 'Regio'},
+                {name: 'description', title: 'Omschrijving'},
+                {name: 'price', title: 'Prijs'}
             ],
             tableColumnExtensions: [
                 {columnName: 'title', width: 300}
@@ -198,7 +173,7 @@ class WinesEditor extends React.Component<IProps, IState> {
                 <Table messages={tableMessages} columnExtensions={tableColumnExtensions}/>
                 {/*<TableFilterRow />*/}
                 <TableHeaderRow messages={headerRowMessages}/>
-                <TableTreeColumn for="name"/>
+                <TableTreeColumn for="title"/>
 
                 {/*<TableGroupRow/>*/}
                 {/*<TableEditRow />*/}

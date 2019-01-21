@@ -3,20 +3,25 @@
     {
       "id": 0,
       "title": "Roussillon “Centenaire”",
+      "region": "Domaine Lafage",
+      "type": "Wit",
+      "year": "-",
+      "price": "-",
+      "description": "Een verleider: zacht, mollig en toch mooie zuren.",
       "years": [
         {
           "year": 2017,
-          "region": "Domaine Lafage",
-          "type": "Wit",
           "price": 6.00,
-          "description": "Een verleider: zacht, mollig en toch mooie zuren."
+          "type": "Wit",
+          "description": "Een verleider: zacht, mollig en toch mooie zuren.",
+          "region": "Domaine Lafage"
         },
         {
           "year": 2016,
-          "region": "Domaine Lafage",
+          "price": 8.00,
           "type": "Wit",
-          "price": 4.00,
-          "description": "Een verleider: zacht, mollig en toch mooie zuren."
+          "description": "Een verleider: zacht, mollig en toch mooie zuren.",
+          "region": "Domaine Lafage"
         }
       ]
     },
