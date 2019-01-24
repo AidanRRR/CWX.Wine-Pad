@@ -7,7 +7,7 @@ class Header extends Component {
         return (
             <header id="topnav">
                 <Topnav />
-                <Navbar/>
+                <Navbar />
             </header>
         );
     }
