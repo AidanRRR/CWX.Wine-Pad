@@ -17,6 +17,14 @@ export const CommandButton = ({onExecute, icon, text, hint, color}) => (
     </button>
 );
 
+export const MultilineEditCell = ({column, value, onValueChange}) => (
+    <td style={{ verticalAlign: 'middle', padding: 1}}>
+        <textarea className="form-control" style={{height: 125}}
+                  value={value} onChange={e => onValueChange(e.target.value)}>
+        </textarea>
+    </td>
+);
+
 export const Command = ({id, onExecute}) => (
     <CommandButton {...commandComponentProps[id]} onExecute={onExecute}/>
 );

@@ -6,7 +6,8 @@ import {
     IntegratedSorting,
     PagingState,
     SearchState,
-    SortingState
+    SortingState,
+    DataTypeProvider
 } from '@devexpress/dx-react-grid';
 import {
     Grid,
@@ -16,7 +17,7 @@ import {
     TableEditColumn,
     PagingPanel,
     SearchPanel,
-    Toolbar
+    Toolbar, TableColumnResizing
 } from '@devexpress/dx-react-grid-bootstrap4';
 import {
     editColumnMessages,
@@ -26,7 +27,7 @@ import {
     tableMessages
 } from "../ui/react-grid/Localization";
 import Wines from './Wines.json';
-import {Command, getRowId} from "../ui/react-grid/Helpers";
+import {Command, getRowId, MultilineEditCell} from "../ui/react-grid/Helpers";
 
 interface IProps {
 }
@@ -36,8 +37,23 @@ interface IState {
     columns: any,
     pageSizes: any,
     grouping: any,
-    tableColumnExtensions: any
+    tableColumnExtensions: any,
+    defaultColumnWidths: any
 }
+
+const isMultiline = (columnName) => {
+    return columnName.name === 'description';
+};
+
+const EditCell = (props) => {
+    const {column} = props;
+
+    if (isMultiline(column)) {
+        return <MultilineEditCell {...props} />
+    } else {
+        return <TableEditRow.Cell {...props} />
+    }
+};
 
 class WinesEditor extends React.Component<IProps, IState> {
     constructor(props) {
@@ -51,6 +67,14 @@ class WinesEditor extends React.Component<IProps, IState> {
                 {name: 'region', title: 'Regio'},
                 {name: 'description', title: 'Omschrijving'},
                 {name: 'price', title: 'Prijs'}
+            ],
+            defaultColumnWidths: [
+                { columnName: 'title', width: 180 },
+                { columnName: 'year', width: 75 },
+                { columnName: 'type', width: 100 },
+                { columnName: 'region', width: 240 },
+                { columnName: 'description', width: 400 },
+                { columnName: 'price', width: 100 },
             ],
             tableColumnExtensions: [
                 {columnName: 'title', width: 300}
@@ -86,22 +110,23 @@ class WinesEditor extends React.Component<IProps, IState> {
     }
 
     render() {
-        const {rows, columns, tableColumnExtensions, pageSizes} = this.state;
+        const {rows, defaultColumnWidths, columns, tableColumnExtensions, pageSizes} = this.state;
 
         return (
             <Grid rows={rows} columns={columns} getRowId={getRowId}>
                 <SearchState defaultValue={""}/>
                 <SortingState/>
-                <PagingState defaultCurrentPage={5} defaultPageSize={10} />
+                <PagingState defaultCurrentPage={5} defaultPageSize={10}/>
                 <EditingState onCommitChanges={this.commitChanges}/>
                 <IntegratedPaging/>
                 <IntegratedSorting/>
                 <IntegratedFiltering/>
                 <Table messages={tableMessages} columnExtensions={tableColumnExtensions}/>
+                <TableColumnResizing defaultColumnWidths={defaultColumnWidths} />
                 <TableHeaderRow messages={headerRowMessages} showSortingControls/>
-                <TableEditRow/>
+                <TableEditRow cellComponent={EditCell}/>
                 <Toolbar/>
-                <SearchPanel messages={searchMessages} />
+                <SearchPanel messages={searchMessages}/>
                 <TableEditColumn messages={editColumnMessages}
                                  commandComponent={Command}
                                  showAddCommand
