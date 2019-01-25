@@ -7,7 +7,7 @@ interface IProps {
     onComplete: () => void
 }
 
-class CardForm extends Component<IProps, IState> {
+class MenuTabForm extends Component<IProps, IState> {
     render() {
         return (
             <Formik initialValues={initialValues} validationSchema={validations} onSubmit={() => {
@@ -35,4 +35,4 @@ class CardForm extends Component<IProps, IState> {
     }
 }
 
-export default CardForm;
+export default MenuTabForm;

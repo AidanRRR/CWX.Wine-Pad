@@ -7,30 +7,24 @@ import WineListDraggable from "../components/wines/WineListDraggable";
 import CardTabs from "../components/cards/CardTabs";
 import CardDroppable from "../components/cards/CardDroppable";
 import {IWine} from "../components/wines/Wine";
+import {RouterProps} from "react-router";
 
+export interface IMenuTab {
+    id: number,
+    name: string,
+    wines: IWine[]
+}
 interface IState {
-    tabs: any,
+    tabs: IMenuTab[],
     activeTabId: number,
     allWines: IWine[],
     addedWines: IWine[]
 }
-interface IProps {}
+interface IProps extends RouterProps {}
 
-class Card extends Component<IProps, IState> {
+class Menu extends Component<IProps, IState> {
     state = {
-        tabs: [{
-            id: 0,
-            name: 'BY THE GLASS',
-            wines: []
-        }, {
-            id: 1,
-            name: 'BOTTLES',
-            wines: []
-        }, {
-            id: 2,
-            name: 'THE BUTCHER\'S BASEMENT',
-            wines: []
-        }],
+        tabs: [],
         activeTabId: 0,
         allWines: Wines.Wines,
         addedWines: []
@@ -78,7 +72,7 @@ class Card extends Component<IProps, IState> {
 
     render() {
         const {tabs, allWines, addedWines, activeTabId} = this.state;
-        const currentTab = tabs.filter(x => x.id === activeTabId)[0];
+        const currentTab: IMenuTab = tabs.filter((tab: IMenuTab) => tab.id === activeTabId)[0];
 
         return (
             <div>
@@ -109,7 +103,7 @@ class Card extends Component<IProps, IState> {
                                     <CardTabs activeTabId={activeTabId} tabs={tabs}
                                               setActiveTab={this.setActiveTabId}/>
                                     <br/>
-                                    {currentTab.wines.length === 0 && (
+                                    {currentTab !== undefined && currentTab.wines.length === 0 && (
                                         <p>Sleep wijnen naar hier om ze toe te voegen aan de kaart!</p>
                                     )}
                                     <CardDroppable id={this.ids.addedWines} wines={addedWines}/>
@@ -127,4 +121,4 @@ class Card extends Component<IProps, IState> {
     }
 }
 
-export default Card;
+export default Menu;
