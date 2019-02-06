@@ -14,7 +14,6 @@ interface IState {
   tabs: IMenuTab[];
   activeTabId: number;
   allWines: IWine[];
-  addedWines: IWine[];
 }
 
 interface IProps extends RouterProps {}
@@ -39,17 +38,27 @@ class Menu extends Component<IProps, IState> {
       }
     ],
     activeTabId: 0,
-    allWines: Wines.Wines,
-    addedWines: []
+    allWines: Wines.Wines
   };
 
   ids = {
     allWines: "allWines",
     addedWines: "addedWines"
   };
-  getList = id => this.state[this.ids[id]];
+
+  getList = id => {
+    if (id === "allWines") {
+      // console.log(this.state.allWines);
+      return this.state.allWines;
+    } else {
+      // console.log(this.state.tabs[this.state.activeTabId].wines);
+      return this.state.tabs[this.state.activeTabId].wines;
+    }
+  };
 
   onDragEnd = result => {
+    const { activeTabId } = this.state;
+    let { allWines, tabs } = this.state;
     const { source, destination } = result;
 
     // Cancel drag to another list
@@ -64,30 +73,30 @@ class Menu extends Component<IProps, IState> {
     if (source.droppableId === destination.droppableId) {
       let items: any = reorder(sourceList, source.index, destination.index);
 
-      let state = this.state;
-
       if (source.droppableId === this.ids.addedWines) {
-        state.addedWines = items;
+        tabs[activeTabId].wines = items;
       }
 
       if (source.droppableId === this.ids.allWines) {
-        state.allWines = items;
+        allWines = items;
       }
 
-      this.setState(state);
+      this.setState({ allWines, tabs });
     } else {
       // Move to another list
       const result = move(sourceList, destinationList, source, destination);
 
+      tabs[activeTabId].wines = result.addedWines;
+
       this.setState({
         allWines: result.allWines,
-        addedWines: result.addedWines
+        tabs
       });
     }
   };
 
   render() {
-    const { tabs, allWines, addedWines, activeTabId } = this.state;
+    const { tabs, allWines, activeTabId } = this.state;
     const currentTab: IMenuTab = tabs.filter(
       (tab: IMenuTab) => tab.id === activeTabId
     )[0];
@@ -133,13 +142,12 @@ class Menu extends Component<IProps, IState> {
                     setActiveTab={this.setActiveTabId}
                   />
                   <br />
-                  {currentTab !== undefined &&
-                    currentTab.wines.length === 0 && (
-                      <MenuCardDroppable
-                        id={this.ids.addedWines}
-                        wines={addedWines}
-                      />
-                    )}
+                  {currentTab !== undefined && (
+                    <MenuCardDroppable
+                      id={this.ids.addedWines}
+                      wines={currentTab.wines}
+                    />
+                  )}
                 </div>
               </div>
             </div>

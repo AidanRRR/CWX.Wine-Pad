@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { Droppable } from "react-beautiful-dnd";
 import { IWine } from "./Wine";
 import WineItemDraggable from "./WineItemDraggable";
@@ -39,20 +39,18 @@ class WineListDraggable extends Component<IProps, IState> {
 
     return (
       <div className={"wine-list-draggable"}>
-        <div>
-          <div className="input-group mb-4">
-            <span className="input-group-prepend">
-              <button type="button" className="btn btn-primary">
-                <i className="fa fa-search" />
-              </button>
-            </span>
-            <input
-              onChange={this.handleChangeFilter}
-              type="text"
-              className="form-control"
-              placeholder="Zoeken..."
-            />
-          </div>
+        <div className="input-group mb-4">
+          <span className="input-group-prepend">
+            <button type="button" className="btn btn-primary">
+              <i className="fa fa-search" />
+            </button>
+          </span>
+          <input
+            onChange={this.handleChangeFilter}
+            type="text"
+            className="form-control"
+            placeholder="Zoeken..."
+          />
         </div>
         <Droppable droppableId={id}>
           {provided => (
