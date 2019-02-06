@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen">
+      <change afterPath="$PROJECT_DIR$/src/scenes/account/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/menus/MenuCardDroppable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menus/MenuCardDroppable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/wines/WineListDraggable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/wines/WineListDraggable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/menu/Menu.tsx" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,47 +20,49 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/menus/MenuCardDroppable.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/menus/MenuTabs.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="43" column="60" lean-forward="true" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-              <folding>
-                <element signature="e#0#49#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scenes/menu/Menu.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="156" column="6" lean-forward="true" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
+            <state relative-caret-position="138">
+              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#2748#3350#0" />
+                <element signature="n#!!block;n#IState#0" />
+                <element signature="e#818#1118#0" />
+                <element signature="e#830#1067#0" />
+                <element signature="e#838#910#0" />
+                <element signature="e#918#985#0" />
+                <element signature="e#993#1061#0" />
+                <element signature="e#1129#1189#0" />
+                <element signature="e#1210#1469#0" />
+                <element signature="e#1239#1323#0" />
+                <element signature="e#1329#1465#0" />
+                <element signature="e#1496#2485#0" />
+                <element signature="e#1681#1702#0" />
+                <element signature="e#1907#2228#0" />
+                <element signature="e#2041#2091#0" />
+                <element signature="e#2145#2180#0" />
+                <element signature="e#2234#2481#0" />
+                <element signature="e#2416#2473#0" />
+                <element signature="n#!!block;n#render#0;n#Menu#0" />
+                <element signature="e#2681#4340#0" />
+                <element signature="e#2695#2922#0" />
+                <element signature="e#2727#2907#0" />
+                <element signature="e#2767#2890#0" />
+                <element signature="e#2931#4327#0" />
+                <element signature="e#2986#4300#0" />
+                <element signature="e#3020#3622#0" />
+                <element signature="e#3061#3603#0" />
+                <element signature="e#3100#3582#0" />
+                <element signature="e#3146#3559#0" />
+                <element signature="e#3217#3366#0" />
+                <element signature="e#3241#3344#0" />
+                <element signature="e#3408#3533#0" />
+                <element signature="e#3635#4283#0" />
+                <element signature="e#3676#4264#0" />
+                <element signature="e#3715#4243#0" />
+                <element signature="e#3761#3969#0" />
+                <element signature="e#4064#4199#0" />
+                <element signature="e#4407#4452#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/ui/dragndrop/dragndrop-helper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -71,7 +71,19 @@
         <entry file="file://$PROJECT_DIR$/src/scenes/menu/IMenuTab.tsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="138">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scenes/menu/Menus.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+              <folding>
+                <element signature="e#0#49#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -131,8 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/kaarten/kaarten-tabs.tsx" />
-        <option value="$PROJECT_DIR$/src/components/wijnen/wijnen-list-draggable.tsx" />
         <option value="$PROJECT_DIR$/src/components/kaarten/kaart-droppable.tsx" />
         <option value="$PROJECT_DIR$/src/scenes/kaart.tsx" />
         <option value="$PROJECT_DIR$/src/components/wijnen/wijn-item-draggable.tsx" />
@@ -182,6 +192,8 @@
         <option value="$PROJECT_DIR$/src/components/ui/dragndrop/dragndrop-helper.js" />
         <option value="$PROJECT_DIR$/src/components/menus/MenuCardDroppable.tsx" />
         <option value="$PROJECT_DIR$/src/scenes/menu/Menu.tsx" />
+        <option value="$PROJECT_DIR$/src/scenes/account/Login.tsx" />
+        <option value="$PROJECT_DIR$/src/scenes/account/Register.tsx" />
       </list>
     </option>
   </component>
@@ -192,9 +204,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="width" value="1738" />
-    <option name="height" value="1399" />
+    <option name="x" value="-8" />
+    <option name="width" value="1737" />
+    <option name="height" value="1398" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -215,34 +227,6 @@
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="menus" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="dragndrop" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -330,6 +314,8 @@
       <workItem from="1548274977943" duration="1295000" />
       <workItem from="1548320595043" duration="4610000" />
       <workItem from="1549478131820" duration="4756000" />
+      <workItem from="1549487602284" duration="208000" />
+      <workItem from="1549488074287" duration="3690000" />
     </task>
     <task id="LOCAL-00001" summary="Added wine types">
       <created>1547244494395</created>
@@ -349,7 +335,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126460000" />
+    <option name="totallyTimeSpent" value="130358000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="1389" height="1118" extended-state="0" />
@@ -384,8 +370,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added wijnen" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG3.json" />
-    <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG4.json" />
     <entry file="file://$PROJECT_DIR$/src/components/wines/WinesOG.json" />
     <entry file="file://$PROJECT_DIR$/src/components/wines/Wines.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -645,16 +629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/menu/Menus.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="37" column="50" lean-forward="true" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/menus/MenuForm/Config.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -719,33 +693,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/menus/MenuTabs.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="43" column="60" lean-forward="true" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#49#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/menu/IMenuTab.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/dragndrop/dragndrop-helper.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/menus/MenuCardDroppable.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
+        <state relative-caret-position="230">
           <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -753,13 +703,96 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/ui/dragndrop/dragndrop-helper.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="30" column="85" selection-start-line="30" selection-start-column="85" selection-end-line="30" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/menus/MenuTabs.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="588">
+          <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/account/Login.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="4" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/account/Register.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="42" lean-forward="true" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/menu/Menu.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="156" column="6" lean-forward="true" selection-start-line="156" selection-start-column="6" selection-end-line="156" selection-end-column="6" />
+        <state relative-caret-position="138">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#2748#3350#0" />
+            <element signature="n#!!block;n#IState#0" />
+            <element signature="e#818#1118#0" />
+            <element signature="e#830#1067#0" />
+            <element signature="e#838#910#0" />
+            <element signature="e#918#985#0" />
+            <element signature="e#993#1061#0" />
+            <element signature="e#1129#1189#0" />
+            <element signature="e#1210#1469#0" />
+            <element signature="e#1239#1323#0" />
+            <element signature="e#1329#1465#0" />
+            <element signature="e#1496#2485#0" />
+            <element signature="e#1681#1702#0" />
+            <element signature="e#1907#2228#0" />
+            <element signature="e#2041#2091#0" />
+            <element signature="e#2145#2180#0" />
+            <element signature="e#2234#2481#0" />
+            <element signature="e#2416#2473#0" />
+            <element signature="n#!!block;n#render#0;n#Menu#0" />
+            <element signature="e#2681#4340#0" />
+            <element signature="e#2695#2922#0" />
+            <element signature="e#2727#2907#0" />
+            <element signature="e#2767#2890#0" />
+            <element signature="e#2931#4327#0" />
+            <element signature="e#2986#4300#0" />
+            <element signature="e#3020#3622#0" />
+            <element signature="e#3061#3603#0" />
+            <element signature="e#3100#3582#0" />
+            <element signature="e#3146#3559#0" />
+            <element signature="e#3217#3366#0" />
+            <element signature="e#3241#3344#0" />
+            <element signature="e#3408#3533#0" />
+            <element signature="e#3635#4283#0" />
+            <element signature="e#3676#4264#0" />
+            <element signature="e#3715#4243#0" />
+            <element signature="e#3761#3969#0" />
+            <element signature="e#4064#4199#0" />
+            <element signature="e#4407#4452#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/menu/IMenuTab.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/menu/Menus.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="37" column="50" selection-start-line="37" selection-start-column="50" selection-end-line="37" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
           </folding>
         </state>
       </provider>
