@@ -5,12 +5,13 @@ interface IState {}
 interface IProps {
     title?: string,
     toggle: () => void;
-    content: any
+    onConfirm?: () => void;
+    body: any,
 }
 
 class ModalConfirm extends Component<IProps, IState> {
     render() {
-        const {title, toggle, content} = this.props;
+        const {title, onConfirm, toggle, body} = this.props;
 
         return (
             <Fragment>
@@ -22,11 +23,11 @@ class ModalConfirm extends Component<IProps, IState> {
                         </button>
                     </div>
                     <div className="modal-body">
-                        {content}
+                        {body}
                     </div>
                     <div className="modal-footer">
                         <button onClick={toggle} type="button" className="btn btn-danger" data-dismiss="modal">Annuleren</button>
-                        <button type="button" className="btn btn-primary">Bevestigen</button>
+                        <button onClick={onConfirm} type="button" className="btn btn-primary">Bevestigen</button>
                     </div>
                 </Modal>
             </Fragment>

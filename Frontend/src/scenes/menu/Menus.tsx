@@ -1,8 +1,8 @@
 import React, {Component, Fragment} from 'react';
-import Menu from "../components/cards/Menu";
-import NewMenu from "../components/cards/NewMenu";
-import NewMenuForm from "../components/menus/newMenuForm/NewMenuForm";
-import ModalConfirm from "../components/ui/modals/ModalConfirm";
+import Menu from "../../components/menus/Menu";
+import NewMenu from "../../components/menus/NewMenu";
+import NewMenuForm from "../../components/menus/MenuForm/NewMenuForm";
+import ModalConfirm from "../../components/ui/modals/ModalConfirm";
 
 export interface IMenu {
     id: number,
@@ -35,7 +35,7 @@ class Menus extends Component<IProps, IState> {
             <Fragment>
                 { showAddMenu && (
                     <ModalConfirm toggle={this.handleToggleModal}
-                                  content={<NewMenuForm onComplete={this.refresh} />}
+                                  body={<NewMenuForm onComplete={this.refresh} />}
                                   title={"Nieuwe wijnkaart"}
                     />
                 )}

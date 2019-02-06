@@ -10,7 +10,7 @@ interface IProps {
     wines: IWine[]
 }
 
-class CardDroppable extends Component<IProps, IState> {
+class MenuCardDroppable extends Component<IProps, IState> {
     render() {
         const { wines, id} = this.props;
 
@@ -31,4 +31,4 @@ class CardDroppable extends Component<IProps, IState> {
     }
 }
 
-export default CardDroppable;
+export default MenuCardDroppable;

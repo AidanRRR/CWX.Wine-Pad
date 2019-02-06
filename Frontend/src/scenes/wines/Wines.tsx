@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import WinesEditor from "../components/wines/WinesEditor";
+import WinesEditor from "../../components/wines/WinesEditor";
 
 class Wines extends Component {
     render() {

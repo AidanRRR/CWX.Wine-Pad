@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Field, Formik} from "formik";
-import {initialValues, IValues, validations} from "./NewMenuFormConfig";
+import {initialValues, IValues, validations} from "./Config";
 
 interface IState {}
 interface IProps {

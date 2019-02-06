@@ -1,31 +1,37 @@
 import React, {Component, Fragment} from 'react';
-import MenuTabForm from "./forms/CardForm";
 import ModalConfirm from "../ui/modals/ModalConfirm";
+import MenuTabForm from "./MenuTabForm/MenuTabForm";
+import {IMenuTab} from "../../scenes/menu/IMenuTab";
 
 interface IState {
-    showAddCard: boolean
+    showAddCard: boolean,
+    addCardConfirmed: boolean
 }
+
 interface IProps {
-    tabs: any,
+    tabs: IMenuTab[],
     activeTabId: any,
-    setActiveTab: (id) => void
+    setActiveTab: (id) => void,
+    onRefresh: () => void
 }
 
 class MenuTabs extends Component<IProps, IState> {
     state = {
-        showAddCard: false
+        showAddCard: false,
+        addCardConfirmed: false
     };
 
     render() {
-        const {tabs, activeTabId, setActiveTab} = this.props;
-        const {showAddCard} = this.state;
+        const {tabs, activeTabId, setActiveTab, onRefresh} = this.props;
+        const {showAddCard, addCardConfirmed} = this.state;
 
         return (
             <Fragment>
                 {showAddCard && (
                     <ModalConfirm toggle={this.handleToggleModal}
-                       content={<MenuTabForm onComplete={this.refresh} />}
-                       title={"Onderdeel toevoegen"}
+                                  onConfirm={() => {this.setState({addCardConfirmed: true})}}
+                                  body={<MenuTabForm confirmed={addCardConfirmed} onComplete={onRefresh}/>}
+                                  title={"Onderdeel toevoegen"}
                     />
                 )}
 
@@ -59,11 +65,14 @@ class MenuTabs extends Component<IProps, IState> {
         );
     }
 
-    handleToggleModal = () => {
-        this.setState({showAddCard: !(this.state.showAddCard)});
+    handleConfirmModal = () => {
+        const {showAddCard, addCardConfirmed} = this.state;
+        this.setState({showAddCard: !(showAddCard), addCardConfirmed: !(addCardConfirmed)});
     };
-
-    refresh = async () => {}
+    handleToggleModal = () => {
+        const { showAddCard } = this.state;
+        this.setState({showAddCard: !(showAddCard)});
+    };
 }
 
 export default MenuTabs;
