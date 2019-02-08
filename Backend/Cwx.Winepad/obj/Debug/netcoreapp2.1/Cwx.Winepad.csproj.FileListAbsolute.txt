@@ -1,0 +1,14 @@
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\bin\Debug\netcoreapp2.1\Cwx.Winepad.deps.json
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\bin\Debug\netcoreapp2.1\Cwx.Winepad.runtimeconfig.json
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\bin\Debug\netcoreapp2.1\Cwx.Winepad.runtimeconfig.dev.json
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\bin\Debug\netcoreapp2.1\Cwx.Winepad.dll
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\bin\Debug\netcoreapp2.1\Cwx.Winepad.pdb
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.csprojAssemblyReference.cache
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.csproj.CoreCompileInputs.cache
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.RazorAssemblyInfo.cache
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.RazorAssemblyInfo.cs
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.AssemblyInfoInputs.cache
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.AssemblyInfo.cs
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.RazorTargetAssemblyInfo.cache
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.dll
+C:\repos\CWX.Wine-Pad\Backend\Cwx.Winepad\Cwx.Winepad\obj\Debug\netcoreapp2.1\Cwx.Winepad.pdb
