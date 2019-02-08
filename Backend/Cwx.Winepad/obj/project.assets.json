@@ -11800,11 +11800,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\CWX.Wine-Pad\\Backend\\Cwx.Winepad\\Cwx.Winepad\\Cwx.Winepad.csproj",
+      "projectUniqueName": "C:\\repos\\CWX.Wine-Pad\\Backend\\Cwx.Winepad\\Cwx.Winepad.csproj",
       "projectName": "Cwx.Winepad",
-      "projectPath": "C:\\repos\\CWX.Wine-Pad\\Backend\\Cwx.Winepad\\Cwx.Winepad\\Cwx.Winepad.csproj",
+      "projectPath": "C:\\repos\\CWX.Wine-Pad\\Backend\\Cwx.Winepad\\Cwx.Winepad.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\CWX.Wine-Pad\\Backend\\Cwx.Winepad\\Cwx.Winepad\\obj\\",
+      "outputPath": "C:\\repos\\CWX.Wine-Pad\\Backend\\Cwx.Winepad\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
