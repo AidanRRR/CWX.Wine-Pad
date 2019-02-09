@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import WinesEditor from "../../components/wines/editor/WinesEditor";
-import { IWine } from "../../components/wines/Wine";
+import { IWine } from "../../models/Wine";
 import WineForm from "../../components/wines/editor/wineForm/WineForm";
 import ModalConfirm from "../../components/ui/modals/ModalConfirm";
 

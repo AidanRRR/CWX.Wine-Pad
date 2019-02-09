@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Droppable } from "react-beautiful-dnd";
 import { getListStyle } from "../../../ui/dragndrop/dragndrop-helper";
-import { IWine } from "../../../wines/Wine";
+import { IWine } from "../../../../models/Wine";
 import WineItemDraggable from "./wine/item/WineItemDraggable";
 
 interface IState {}

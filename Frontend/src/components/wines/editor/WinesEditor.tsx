@@ -26,7 +26,7 @@ import {
   searchMessages,
   tableMessages
 } from "../../ui/react-grid/Localization";
-import Wines from "../testdata/Wines.json";
+import Wines from "../../../models/Wines.json";
 import {
   Command,
   CommandButton,
@@ -34,7 +34,7 @@ import {
   getRowId,
   MultilineEditCell
 } from "../../ui/react-grid/Helpers";
-import { IWine } from "../Wine";
+import { IWine } from "../../../models/Wine";
 
 interface IProps {
   onEditWine: (wine: IWine) => void;
