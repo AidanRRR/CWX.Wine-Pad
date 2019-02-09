@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Droppable } from "react-beautiful-dnd";
-import { IWine } from "./Wine";
-import WineItemDraggable from "./WineItemDraggable";
+import { IWine } from "../../../../../wines/Wine";
+import WineItemDraggable from "../item/WineItemDraggable";
 import "./WineListDraggable.scss";
 
 interface IState {
