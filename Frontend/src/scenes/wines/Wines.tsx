@@ -1,10 +1,37 @@
 import React, { Component } from "react";
 import WinesEditor from "../../components/wines/editor/WinesEditor";
+import { IWine } from "../../components/wines/Wine";
+import WineForm from "../../components/wines/editor/wineForm/WineForm";
+import ModalConfirm from "../../components/ui/modals/ModalConfirm";
 
-class Wines extends Component {
+export interface IProps {}
+export interface IState {
+  editingWine: IWine | null;
+}
+
+class Wines extends Component<IProps, IState> {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      editingWine: null
+    };
+  }
+
   render() {
+    const { editingWine } = this.state;
+
     return (
       <div>
+        {editingWine && (
+          <ModalConfirm
+            toggle={this.handleToggleModal}
+            onConfirm={() => {}}
+            body={<WineForm wine={editingWine} />}
+            title={"Onderdeel toevoegen"}
+          />
+        )}
+
         <div className="row">
           <div className="col-sm-12">
             <div className="page-title-box text-left">
@@ -15,13 +42,21 @@ class Wines extends Component {
         <div className="row">
           <div className="card">
             <div className="card-body">
-              <WinesEditor />
+              <WinesEditor
+                onEditWine={(wine: IWine) => {
+                  this.setState({ editingWine: wine });
+                }}
+              />
             </div>
           </div>
         </div>
       </div>
     );
   }
+
+  handleToggleModal = () => {
+    this.setState({ editingWine: null });
+  };
 }
 
 export default Wines;

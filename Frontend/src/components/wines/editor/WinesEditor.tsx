@@ -6,8 +6,7 @@ import {
   IntegratedSorting,
   PagingState,
   SearchState,
-  SortingState,
-  DataTypeProvider
+  SortingState
 } from "@devexpress/dx-react-grid";
 import {
   Grid,
@@ -30,11 +29,16 @@ import {
 import Wines from "../testdata/Wines.json";
 import {
   Command,
+  CommandButton,
+  commandComponentProps,
   getRowId,
   MultilineEditCell
 } from "../../ui/react-grid/Helpers";
+import { IWine } from "../Wine";
 
-interface IProps {}
+interface IProps {
+  onEditWine: (wine: IWine) => void;
+}
 
 interface IState {
   rows: any;
@@ -43,21 +47,8 @@ interface IState {
   grouping: any;
   tableColumnExtensions: any;
   defaultColumnWidths: any;
+  editingWine: IWine | null;
 }
-
-const isMultiline = columnName => {
-  return columnName.name === "description";
-};
-
-const EditCell = props => {
-  const { column } = props;
-
-  if (isMultiline(column)) {
-    return <MultilineEditCell {...props} />;
-  } else {
-    return <TableEditRow.Cell {...props} />;
-  }
-};
 
 class WinesEditor extends React.Component<IProps, IState> {
   constructor(props) {
@@ -83,7 +74,8 @@ class WinesEditor extends React.Component<IProps, IState> {
       tableColumnExtensions: [{ columnName: "title", width: 300 }],
       grouping: [{ columnName: "title" }],
       pageSizes: [5, 10, 15, 0],
-      rows: Wines.Wines
+      rows: Wines.Wines,
+      editingWine: null
     };
 
     this.commitChanges = this.commitChanges.bind(this);
@@ -114,6 +106,17 @@ class WinesEditor extends React.Component<IProps, IState> {
     this.setState({ rows });
   }
 
+  changeEditingRowIds = editingRowIds => {
+    const { rows } = this.state;
+    const { onEditWine } = this.props;
+
+    const editingWine = rows[editingRowIds[0]];
+
+    onEditWine(editingWine);
+
+    this.setState({ editingWine });
+  };
+
   render() {
     const {
       rows,
@@ -127,8 +130,11 @@ class WinesEditor extends React.Component<IProps, IState> {
       <Grid rows={rows} columns={columns} getRowId={getRowId}>
         <SearchState defaultValue={""} />
         <SortingState />
+        <EditingState
+          onCommitChanges={() => {}}
+          onEditingRowIdsChange={this.changeEditingRowIds}
+        />
         <PagingState defaultCurrentPage={5} defaultPageSize={10} />
-        <EditingState onCommitChanges={this.commitChanges} />
         <IntegratedPaging />
         <IntegratedSorting />
         <IntegratedFiltering />
@@ -138,7 +144,6 @@ class WinesEditor extends React.Component<IProps, IState> {
         />
         <TableColumnResizing defaultColumnWidths={defaultColumnWidths} />
         <TableHeaderRow messages={headerRowMessages} showSortingControls />
-        <TableEditRow cellComponent={EditCell} />
         <Toolbar />
         <SearchPanel messages={searchMessages} />
         <TableEditColumn

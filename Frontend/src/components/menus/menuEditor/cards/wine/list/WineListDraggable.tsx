@@ -9,7 +9,7 @@ interface IState {
 }
 interface IProps {
   id: string;
-  wines: IWine[];
+  wines: IWine[] | any;
 }
 
 const filterField = (search, value) =>

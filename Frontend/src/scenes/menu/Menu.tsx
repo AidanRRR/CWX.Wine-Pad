@@ -13,7 +13,7 @@ import MenuCardDroppable from "../../components/menus/menuEditor/cards/MenuCardD
 interface IState {
   tabs: IMenuTab[];
   activeTabId: number;
-  allWines: IWine[];
+  allWines: IWine[] | any;
 }
 
 interface IProps extends RouterProps {}
