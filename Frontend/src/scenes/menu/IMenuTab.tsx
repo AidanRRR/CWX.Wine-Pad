@@ -1,7 +1,7 @@
-import {IWine} from "../../components/wines/Wine";
+import { IWine } from "../../models/Wine";
 
 export interface IMenuTab {
-    id: number,
-    name: string,
-    wines: IWine[]
+  id: number;
+  name: string;
+  wines: IWine[];
 }

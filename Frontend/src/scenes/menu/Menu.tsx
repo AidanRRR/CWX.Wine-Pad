@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import { DragDropContext } from "react-beautiful-dnd";
 import { move, reorder } from "../../components/ui/dragndrop/dragndrop-helper";
 import { Grid } from "@devexpress/dx-react-grid-bootstrap4";
-import Wines from "../../components/wines/Wines.json";
-import WineListDraggable from "../../components/wines/WineListDraggable";
-import { IWine } from "../../components/wines/Wine";
+import Wines from "../../models/Wines.json";
+import WineListDraggable from "../../components/menus/menuEditor/cards/wine/list/WineListDraggable";
+import { IWine } from "../../models/Wine";
 import { RouterProps } from "react-router";
 import { IMenuTab } from "./IMenuTab";
-import MenuTabs from "../../components/menus/MenuTabs";
-import MenuCardDroppable from "../../components/menus/MenuCardDroppable";
+import MenuTabs from "../../components/menus/menuEditor/menuTabs/MenuTabs";
+import MenuCardDroppable from "../../components/menus/menuEditor/cards/MenuCardDroppable";
 
 interface IState {
   tabs: IMenuTab[];
   activeTabId: number;
-  allWines: IWine[];
+  allWines: IWine[] | any;
 }
 
 interface IProps extends RouterProps {}

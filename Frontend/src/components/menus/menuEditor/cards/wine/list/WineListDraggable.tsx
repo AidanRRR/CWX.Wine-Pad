@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Droppable } from "react-beautiful-dnd";
-import { IWine } from "./Wine";
-import WineItemDraggable from "./WineItemDraggable";
+import { IWine } from "../../../../../../models/Wine";
+import WineItemDraggable from "../item/WineItemDraggable";
 import "./WineListDraggable.scss";
 
 interface IState {
@@ -9,7 +9,7 @@ interface IState {
 }
 interface IProps {
   id: string;
-  wines: IWine[];
+  wines: IWine[] | any;
 }
 
 const filterField = (search, value) =>
