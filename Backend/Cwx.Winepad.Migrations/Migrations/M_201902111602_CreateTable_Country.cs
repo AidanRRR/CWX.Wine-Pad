@@ -1,4 +1,6 @@
-﻿using FluentMigrator;
+﻿using Cwx.Winepad.Domain.Models;
+using Cwx.Winepad.Migrations.Tools;
+using FluentMigrator;
 
 namespace Cwx.Winepad.Migrations.Migrations
 {
@@ -7,12 +9,14 @@ namespace Cwx.Winepad.Migrations.Migrations
     {
         public override void Up()
         {
-            Create.Table("Country")
-                .WithColumn("Id").AsInt32().NotNullable().PrimaryKey().Identity()
+            Create.TableForEntity<Country>()
+                .WithPrimaryKeyColumn()
                 .WithColumn("Name").AsString()
                 .WithColumn("Code").AsString();
         }
 
-        public override void Down() { }
+        public override void Down()
+        {
+        }
     }
 }

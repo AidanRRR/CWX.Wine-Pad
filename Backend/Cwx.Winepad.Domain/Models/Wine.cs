@@ -1,8 +1,10 @@
-﻿namespace Cwx.Winepad.Domain.Models
+﻿using Cwx.Winepad.Infrastructure.Entities;
+
+namespace Cwx.Winepad.Domain.Models
 {
-    public class Wine
+    public class Wine : IEntity
     {
-        public int Id { get; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Region { get; set; }
         public int Year { get; set; }

@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwx.Winepad.Domain", "Cwx.W
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwx.Winepad.Data", "Cwx.Winepad.Data\Cwx.Winepad.Data.csproj", "{7DDCF467-A6FE-4BF2-9546-4F8E57EBEC96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwx.Winepad.Infrastructure", "Cwx.Winepad.Infrastructure\Cwx.Winepad.Infrastructure.csproj", "{564F0FC7-8A99-4783-A643-08C66D3AD547}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwx.Winepad.Infrastructure", "Cwx.Winepad.Infrastructure\Cwx.Winepad.Infrastructure.csproj", "{564F0FC7-8A99-4783-A643-08C66D3AD547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

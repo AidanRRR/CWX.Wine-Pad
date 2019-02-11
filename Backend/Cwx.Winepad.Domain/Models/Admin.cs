@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
+using Cwx.Winepad.Infrastructure.Entities;
 
 namespace Cwx.Winepad.Domain.Models
 {
-    public class Admin
+    public class Admin : IEntity
     {
-        public int Id { get; }
-        public string Name { get; set; }
-        public List<Card> Card { get; set; }
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public List<Card> Card { get; set; }
     }
 }
