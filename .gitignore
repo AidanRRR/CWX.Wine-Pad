@@ -7,6 +7,13 @@
 *.userosscache
 *.sln.docstates
 
+# Appsettings
+Backend/Cwx.Winepad.WebApi/appsettings.Development.json
+Backend/Cwx.Winepad.WebApi/appsettings.json
+
+Backend/Cwx.Winepad.Migrations/appsettings.Development.json
+Backend/Cwx.Winepad.Migrations/appsettings.json
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

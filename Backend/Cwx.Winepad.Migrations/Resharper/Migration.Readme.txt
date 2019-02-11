@@ -1,0 +1,7 @@
+﻿1. Resharper
+2. Tools
+3. Templates Explorer
+4. File Templates
+5. C#
+6. Import template
+7. Drag the migration from "Not in quicklist" to "In Quicklist" for keyboard shortcut
