@@ -4,8 +4,8 @@
     "windowsAuthentication": false, 
     "anonymousAuthentication": true, 
     "iisExpress": {
-      "applicationUrl": "http://localhost:59169",
-      "sslPort": 44320
+      "applicationUrl": "http://localhost:54858",
+      "sslPort": 44395
     }
   },
   "profiles": {
@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Cwx.Winepad": {
+    "Cwx.Winepad.WebApi": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

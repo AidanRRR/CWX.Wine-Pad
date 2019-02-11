@@ -10,9 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Swashbuckle.AspNetCore.Swagger;
 
-namespace Cwx.Winepad
+namespace Cwx.Winepad.WebApi
 {
     public class Startup
     {
@@ -27,23 +26,11 @@ namespace Cwx.Winepad
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-            services.AddSwaggerGen(c =>
-            {
-               c.SwaggerDoc("v1", new Info{Title = "Winepad", Version = "v1", Description = "Documentation for Winepad API"});
-            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseSwagger();
-            
-            app.UseSwaggerUI(c =>
-            {
-                //de endpoint is de url dat na de localhost komt
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

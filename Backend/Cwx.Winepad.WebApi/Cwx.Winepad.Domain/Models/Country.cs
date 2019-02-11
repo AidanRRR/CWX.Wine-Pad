@@ -1,4 +1,4 @@
-﻿namespace Cwx.Winepad.Models
+﻿namespace Cwx.Winepad.Domain.Models
 {
     public class Country
     {
