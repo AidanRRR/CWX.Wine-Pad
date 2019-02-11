@@ -13,8 +13,6 @@ namespace Cwx.Winepad.Migrations.Migrations
                 .WithColumn("Code").AsString();
         }
 
-        public override void Down()
-        {
-        }
+        public override void Down() { }
     }
 }

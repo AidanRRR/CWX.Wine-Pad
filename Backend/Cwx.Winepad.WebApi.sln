@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwx.Winepad.WebApi", "Cwx.Winepad.WebApi\Cwx.Winepad.WebApi.csproj", "{31C820B7-68BB-45FB-BF74-092E36BEF4B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwx.Winepad.WebApi", "Cwx.Winepad.WebApi\Cwx.Winepad.WebApi.csproj", "{31C820B7-68BB-45FB-BF74-092E36BEF4B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwx.Winepad.Migrations", "Cwx.Winepad.Migrations\Cwx.Winepad.Migrations.csproj", "{AF761348-9818-4A77-853B-1903524FC780}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwx.Winepad.Migrations", "Cwx.Winepad.Migrations\Cwx.Winepad.Migrations.csproj", "{AF761348-9818-4A77-853B-1903524FC780}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwx.Winepad.Domain", "Cwx.Winepad.Domain\Cwx.Winepad.Domain.csproj", "{7222D948-D425-4B92-9CBD-DE68A397597B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwx.Winepad.Domain", "Cwx.Winepad.Domain\Cwx.Winepad.Domain.csproj", "{7222D948-D425-4B92-9CBD-DE68A397597B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwx.Winepad.Data", "Cwx.Winepad.Data\Cwx.Winepad.Data.csproj", "{7DDCF467-A6FE-4BF2-9546-4F8E57EBEC96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cwx.Winepad.Data", "Cwx.Winepad.Data\Cwx.Winepad.Data.csproj", "{7DDCF467-A6FE-4BF2-9546-4F8E57EBEC96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cwx.Winepad.Infrastructure", "Cwx.Winepad.Infrastructure\Cwx.Winepad.Infrastructure.csproj", "{564F0FC7-8A99-4783-A643-08C66D3AD547}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7DDCF467-A6FE-4BF2-9546-4F8E57EBEC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DDCF467-A6FE-4BF2-9546-4F8E57EBEC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DDCF467-A6FE-4BF2-9546-4F8E57EBEC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{564F0FC7-8A99-4783-A643-08C66D3AD547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{564F0FC7-8A99-4783-A643-08C66D3AD547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{564F0FC7-8A99-4783-A643-08C66D3AD547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{564F0FC7-8A99-4783-A643-08C66D3AD547}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
