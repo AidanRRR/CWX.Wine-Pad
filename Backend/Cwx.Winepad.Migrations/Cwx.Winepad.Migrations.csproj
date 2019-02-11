@@ -33,6 +33,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Cwx.Winepad.Domain\Cwx.Winepad.Domain.csproj" />
+    <ProjectReference Include="..\Cwx.Winepad.Infrastructure\Cwx.Winepad.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
