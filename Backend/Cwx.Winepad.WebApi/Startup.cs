@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Cwx.Winepad.WebApi
@@ -30,14 +23,11 @@ namespace Cwx.Winepad.WebApi
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("V1", new Info{Title = "Winepad",
-                    Version = "V1",
+                c.SwaggerDoc("v1", new Info
+                {
+                    Title = "Winepad",
+                    Version = "v1",
                     Description = "APi documentation: Winepad",
-                    TermsOfService = "Thanks for using our products and services (“Services”). If you’re based in the " +
-                                     "European Economic Area or Switzerland, unless stated otherwise in any additional terms, " +
-                                     "the Services are provided by CWX Limited (“Crossworx”), a company incorporated and " +
-                                     "operating under the laws of Vloanderen (Registered Number: 368047), and located at Bomma House, " +
-                                     "Elsbos 2 Busnr 4, Edegem 2650, België."
                 });
             });
         }
@@ -45,12 +35,6 @@ namespace Cwx.Winepad.WebApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("swagger/v1/swagger.json", "API V1");
-            });
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -62,6 +46,13 @@ namespace Cwx.Winepad.WebApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("v1/swagger.json", "API V1");
+                c.RoutePrefix = string.Empty;
+            });
         }
     }
 }
