@@ -16,11 +16,10 @@ namespace Cwx.Winepad.Migrations.Migrations
                 .WithColumn("BusNumber").AsString().Nullable()
                 .WithColumn("City").AsString().NotNullable()
                 .WithColumn("PostalCode").AsString().NotNullable()
-                .WithColumnForForeignKeyTo<Address>().NotNullable();
+                .WithColumnForForeignKeyTo<Country>().NotNullable();
 
             Create.ForeignKey("FK_Address_Country")
                 .BetweenEntities<Address, Country>();
-
         }
 
         public override void Down()
