@@ -6,15 +6,5 @@
         {
             return typeof(TEntity).Name;
         }
-
-        public static string ForManyToMany<TEntityLeft, TEntityRight>()
-            where TEntityLeft : class, IEntity
-            where TEntityRight : class, IEntity
-        {
-            var tableNameLeft = ForEntity<TEntityLeft>();
-            var tableNameRight = ForEntity<TEntityRight>();
-
-            return $"{tableNameLeft}{tableNameRight}";
-        }
     }
 }

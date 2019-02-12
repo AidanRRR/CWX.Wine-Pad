@@ -1,7 +1,6 @@
 ﻿using Cwx.Winepad.Infrastructure.Entities;
 using Cwx.Winepad.Infrastructure.Entities.ModelBuilder;
 using FluentMigrator.Builders.Create.ForeignKey;
-using UZA.Recist.Infrastructure.Entities.ModelBuilder;
 
 namespace Cwx.Winepad.Migrations.Tools
 {

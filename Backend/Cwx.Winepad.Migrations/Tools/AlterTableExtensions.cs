@@ -2,7 +2,6 @@
 using Cwx.Winepad.Infrastructure.Entities.ModelBuilder;
 using FluentMigrator.Builders.Alter;
 using FluentMigrator.Builders.Alter.Table;
-using UZA.Recist.Infrastructure.Entities.ModelBuilder;
 
 namespace Cwx.Winepad.Migrations.Tools
 {
