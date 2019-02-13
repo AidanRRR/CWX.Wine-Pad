@@ -1,11 +1,26 @@
 import React, { Component, Fragment } from "react";
-import Splash, { Background } from "../../components/menu-designer/0/Splash";
+import Splash, {
+  Background,
+  TextAlignment,
+  TextElement
+} from "../../components/menu-designer/0/Splash";
 import Slider, { Range } from "rc-slider";
 import "rc-slider/assets/index.css";
 
 interface IProps {}
 interface IState {
   background: Background;
+  title: TextElement;
+  subTitle: TextElement;
+}
+
+enum Sliders {
+  BackgroundInput,
+  BackgroundImageOpacity,
+  TitleLeft,
+  TitleTop,
+  SubTitleLeft,
+  SubTitleTop
 }
 
 class MenuDesigner extends Component<IProps, IState> {
@@ -13,16 +28,68 @@ class MenuDesigner extends Component<IProps, IState> {
     background: {
       Opacity: 0.5,
       Url: "http://www.rypens.be/upload/files/bg_only.png"
+    },
+    title: {
+      Value: "Butcher's Dining",
+      Left: 0,
+      Top: 0
+    },
+    subTitle: {
+      Value: "Welkom",
+      Left: 0,
+      Top: 0
     }
   };
 
-  handleSliderChange = newValue => {
-    this.setState({
-      background: {
-        Url: this.state.background.Url,
-        Opacity: newValue
-      }
-    });
+  handleSliderChange = (slider: Sliders, newValue) => {
+    switch (slider) {
+      case Sliders.BackgroundInput:
+        break;
+      case Sliders.BackgroundImageOpacity:
+        this.setState({
+          background: {
+            Url: this.state.background.Url,
+            Opacity: newValue
+          }
+        });
+        break;
+      case Sliders.TitleLeft:
+        this.setState({
+          title: {
+            Top: this.state.title.Top,
+            Left: newValue,
+            Value: this.state.title.Value
+          }
+        });
+        break;
+      case Sliders.TitleTop:
+        this.setState({
+          title: {
+            Top: newValue,
+            Left: this.state.title.Left,
+            Value: this.state.title.Value
+          }
+        });
+        break;
+      case Sliders.SubTitleLeft:
+        this.setState({
+          subTitle: {
+            Top: this.state.subTitle.Top,
+            Left: newValue,
+            Value: this.state.subTitle.Value
+          }
+        });
+        break;
+      case Sliders.SubTitleTop:
+        this.setState({
+          subTitle: {
+            Top: newValue,
+            Left: this.state.subTitle.Left,
+            Value: this.state.subTitle.Value
+          }
+        });
+        break;
+    }
   };
 
   handleInputBackgroundImageChange = event => {
@@ -35,7 +102,7 @@ class MenuDesigner extends Component<IProps, IState> {
   };
 
   render() {
-    const { background } = this.state;
+    const { title, subTitle, background } = this.state;
 
     return (
       <div className={"row"} style={{ marginTop: 50 }}>
@@ -52,7 +119,12 @@ class MenuDesigner extends Component<IProps, IState> {
                 />
                 <li>Doorzichtigheid</li>
                 <Slider
-                  onChange={this.handleSliderChange}
+                  onChange={value => {
+                    this.handleSliderChange(
+                      Sliders.BackgroundImageOpacity,
+                      value
+                    );
+                  }}
                   value={background.Opacity}
                   min={0}
                   max={1}
@@ -74,7 +146,26 @@ class MenuDesigner extends Component<IProps, IState> {
               <br />
               <b>Titel</b>
               <ul>
-                <li>Positionering</li>
+                <li>Links</li>
+                <Slider
+                  onChange={value => {
+                    this.handleSliderChange(Sliders.TitleLeft, value);
+                  }}
+                  value={title.Left}
+                  min={0}
+                  max={100}
+                  step={1}
+                />
+                <li>Top</li>
+                <Slider
+                  onChange={value => {
+                    this.handleSliderChange(Sliders.TitleTop, value);
+                  }}
+                  value={title.Top}
+                  min={0}
+                  max={100}
+                  step={1}
+                />
                 <li>Kleur</li>
                 <li>Font</li>
                 <li>Grootte</li>
@@ -82,7 +173,26 @@ class MenuDesigner extends Component<IProps, IState> {
               <br />
               <b>Welkomsttekst</b>
               <ul>
-                <li>Positionering</li>
+                <li>Links</li>
+                <Slider
+                  onChange={value => {
+                    this.handleSliderChange(Sliders.SubTitleLeft, value);
+                  }}
+                  value={subTitle.Left}
+                  min={0}
+                  max={100}
+                  step={1}
+                />
+                <li>Top</li>
+                <Slider
+                  onChange={value => {
+                    this.handleSliderChange(Sliders.SubTitleTop, value);
+                  }}
+                  value={subTitle.Top}
+                  min={0}
+                  max={100}
+                  step={1}
+                />
                 <li>Kleur</li>
                 <li>Font</li>
                 <li>Grootte</li>
@@ -100,6 +210,8 @@ class MenuDesigner extends Component<IProps, IState> {
                   Opacity: background.Opacity,
                   Url: background.Url
                 }}
+                title={title}
+                subTitle={subTitle}
               />
             </div>
           </div>
