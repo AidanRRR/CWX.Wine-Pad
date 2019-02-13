@@ -4,17 +4,18 @@ using FluentMigrator;
 
 namespace Cwx.Winepad.Migrations.Migrations
 {
-    [Migration(201902121733)]
-    public class M_201902121733CreateTable_Card : Migration
+    [Migration(201902130941)]
+    public class M_201902130941_CreateTable_Card : Migration
     {
         public override void Up()
         {
             Create.TableForEntity<Card>()
-                .WithPrimaryKeyColumn();
+                .WithPrimaryKeyColumn()
+                .WithColumnForForeignKeyTo<Admin>().NotNullable();
 
             Create.ForeignKey("FK_Card_Admin")
                 .BetweenEntities<Card, Admin>();
-            
+
         }
 
         public override void Down()
