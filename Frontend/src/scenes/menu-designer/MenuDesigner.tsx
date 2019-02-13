@@ -1,11 +1,42 @@
 import React, { Component, Fragment } from "react";
-import Splash from "../../components/menu-designer/0/Splash";
+import Splash, { Background } from "../../components/menu-designer/0/Splash";
+import Slider, { Range } from "rc-slider";
+import "rc-slider/assets/index.css";
 
 interface IProps {}
-interface IState {}
+interface IState {
+  background: Background;
+}
 
 class MenuDesigner extends Component<IProps, IState> {
+  state: IState = {
+    background: {
+      Opacity: 0.5,
+      Url: "http://www.rypens.be/upload/files/bg_only.png"
+    }
+  };
+
+  handleSliderChange = newValue => {
+    this.setState({
+      background: {
+        Url: this.state.background.Url,
+        Opacity: newValue
+      }
+    });
+  };
+
+  handleInputBackgroundImageChange = event => {
+    this.setState({
+      background: {
+        Url: event.target.value,
+        Opacity: this.state.background.Opacity
+      }
+    });
+  };
+
   render() {
+    const { background } = this.state;
+
     return (
       <div className={"row"} style={{ marginTop: 50 }}>
         <div className={"col-md-4"}>
@@ -15,7 +46,18 @@ class MenuDesigner extends Component<IProps, IState> {
               <b>Achtergrond afbeelding</b>
               <ul>
                 <li>Afbeelding</li>
+                <input
+                  onChange={this.handleInputBackgroundImageChange}
+                  value={background.Url}
+                />
                 <li>Doorzichtigheid</li>
+                <Slider
+                  onChange={this.handleSliderChange}
+                  value={background.Opacity}
+                  min={0}
+                  max={1}
+                  step={0.01}
+                />
               </ul>
               <br />
               <b>Achtergrondkleur</b>
@@ -55,8 +97,8 @@ class MenuDesigner extends Component<IProps, IState> {
               <h4 className="card-title font-20 mt-0">Preview</h4>
               <Splash
                 background={{
-                  Opacity: 0.5,
-                  Url: "http://www.rypens.be/upload/files/bg_only.png"
+                  Opacity: background.Opacity,
+                  Url: background.Url
                 }}
               />
             </div>

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-type Background = {
+export type Background = {
   Url: string;
   Opacity: number;
 };
@@ -24,9 +24,7 @@ class Splash extends Component<IProps, IState> {
             backgroundSize: "cover",
             opacity: background.Opacity
           }}
-        >
-          hello
-        </div>
+        />
       </div>
     );
   }
