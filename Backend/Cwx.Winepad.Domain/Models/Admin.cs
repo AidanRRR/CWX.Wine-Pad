@@ -5,8 +5,8 @@ namespace Cwx.Winepad.Domain.Models
 {
     public class Admin : IEntity
     {
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public List<Card> Card { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public List<Card> Card { get; set; }
     }
 }

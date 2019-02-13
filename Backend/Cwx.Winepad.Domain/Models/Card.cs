@@ -7,6 +7,5 @@ namespace Cwx.Winepad.Domain.Models
     {
         public int Id { get; set; }
         public List<Wine> Wines { get; set; }
-        public Admin Admin { get; set; }
     }
 }
