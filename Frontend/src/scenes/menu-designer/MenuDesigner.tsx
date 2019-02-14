@@ -1,15 +1,17 @@
 import React, { Component, Fragment } from "react";
 import Splash, {
   Background,
-  TextAlignment,
+  BackgroundColor,
   TextElement
 } from "../../components/menu-designer/0/Splash";
 import Slider, { Range } from "rc-slider";
+import { SketchPicker } from "react-color";
 import "rc-slider/assets/index.css";
 
 interface IProps {}
 interface IState {
   background: Background;
+  backgroundColor: BackgroundColor;
   title: TextElement;
   subTitle: TextElement;
 }
@@ -17,6 +19,7 @@ interface IState {
 enum Sliders {
   BackgroundInput,
   BackgroundImageOpacity,
+  BackgroundColorOpacity,
   TitleLeft,
   TitleTop,
   SubTitleLeft,
@@ -28,6 +31,10 @@ class MenuDesigner extends Component<IProps, IState> {
     background: {
       Opacity: 0.5,
       Url: "http://www.rypens.be/upload/files/bg_only.png"
+    },
+    backgroundColor: {
+      ColorCode: "#212529",
+      Opacity: 0
     },
     title: {
       Value: "Butcher's Dining",
@@ -89,6 +96,14 @@ class MenuDesigner extends Component<IProps, IState> {
           }
         });
         break;
+      case Sliders.BackgroundColorOpacity:
+        this.setState({
+          backgroundColor: {
+            ColorCode: this.state.backgroundColor.ColorCode,
+            Opacity: newValue
+          }
+        });
+        break;
     }
   };
 
@@ -101,8 +116,18 @@ class MenuDesigner extends Component<IProps, IState> {
     });
   };
 
+  handleColorPickerChange = color => {
+    console.log(color);
+    this.setState({
+      backgroundColor: {
+        ColorCode: color.hex,
+        Opacity: this.state.backgroundColor.Opacity
+      }
+    });
+  };
+
   render() {
-    const { title, subTitle, background } = this.state;
+    const { title, subTitle, background, backgroundColor } = this.state;
 
     return (
       <div className={"row"} style={{ marginTop: 50 }}>
@@ -135,7 +160,23 @@ class MenuDesigner extends Component<IProps, IState> {
               <b>Achtergrondkleur</b>
               <ul>
                 <li>Kleur</li>
+                <SketchPicker
+                  color={backgroundColor.ColorCode}
+                  onChangeComplete={this.handleColorPickerChange}
+                />
                 <li>Doorzichtigheid</li>
+                <Slider
+                  onChange={value => {
+                    this.handleSliderChange(
+                      Sliders.BackgroundColorOpacity,
+                      value
+                    );
+                  }}
+                  value={backgroundColor.Opacity}
+                  min={0}
+                  max={1}
+                  step={0.01}
+                />
               </ul>
               <br />
               <b>Logo</b>
@@ -206,10 +247,8 @@ class MenuDesigner extends Component<IProps, IState> {
             <div className="card-body">
               <h4 className="card-title font-20 mt-0">Preview</h4>
               <Splash
-                background={{
-                  Opacity: background.Opacity,
-                  Url: background.Url
-                }}
+                background={background}
+                backgroundColor={backgroundColor}
                 title={title}
                 subTitle={subTitle}
               />
