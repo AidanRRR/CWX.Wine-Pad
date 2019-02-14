@@ -2,9 +2,10 @@
 
 namespace Cwx.Winepad.Domain.Models
 {
-    public class Type : IEntity
+    public class CardSegment : IEntity
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public Card Card { get; set; }
+        public Segment Segment { get; set; }
     }
 }

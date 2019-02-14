@@ -11,11 +11,7 @@ namespace Cwx.Winepad.Migrations.Migrations
         {
             Create.TableForEntity<Segment>()
                 .WithPrimaryKeyColumn()
-                .WithColumn("Name").AsString().NotNullable()
-                .WithColumnForForeignKeyTo<Card>();
-
-            Create.ForeignKey("FK_Segment_Card")
-                .BetweenEntities<Segment, Card>();
+                .WithColumn("Name").AsString().NotNullable();
         }
 
         public override void Down()

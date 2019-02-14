@@ -10,12 +10,7 @@ namespace Cwx.Winepad.Migrations.Migrations
         public override void Up()
         {
             Create.TableForEntity<Card>()
-                .WithPrimaryKeyColumn()
-                .WithColumnForForeignKeyTo<Admin>().NotNullable();
-                
-
-            Create.ForeignKey("FK_Card_Admin")
-                .BetweenEntities<Card, Admin>();
+                .WithPrimaryKeyColumn();
         }
 
         public override void Down()

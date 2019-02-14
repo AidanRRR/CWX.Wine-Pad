@@ -1,7 +1,7 @@
 ﻿using System;
+using Cwx.Winepad.Domain.Models;
 using Cwx.Winepad.Migrations.Tools;
 using FluentMigrator;
-using Type = Cwx.Winepad.Domain.Models.Type;
 
 namespace Cwx.Winepad.Migrations.Migrations
 {
@@ -10,7 +10,7 @@ namespace Cwx.Winepad.Migrations.Migrations
     {
         public override void Up()
         {
-            Create.TableForEntity<Type>()
+            Create.TableForEntity<WineType>()
                 .WithPrimaryKeyColumn()
                 .WithColumn("Name").AsString().NotNullable();
         }

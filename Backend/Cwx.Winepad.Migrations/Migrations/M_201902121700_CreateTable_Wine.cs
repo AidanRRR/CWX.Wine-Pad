@@ -11,19 +11,25 @@ namespace Cwx.Winepad.Migrations.Migrations
         {
             Create.TableForEntity<Wine>()
                 .WithPrimaryKeyColumn()
-                .WithColumn("Title").AsString().NotNullable()
-                .WithColumn("Region").AsString().NotNullable()
-                .WithColumn("Year").AsInt32().NotNullable()
-                .WithColumn("Price").AsDecimal().NotNullable()
+                .WithColumn("Name").AsString().NotNullable()
+                .WithColumn("Year").AsInt32().Nullable()
                 .WithColumn("Description").AsString().Nullable()
-                .WithColumnForForeignKeyTo<Country>().NotNullable()
-                .WithColumnForForeignKeyTo<Type>().NotNullable();
+                .WithColumn("GlassPrice").AsDecimal().Nullable()
+                .WithColumn("BottlePrice").AsDecimal().Nullable()
+                .WithColumn("CarafePrice").AsDecimal().Nullable()
+                .WithColumnForForeignKeyTo<WineType>().NotNullable()
+                .WithColumnForForeignKeyTo<Region>().Nullable()
+                .WithColumnForForeignKeyTo<Measure>().Nullable();
 
-            Create.ForeignKey("FK_Wine_Country")
-                .BetweenEntities<Wine, Country>();
 
             Create.ForeignKey("FK_Wine_Type")
-                .BetweenEntities<Wine, Type>();
+                .BetweenEntities<Wine, WineType>();
+
+            Create.ForeignKey("DK_Wine_Region")
+                .BetweenEntities<Wine, Region>();
+
+            Create.ForeignKey("FK_Wine_Measure")
+                .BetweenEntities<Wine, Measure>();
         }
 
         public override void Down()
