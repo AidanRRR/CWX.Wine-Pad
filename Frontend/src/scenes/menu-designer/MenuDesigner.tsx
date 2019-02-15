@@ -25,6 +25,11 @@ enum Sliders {
   SubTitleLeft,
   SubTitleTop
 }
+enum ColorPickers {
+  Background = 0,
+  Title = 1,
+  WelcomeText = 2
+}
 
 class MenuDesigner extends Component<IProps, IState> {
   state: IState = {
@@ -39,12 +44,14 @@ class MenuDesigner extends Component<IProps, IState> {
     title: {
       Value: "Butcher's Dining",
       Left: 0,
-      Top: 0
+      Top: 0,
+      Color: "#212529"
     },
     subTitle: {
       Value: "Welkom",
       Left: 0,
-      Top: 0
+      Top: 0,
+      Color: "#212529"
     }
   };
 
@@ -65,7 +72,8 @@ class MenuDesigner extends Component<IProps, IState> {
           title: {
             Top: this.state.title.Top,
             Left: newValue,
-            Value: this.state.title.Value
+            Value: this.state.title.Value,
+            Color: this.state.title.Color
           }
         });
         break;
@@ -74,7 +82,8 @@ class MenuDesigner extends Component<IProps, IState> {
           title: {
             Top: newValue,
             Left: this.state.title.Left,
-            Value: this.state.title.Value
+            Value: this.state.title.Value,
+            Color: this.state.title.Color
           }
         });
         break;
@@ -83,7 +92,8 @@ class MenuDesigner extends Component<IProps, IState> {
           subTitle: {
             Top: this.state.subTitle.Top,
             Left: newValue,
-            Value: this.state.subTitle.Value
+            Value: this.state.subTitle.Value,
+            Color: this.state.title.Color
           }
         });
         break;
@@ -92,7 +102,8 @@ class MenuDesigner extends Component<IProps, IState> {
           subTitle: {
             Top: newValue,
             Left: this.state.subTitle.Left,
-            Value: this.state.subTitle.Value
+            Value: this.state.subTitle.Value,
+            Color: this.state.title.Color
           }
         });
         break;
@@ -116,14 +127,40 @@ class MenuDesigner extends Component<IProps, IState> {
     });
   };
 
-  handleColorPickerChange = color => {
-    console.log(color);
-    this.setState({
-      backgroundColor: {
-        ColorCode: color.hex,
-        Opacity: this.state.backgroundColor.Opacity
+  handleColorPickerChange = (colorPicker: ColorPickers, color) => {
+    console.log(colorPicker);
+    switch (colorPicker) {
+      case ColorPickers.Background:
+        this.setState({
+          backgroundColor: {
+            ColorCode: color.hex,
+            Opacity: this.state.backgroundColor.Opacity
+          }
+        });
+        break;
+      case ColorPickers.Title: {
+        this.setState({
+          title: {
+            Left: this.state.title.Left,
+            Top: this.state.title.Top,
+            Value: this.state.title.Value,
+            Color: color.hex
+          }
+        });
+        break;
       }
-    });
+      case ColorPickers.WelcomeText: {
+        this.setState({
+          subTitle: {
+            Left: this.state.title.Left,
+            Top: this.state.title.Top,
+            Value: this.state.title.Value,
+            Color: color.hex
+          }
+        });
+        break;
+      }
+    }
   };
 
   render() {
@@ -162,7 +199,12 @@ class MenuDesigner extends Component<IProps, IState> {
                 <li>Kleur</li>
                 <SketchPicker
                   color={backgroundColor.ColorCode}
-                  onChangeComplete={this.handleColorPickerChange}
+                  onChangeComplete={color => {
+                    this.handleColorPickerChange(
+                      ColorPickers.Background,
+                      color
+                    );
+                  }}
                 />
                 <li>Doorzichtigheid</li>
                 <Slider
@@ -208,6 +250,12 @@ class MenuDesigner extends Component<IProps, IState> {
                   step={1}
                 />
                 <li>Kleur</li>
+                <SketchPicker
+                  color={title.Color}
+                  onChangeComplete={color => {
+                    this.handleColorPickerChange(ColorPickers.Title, color);
+                  }}
+                />
                 <li>Font</li>
                 <li>Grootte</li>
               </ul>
@@ -235,6 +283,15 @@ class MenuDesigner extends Component<IProps, IState> {
                   step={1}
                 />
                 <li>Kleur</li>
+                <SketchPicker
+                  color={subTitle.Color}
+                  onChangeComplete={color => {
+                    this.handleColorPickerChange(
+                      ColorPickers.WelcomeText,
+                      color
+                    );
+                  }}
+                />
                 <li>Font</li>
                 <li>Grootte</li>
                 <li>Border</li>

@@ -14,6 +14,7 @@ export type TextElement = {
   Value: string;
   Top: number;
   Left: number;
+  Color: string;
 };
 
 interface IProps {
@@ -60,7 +61,8 @@ class Splash extends Component<IProps, IState> {
             style={{
               position: "absolute",
               left: `${title.Left}%`,
-              top: `${title.Top}%`
+              top: `${title.Top}%`,
+              color: `${title.Color}`
             }}
           >
             <h1>{title.Value}</h1>
@@ -69,7 +71,8 @@ class Splash extends Component<IProps, IState> {
             style={{
               position: "absolute",
               left: `${subTitle.Left}%`,
-              top: `${subTitle.Top}%`
+              top: `${subTitle.Top}%`,
+              color: `${subTitle.Color}`
             }}
           >
             <p>{subTitle.Value}</p>
