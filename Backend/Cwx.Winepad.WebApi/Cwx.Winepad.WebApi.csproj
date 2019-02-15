@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Cwx.Winepad.Data\Cwx.Winepad.Data.csproj" />
     <ProjectReference Include="..\Cwx.Winepad.Domain\Cwx.Winepad.Domain.csproj" />
   </ItemGroup>
 

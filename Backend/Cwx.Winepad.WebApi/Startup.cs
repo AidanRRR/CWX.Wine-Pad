@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using Cwx.Winepad.Data.DAL;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Swashbuckle.AspNetCore.Swagger;
@@ -30,6 +33,9 @@ namespace Cwx.Winepad.WebApi
                     Description = "APi documentation: Winepad",
                 });
             });
+
+            services.AddDbContext<WinePadContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("Database")));
         }
 
 
@@ -53,6 +59,7 @@ namespace Cwx.Winepad.WebApi
             {
                 c.SwaggerEndpoint("v1/swagger.json", "API V1");
                 c.RoutePrefix = string.Empty;
+                
             });
         }
     }

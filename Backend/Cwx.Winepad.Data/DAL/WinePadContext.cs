@@ -6,6 +6,12 @@ namespace Cwx.Winepad.Data.DAL
 {
     public class WinePadContext : DbContext
     {
+        //DbContext MOET een instantie hebben van DbCOntextOptions om te kunnen werken. 
+        //Die opties steken in de Startup.cs
+        public WinePadContext(DbContextOptions<WinePadContext> options) : base(options)
+        {
+            
+        }
     
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
