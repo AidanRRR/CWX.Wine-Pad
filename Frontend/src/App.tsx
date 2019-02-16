@@ -4,12 +4,18 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import "@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css";
 
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import Wines from "./scenes/wines/Wines";
 import Menus from "./scenes/menu/Menus";
 import Menu from "./scenes/menu/Menu";
 import MenuDesigner from "./scenes/menu-designer/MenuDesigner";
+import Page, { Grid, GridColumn } from "@atlaskit/page";
+import {
+  createTheme,
+  AtlaskitThemeProvider,
+  themed,
+  colors
+} from "@atlaskit/theme";
+import Header from "./components/Header";
 
 const Routes = () => {
   return (
@@ -26,17 +32,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Router>
-          <div>
-            <div className="wrapper">
-              <div className="container-fluid">
-                <Header />
-                <Routes />
-                <Footer />
-              </div>
+        <AtlaskitThemeProvider mode={"dark"}>
+          <Router>
+            <div>
+              <Header />
+              <Routes />
             </div>
-          </div>
-        </Router>
+          </Router>
+        </AtlaskitThemeProvider>
       </div>
     );
   }
