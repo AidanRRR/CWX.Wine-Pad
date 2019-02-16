@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/components/menus/menuEditor/cards/wine/item/WineItemDraggable.tsx" line="16" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,104 +17,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/wines/editor/wineForm/WineForm.tsx">
+        <entry file="file://$PROJECT_DIR$/src/App.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="365">
+              <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
-                <element signature="n#!!block;n#createInitialValues#0;n#WineForm#0" />
+                <element signature="e#0#51#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Header.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/scenes/menu-designer/MenuDesigner.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/Navbar.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="256" column="40" selection-start-line="256" selection-start-column="40" selection-end-line="256" selection-end-column="40" />
+            <state relative-caret-position="161">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
-                <element signature="n#!!block;n#IState#0" />
-                <element signature="n#Sliders#0" />
-                <element signature="e#589#929#0" />
-                <element signature="e#569#655#0" />
-                <element signature="e#716#768#0" />
-                <element signature="e#668#736#0" />
-                <element signature="e#752#810#0" />
-                <element signature="e#871#2067#0" />
-                <element signature="e#1018#2307#0" />
-                <element signature="e#901#945#0" />
-                <element signature="e#952#1149#0" />
-                <element signature="e#1011#1132#0" />
-                <element signature="e#1035#1122#0" />
-                <element signature="e#1156#1370#0" />
-                <element signature="e#1202#1353#0" />
-                <element signature="e#1221#1343#0" />
-                <element signature="e#1377#1591#0" />
-                <element signature="e#1422#1574#0" />
-                <element signature="e#1441#1564#0" />
-                <element signature="e#1598#1824#0" />
-                <element signature="e#1647#1807#0" />
-                <element signature="e#1669#1797#0" />
-                <element signature="e#1972#2198#0" />
-                <element signature="e#1879#2040#0" />
-                <element signature="e#1901#2030#0" />
-                <element signature="e#2205#2424#0" />
-                <element signature="e#2264#2407#0" />
-                <element signature="e#2293#2397#0" />
-                <element signature="e#2116#2257#0" />
-                <element signature="e#2136#2251#0" />
-                <element signature="e#2156#2245#0" />
-                <element signature="e#3014#3540#0" />
-                <element signature="e#3020#3825#0" />
-                <element signature="e#2829#2882#0" />
-                <element signature="e#2885#3007#0" />
-                <element signature="e#2910#3001#0" />
-                <element signature="e#3267#3544#0" />
-                <element signature="e#3096#3260#0" />
-                <element signature="e#3163#3328#0" />
-                <element signature="e#3542#3817#0" />
-                <element signature="e#3597#3794#0" />
-                <element signature="e#3619#3784#0" />
-                <element signature="e#3207#3838#0" />
-                <element signature="e#3264#3397#0" />
-                <element signature="e#3455#3818#0" />
-                <element signature="e#3500#3671#0" />
-                <element signature="e#3819#4175#0" />
-                <element signature="e#3864#4035#0" />
-                <element signature="e#3500#3596#0" />
-                <element signature="e#3711#3986#0" />
-                <element signature="e#3756#3848#0" />
-                <element signature="e#4032#4305#0" />
-                <element signature="e#4077#4168#0" />
-                <element signature="e#4542#4823#0" />
-                <element signature="e#4587#4682#0" />
-                <element signature="e#4869#5148#0" />
-                <element signature="e#4914#5008#0" />
-                <element signature="e#5354#5814#0" />
-                <element signature="e#5393#5799#0" />
-                <element signature="e#5430#5782#0" />
-                <element signature="e#5539#5763#0" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/menu-designer/0/Splash.tsx">
+        <entry file="file://$PROJECT_DIR$/src/components/Topnav.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/csstype/index.d.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="27679" column="15" lean-forward="true" selection-start-line="27679" selection-start-column="15" selection-end-line="27679" selection-end-column="15" />
+            <state relative-caret-position="207">
+              <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -132,7 +69,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>IProps</find>
       <find>console.log(mat</find>
       <find>Nieuwe wijnkaart</find>
       <find>Kaart aanpas</find>
@@ -162,6 +98,7 @@
       <find>handlecolorpicker</find>
       <find>color</find>
       <find>Kleur</find>
+      <find>#283179</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -176,8 +113,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/wines/WinesEditor.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Header.tsx" />
         <option value="$PROJECT_DIR$/src/components/cards/NewMenu.tsx" />
         <option value="$PROJECT_DIR$/src/components/menus/newMenuForm/NewMenuFormConfig.ts" />
         <option value="$PROJECT_DIR$/src/components/menus/newMenuForm/NewMenuForm.tsx" />
@@ -224,9 +159,11 @@
         <option value="$PROJECT_DIR$/src/components/ui/forms/FormFields.tsx" />
         <option value="$PROJECT_DIR$/src/components/wines/editor/wineForm/WineForm.tsx" />
         <option value="$PROJECT_DIR$/src/App.tsx" />
-        <option value="$PROJECT_DIR$/src/components/Navbar.tsx" />
         <option value="$PROJECT_DIR$/src/components/menu-designer/0/Splash.tsx" />
         <option value="$PROJECT_DIR$/src/scenes/menu-designer/MenuDesigner.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Topnav.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Header.tsx" />
+        <option value="$PROJECT_DIR$/src/components/Navbar.tsx" />
       </list>
     </option>
   </component>
@@ -237,9 +174,9 @@
     <auto-save>true</auto-save>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="width" value="1738" />
-    <option name="height" value="1399" />
+    <option name="x" value="-10" />
+    <option name="width" value="1739" />
+    <option name="height" value="1400" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -249,13 +186,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -268,30 +209,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="menu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="scenes" type="462c0819:PsiDirectoryNode" />
-              <item name="menu-designer" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,6 +288,7 @@
       <workItem from="1549717037441" duration="10489000" />
       <workItem from="1550088860913" duration="7188000" />
       <workItem from="1550178542488" duration="4909000" />
+      <workItem from="1550341065675" duration="817000" />
     </task>
     <task id="LOCAL-00001" summary="Added wine types">
       <created>1547244494395</created>
@@ -385,13 +308,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155579000" />
+    <option name="totallyTimeSpent" value="156396000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1390" height="1119" extended-state="0" />
+    <frame x="-8" y="0" width="1391" height="1120" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28824833" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28803545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -406,7 +329,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27963525" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.27935222" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -421,16 +344,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added wijnen" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react-scripts/lib/react-app.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/images/new-menu-example.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -695,36 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Header.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Navbar.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/ui/forms/FormFields.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -768,7 +651,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/wines/editor/wineForm/WineForm.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="23">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
@@ -777,86 +660,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/csstype/index.d.ts">
+    <entry file="file://$PROJECT_DIR$/src/scenes/menu-designer/MenuDesigner.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="27679" column="15" lean-forward="true" selection-start-line="27679" selection-start-column="15" selection-end-line="27679" selection-end-column="15" />
+        <state relative-caret-position="147">
+          <caret line="253" column="25" lean-forward="true" selection-start-line="253" selection-start-column="25" selection-end-line="253" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#IState#0" />
+            <element signature="n#Sliders#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="2574" column="14" lean-forward="true" selection-start-line="2574" selection-start-column="14" selection-end-line="2574" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/menu-designer/0/Splash.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="410">
-          <caret line="74" column="40" lean-forward="true" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
+          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/menu-designer/MenuDesigner.tsx">
+    <entry file="file://$PROJECT_DIR$/node_modules/csstype/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="256" column="40" selection-start-line="256" selection-start-column="40" selection-end-line="256" selection-end-column="40" />
+        <state relative-caret-position="253">
+          <caret line="27679" column="15" selection-start-line="27679" selection-start-column="15" selection-end-line="27679" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding>
-            <element signature="n#!!block;n#IState#0" />
-            <element signature="n#Sliders#0" />
-            <element signature="e#589#929#0" />
-            <element signature="e#569#655#0" />
-            <element signature="e#716#768#0" />
-            <element signature="e#668#736#0" />
-            <element signature="e#752#810#0" />
-            <element signature="e#871#2067#0" />
-            <element signature="e#1018#2307#0" />
-            <element signature="e#901#945#0" />
-            <element signature="e#952#1149#0" />
-            <element signature="e#1011#1132#0" />
-            <element signature="e#1035#1122#0" />
-            <element signature="e#1156#1370#0" />
-            <element signature="e#1202#1353#0" />
-            <element signature="e#1221#1343#0" />
-            <element signature="e#1377#1591#0" />
-            <element signature="e#1422#1574#0" />
-            <element signature="e#1441#1564#0" />
-            <element signature="e#1598#1824#0" />
-            <element signature="e#1647#1807#0" />
-            <element signature="e#1669#1797#0" />
-            <element signature="e#1972#2198#0" />
-            <element signature="e#1879#2040#0" />
-            <element signature="e#1901#2030#0" />
-            <element signature="e#2205#2424#0" />
-            <element signature="e#2264#2407#0" />
-            <element signature="e#2293#2397#0" />
-            <element signature="e#2116#2257#0" />
-            <element signature="e#2136#2251#0" />
-            <element signature="e#2156#2245#0" />
-            <element signature="e#3014#3540#0" />
-            <element signature="e#3020#3825#0" />
-            <element signature="e#2829#2882#0" />
-            <element signature="e#2885#3007#0" />
-            <element signature="e#2910#3001#0" />
-            <element signature="e#3267#3544#0" />
-            <element signature="e#3096#3260#0" />
-            <element signature="e#3163#3328#0" />
-            <element signature="e#3542#3817#0" />
-            <element signature="e#3597#3794#0" />
-            <element signature="e#3619#3784#0" />
-            <element signature="e#3207#3838#0" />
-            <element signature="e#3264#3397#0" />
-            <element signature="e#3455#3818#0" />
-            <element signature="e#3500#3671#0" />
-            <element signature="e#3819#4175#0" />
-            <element signature="e#3864#4035#0" />
-            <element signature="e#3500#3596#0" />
-            <element signature="e#3711#3986#0" />
-            <element signature="e#3756#3848#0" />
-            <element signature="e#4032#4305#0" />
-            <element signature="e#4077#4168#0" />
-            <element signature="e#4542#4823#0" />
-            <element signature="e#4587#4682#0" />
-            <element signature="e#4869#5148#0" />
-            <element signature="e#4914#5008#0" />
-            <element signature="e#5354#5814#0" />
-            <element signature="e#5393#5799#0" />
-            <element signature="e#5430#5782#0" />
-            <element signature="e#5539#5763#0" />
+            <element signature="e#0#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Header.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Topnav.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Navbar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
