@@ -6,7 +6,7 @@ class Header extends Component {
   render() {
     return (
       <header id="topnav">
-        {/*<Topnav />*/}
+        <Topnav />
         <Navbar />
       </header>
     );

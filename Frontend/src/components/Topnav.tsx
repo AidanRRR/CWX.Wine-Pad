@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import logo from "../assets/images/logo.png";
+import logo from "../assets/images/cwx.svg";
 
 class Topnav extends Component {
   render() {
@@ -7,12 +7,19 @@ class Topnav extends Component {
       <div className="topnav">
         <div className="topbar-main">
           <div className="container-fluid">
-            <div className="logo">
-              <a className="logo">
-                <img src={logo} alt="" className="logo-large" />
-              </a>
+            <div className={"row"}>
+              <div className={"col-md-4"}>
+                <div className="logo">
+                  <a className="logo">
+                    <img src={logo} alt="" className="logo-large" />
+                  </a>
+                </div>
+              </div>
+              <div className={"col-md-4 text-center"}>
+                <h1>Winepad</h1>
+              </div>
+              <div className={"col-md-4"} />
             </div>
-            <div className="clearfix" />
           </div>
         </div>
       </div>

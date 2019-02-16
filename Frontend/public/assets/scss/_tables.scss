@@ -7,6 +7,17 @@
   margin-bottom: 10px;
 }
 
+.table thead th {
+  //border-top: 2px solid $brown-light;
+  border-top: none !important;
+  border-bottom: 2px solid $brown-light;
+}
+
+.table td {
+  //border-top: 1px solid $brown-light;
+  border-top: none !important;
+}
+
 th {
   font-weight: 500;
 }
