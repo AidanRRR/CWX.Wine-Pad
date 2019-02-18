@@ -23,16 +23,16 @@ namespace Cwx.Winepad.Data.DAL
            
         }
 
-        public DbSet<Wine> Wines { get; set; }
-        public DbSet<Card> Cards { get; set; }
-        public DbSet<Admin> Admins { get; set; }
-        public DbSet<Country> Countries { get; set; }
-        public DbSet<Measure> Measures { get; set; }
-        public DbSet<Region> Regions { get; set; }
-        public DbSet<Segment> Segments { get; set; }
-        public DbSet<WineType> WineTypes { get; set; }
-        public DbSet<CardAdmin> CardAdmins { get; set; }
-        public DbSet<CardWine> CardWines { get; set; }
+        public DbSet<Wine> Wine { get; set; }
+        public DbSet<Card> Card { get; set; }
+        public DbSet<Admin> Admin { get; set; }
+        public DbSet<Country> Country { get; set; }
+        public DbSet<Measure> Measure { get; set; }
+        public DbSet<Region> Region { get; set; }
+        public DbSet<Segment> Segment { get; set; }
+        public DbSet<WineType> WineType { get; set; }
+        public DbSet<CardAdmin> CardAdmin { get; set; }
+        public DbSet<SegmentWine> SegmentWine { get; set; }
         
     }
 }

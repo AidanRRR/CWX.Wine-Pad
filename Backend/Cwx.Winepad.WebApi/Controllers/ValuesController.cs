@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Cwx.Winepad.Data.DAL;
+using Cwx.Winepad.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cwx.Winepad.WebApi.Controllers
@@ -20,22 +21,27 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            var wine = _context.Wines.FirstOrDefault();
+            var countries = _context.Country.ToList();
 
             return new string[] { "value1", "value2" };
+
+
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
+            var country = _context.Country.Find(id);
             return "value";
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post([FromBody] Country countryToCreate)
         {
+            _context.Add(countryToCreate);
+            _context.SaveChanges();
         }
 
         // PUT api/values/5
