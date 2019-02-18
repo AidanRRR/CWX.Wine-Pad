@@ -17,8 +17,6 @@ namespace Cwx.Winepad.WebApi
         public static void Main(string[] args)
         {
             CreateWebHostBuilder(args).Build().Run();
-
-            Console.WriteLine("Hello");
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>

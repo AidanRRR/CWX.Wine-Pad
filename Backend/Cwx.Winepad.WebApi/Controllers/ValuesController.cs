@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Cwx.Winepad.Data.DAL;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Cwx.Winepad.WebApi.Controllers
@@ -7,10 +9,19 @@ namespace Cwx.Winepad.WebApi.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly WinePadContext _context;
+
+        public ValuesController(WinePadContext context)
+        {
+            _context = context;
+        }
+
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
+            var wine = _context.Wines.FirstOrDefault();
+
             return new string[] { "value1", "value2" };
         }
 

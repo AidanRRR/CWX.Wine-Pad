@@ -4,8 +4,8 @@ using FluentMigrator;
 
 namespace Cwx.Winepad.Migrations.Migrations
 {
-    [Migration(201902130941)]
-    public class M_201902130941_CreateTable_Card : Migration
+    [Migration(201902121693)]
+    public class M_201902121693_CreateTable_Card : Migration
     {
         public override void Up()
         {

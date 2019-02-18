@@ -4,8 +4,8 @@ using FluentMigrator;
 
 namespace Cwx.Winepad.Migrations.Migrations
 {
-    [Migration(201902121700)]
-    public class M201902121700_CreateTable_Wine : Migration
+    [Migration(201902121697)]
+    public class M_201902121697_CreateTable_Wine : Migration
     {
         public override void Up()
         {
@@ -18,18 +18,14 @@ namespace Cwx.Winepad.Migrations.Migrations
                 .WithColumn("BottlePrice").AsDecimal().Nullable()
                 .WithColumn("CarafePrice").AsDecimal().Nullable()
                 .WithColumnForForeignKeyTo<WineType>().NotNullable()
-                .WithColumnForForeignKeyTo<Region>().Nullable()
-                .WithColumnForForeignKeyTo<Measure>().Nullable();
-
+                .WithColumnForForeignKeyTo<Region>().Nullable();
 
             Create.ForeignKey("FK_Wine_Type")
                 .BetweenEntities<Wine, WineType>();
 
             Create.ForeignKey("DK_Wine_Region")
                 .BetweenEntities<Wine, Region>();
-
-            Create.ForeignKey("FK_Wine_Measure")
-                .BetweenEntities<Wine, Measure>();
+            
         }
 
         public override void Down()

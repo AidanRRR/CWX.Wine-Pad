@@ -31,7 +31,6 @@ namespace Cwx.Winepad.Data.DAL
         public DbSet<Region> Regions { get; set; }
         public DbSet<Segment> Segments { get; set; }
         public DbSet<WineType> WineTypes { get; set; }
-        public DbSet<CardSegment> CardSegments { get; set; }
         public DbSet<CardAdmin> CardAdmins { get; set; }
         public DbSet<CardWine> CardWines { get; set; }
         

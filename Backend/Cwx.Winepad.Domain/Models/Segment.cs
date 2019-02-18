@@ -7,6 +7,8 @@ namespace Cwx.Winepad.Domain.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public IEnumerable<Card> Cards { get; set; }
+        public int CardId { get; set; }
+        public Card Card { get; set; }
+        public ICollection<Wine> Wines { get; set; }
     }
 }
