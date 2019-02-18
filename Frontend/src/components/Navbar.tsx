@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { RouteComponentProps, withRouter } from "react-router";
 import { Link } from "react-router-dom";
+import wine from "../assets/images/wine-icon.svg";
 
 interface IState {}
 interface IProps {} /* extends RouteComponentProps {} */
@@ -14,7 +15,7 @@ class Navbar extends Component<IProps, IState> {
             <ul className="navigation-menu text-center">
               <li className="has-submenu">
                 <Link to={"/wijnen"}>
-                  <i className="mdi mdi-airplay" />
+                  <img className={"nav-icon"} src={wine} alt={""} />
                   Wijnen
                 </Link>
               </li>

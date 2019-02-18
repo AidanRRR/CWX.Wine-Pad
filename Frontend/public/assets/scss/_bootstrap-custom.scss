@@ -89,7 +89,7 @@
 }
 
 .text-primary {
-  color: $primary !important;
+  color: $yellow !important;
 }
 
 .text-warning {
@@ -178,7 +178,7 @@
     color: $gray-800;
     z-index: 2;
     .list-group-item-text {
-      color: $primary;
+      color: $yellow;
     }
   }
   &:focus {
@@ -187,11 +187,11 @@
     color: $gray-800;
     z-index: 2;
     .list-group-item-text {
-      color: $primary;
+      color: $yellow;
     }
   }
   .list-group-item-text {
-    color: $primary;
+    color: $yellow;
   }
 }
 

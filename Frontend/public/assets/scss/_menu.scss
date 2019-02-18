@@ -35,12 +35,12 @@ body {
 
 
 #topnav {
+  background: black;
   position: fixed;
   right: 0;
   left: 0;
   top: 0;
   z-index: 1030;
-  background-color: transparent;
   border: 0;
   -webkit-transition: all .5s ease;
   transition: all .5s ease;
@@ -78,14 +78,12 @@ body {
   }
 
   .topbar-main {
-    background-color: $white;
-
     .logo {
       line-height: 60px;      
       float: left;
     }
     .logo-large{
-      height: 18px;
+      // height: 18px;
     }
 
     .logo-small {
@@ -132,7 +130,6 @@ body {
   }
 
   .navbar-custom {
-    background-color: lighten($bg-topbar,3%);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     padding-left: 0;
   }
@@ -519,7 +516,7 @@ body {
       display: block;
     }
     .navigation-menu > li > a {
-      color: $primary;
+      color: $primary-dark;
       padding: 15px;
 
       i {
