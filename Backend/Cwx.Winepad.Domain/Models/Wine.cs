@@ -10,7 +10,6 @@ namespace Cwx.Winepad.Domain.Models
         public int RegionId { get; set; }
         public Region Region { get; set; }
         public int Year { get; set; }
-        public decimal Price { get; set; }
         public string Description { get; set; }
         public int WineTypeId { get; set; }
         public WineType WineType { get; set; }

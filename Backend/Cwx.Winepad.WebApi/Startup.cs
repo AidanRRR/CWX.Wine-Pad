@@ -58,8 +58,6 @@ namespace Cwx.Winepad.WebApi
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("v1/swagger.json", "API V1");
-                c.RoutePrefix = string.Empty;
-                
             });
         }
     }

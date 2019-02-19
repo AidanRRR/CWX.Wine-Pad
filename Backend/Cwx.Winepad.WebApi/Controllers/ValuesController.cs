@@ -17,23 +17,51 @@ namespace Cwx.Winepad.WebApi.Controllers
             _context = context;
         }
 
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        //GET api/values
+       [HttpGet]
+        public ActionResult Get()
         {
-            var countries = _context.Country.ToList();
+            var newCountry = new Country()
+            {
+                Name = "Argentina",
+                Code = "ARG"
+            };
+            _context.Add(newCountry);
 
-            return new string[] { "value1", "value2" };
+            var newRegion = new Region()
+            {
+                Country = _context.Country.Find(1),
+                Name = "Côte de Blancs",
+            };
+            _context.Add(newRegion);
 
+            var newWineType = new WineType()
+            {
+                Name = "Red"
+            };
+            _context.Add(newWineType);
 
+            var newWine = new Wine()
+            {
+                Name = "Champagne Grand Cru",
+                Year = 2017,
+                Description = "What is more impressive: the definition of aromas and flavors, or is it the wine’s sublime texture? The Initial is remarkable for its nuance, clarity and overall sense of harmony.",
+                WineType = _context.WineType.Find( 1),
+                Region = _context.Region.Find(2),
+                BottlePrice  = 175
+            };
+            _context.Add(newWine);
+            _context.SaveChanges();
+           
+            return Ok();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Country> Get(int id)
         {
             var country = _context.Country.Find(id);
-            return "value";
+            return country;
         }
 
         // POST api/values
@@ -46,14 +74,24 @@ namespace Cwx.Winepad.WebApi.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Country updatedCountry)
         {
+            Country countryToUpdate = _context.Country.FirstOrDefault(c => c.Id == id);
+            if (countryToUpdate != null)
+            {
+                countryToUpdate.Name = updatedCountry.Name;
+                countryToUpdate.Code = updatedCountry.Code;
+                _context.SaveChanges();
+            }
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            Country countryToDelete = _context.Country.FirstOrDefault(c => c.Id == id);
+            _context.Country.Remove(countryToDelete);
+            _context.SaveChanges();
         }
     }
 }
