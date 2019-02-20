@@ -3,6 +3,7 @@ using System.Linq;
 using Cwx.Winepad.Data.DAL;
 using Cwx.Winepad.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cwx.Winepad.WebApi.Controllers
 {
@@ -18,7 +19,7 @@ namespace Cwx.Winepad.WebApi.Controllers
         }
 
         //GET api/values
-       [HttpGet]
+        [HttpGet]
         public ActionResult Get()
         {
             var newCountry = new Country()
@@ -27,41 +28,88 @@ namespace Cwx.Winepad.WebApi.Controllers
                 Code = "ARG"
             };
             _context.Add(newCountry);
+            _context.SaveChanges();
 
             var newRegion = new Region()
             {
-                Country = _context.Country.Find(1),
-                Name = "Côte de Blancs",
+                Country = _context.Country.FirstOrDefault(c => c.Code == "ARG"),
+                Name = "Côte de Blancs"
             };
-            _context.Add(newRegion);
 
+            _context.Add(newRegion);
+            _context.SaveChanges();
             var newWineType = new WineType()
             {
                 Name = "Red"
             };
             _context.Add(newWineType);
-
+            _context.SaveChanges();
             var newWine = new Wine()
             {
                 Name = "Champagne Grand Cru",
                 Year = 2017,
-                Description = "What is more impressive: the definition of aromas and flavors, or is it the wine’s sublime texture? The Initial is remarkable for its nuance, clarity and overall sense of harmony.",
-                WineType = _context.WineType.Find( 1),
-                Region = _context.Region.Find(2),
-                BottlePrice  = 175
+                Description =
+                    "What is more impressive: the definition of aromas and flavors, or is it the wine’s sublime texture? The Initial is remarkable for its nuance, clarity and overall sense of harmony.",
+                WineType = _context.WineType.FirstOrDefault(wt => wt.Name =="Red"),
+                Region = _context.Region.FirstOrDefault(r => r.Name == "Côte de Blancs"),
+                BottlePrice = 175
             };
             _context.Add(newWine);
             _context.SaveChanges();
-           
+            var newMeasure = new Measure()
+            {
+                Name = "0,5l Carafe",
+                Wine = _context.Wine.FirstOrDefault(w => w.Name == "Champagne Grand Cru"),
+                Price = 116.66m
+            };
+            _context.Add(newMeasure);
+            _context.SaveChanges();
+            var newCard = new Card();
+            _context.Add(newCard);
+            _context.SaveChanges();
+            var newAdmin = new Admin()
+            {
+                Name = "Ronny"
+            };
+            _context.Add(newAdmin);
+            _context.SaveChanges();
+            var newSegment = new Segment()
+            {
+                Name = "By the glass",
+                Card = _context.Card.Find(1)
+            };
+            _context.Add(newSegment);
+            _context.SaveChanges();
+            
             return Ok();
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<Country> Get(int id)
+        public ActionResult Get(int id)
         {
             var country = _context.Country.Find(id);
-            return country;
+
+            var region = _context.Region.Include(r => r.Country)
+                .FirstOrDefault(re => re.Id == id);
+
+            var wineType = _context.WineType.Find(id);
+
+            var card = _context.Card.Find(id);
+
+            var measure = _context.Measure.Include(m => m.Wine)
+                .FirstOrDefault(me => me.Id == id);
+
+            var wine = _context.Wine.Include(w => w.Region)
+                .Include(w => w.WineType)
+                .FirstOrDefault(w => w.Id == id);
+
+            var segment = _context.Segment.Include(s => s.Card)
+                .FirstOrDefault(s => s.Id == id);
+
+            var admin = _context.Admin.Find(id);
+
+            return Ok();
         }
 
         // POST api/values
@@ -89,9 +137,7 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            Country countryToDelete = _context.Country.FirstOrDefault(c => c.Id == id);
-            _context.Country.Remove(countryToDelete);
-            _context.SaveChanges();
+            
         }
     }
 }
