@@ -8,9 +8,11 @@
 }
 
 .table thead th {
-  //border-top: 2px solid $brown-light;
-  border-top: none !important;
-  border-bottom: 2px solid $brown-light;
+  border-top: 1px solid;
+  border-color: rgba(255,255,255,0.5);
+  border-bottom: none !important;
+  // border-bottom: 2px solid $brown-light;
+  color: white;
 }
 
 .table td {
@@ -20,6 +22,10 @@
 
 th {
   font-weight: 500;
+}
+
+.table-icon {
+  color: $yellow;
 }
 
 .table>tbody>tr>td, .table>tfoot>tr>td, .table>thead>tr>td {

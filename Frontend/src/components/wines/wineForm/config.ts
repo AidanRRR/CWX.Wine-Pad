@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import {FieldInfosType, FormikFieldInfo} from "../../../ui/forms/config";
+import {FieldInfosType, FormikFieldInfo} from "../../ui/forms/config";
 
 export type IValues = {
     title: string;

@@ -12,7 +12,6 @@ import {
   Grid,
   Table,
   TableHeaderRow,
-  TableEditRow,
   TableEditColumn,
   PagingPanel,
   SearchPanel,
@@ -27,13 +26,7 @@ import {
   tableMessages
 } from "../../ui/react-grid/Localization";
 import Wines from "../../../models/Wines.json";
-import {
-  Command,
-  CommandButton,
-  commandComponentProps,
-  getRowId,
-  MultilineEditCell
-} from "../../ui/react-grid/Helpers";
+import { Command, getRowId } from "../../ui/react-grid/Helpers";
 import { IWine } from "../../../models/Wine";
 
 interface IProps {
@@ -49,6 +42,23 @@ interface IState {
   defaultColumnWidths: any;
   editingWine: IWine | null;
 }
+
+const TableComponent = ({ ...restProps }) => (
+  <Table.Table
+    {...restProps}
+    style={{ borderSpacing: "0 10px", borderCollapse: "inherit" }}
+  />
+);
+
+const TableRow = ({ row, ...restProps }) => (
+  // @ts-ignore
+  <Table.Row
+    {...restProps}
+    style={{
+      backgroundColor: "#2F2720"
+    }}
+  />
+);
 
 class WinesEditor extends React.Component<IProps, IState> {
   constructor(props) {
@@ -139,6 +149,8 @@ class WinesEditor extends React.Component<IProps, IState> {
         <IntegratedSorting />
         <IntegratedFiltering />
         <Table
+          tableComponent={TableComponent}
+          rowComponent={TableRow}
           messages={tableMessages}
           columnExtensions={tableColumnExtensions}
         />

@@ -37,21 +37,21 @@ export const commandComponentProps = {
     edit: {
         icon: 'pencil',
         hint: 'Aanpassen',
-        color: 'text-warning',
+        color: 'table-icon',
     },
     delete: {
         icon: 'trash',
         hint: 'Verwijder',
-        color: 'text-danger',
+        color: 'table-icon',
     },
     commit: {
         icon: 'check',
         hint: 'Opslaan',
-        color: 'text-success',
+        color: 'table-icon',
     },
     cancel: {
         icon: 'close',
         hint: 'Annuleren',
-        color: 'text-danger',
+        color: 'table-icon',
     },
 };

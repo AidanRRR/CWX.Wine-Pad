@@ -44,7 +44,7 @@ File: Main Css File
 body {
   background: #1C1713;
   color: #fcf8c5;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Leituranews 1", sans-serif;
   margin: 0;
   font-size: 14px; }
 
@@ -509,7 +509,7 @@ code {
   background-color: #ec536c !important; }
 
 .bg-muted {
-  background-color: #a1a7cc !important; }
+  background-color: #D8A77B !important; }
 
 .bg-white {
   background-color: #FCF8C5 !important; }
@@ -521,7 +521,7 @@ code {
   color: #ec536c !important; }
 
 .text-muted {
-  color: #a1a7cc !important; }
+  color: #D8A77B !important; }
 
 .text-primary {
   color: #fcf8c5 !important; }
@@ -965,7 +965,7 @@ code {
 
 .icon-demo-content {
   text-align: center;
-  color: #a1a7cc; }
+  color: #D8A77B; }
   .icon-demo-content i {
     display: block;
     font-size: 28px;
@@ -1203,10 +1203,10 @@ code {
   border: none;
   box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.05);
   margin-bottom: 20px;
-  background-color: #2F2720; }
+  background-color: #1C1713; }
 
 .card-primary {
-  background-color: #4E3527;
+  background-color: #1C1713;
   border-color: #4E3527; }
 
 .card-success {
@@ -1267,7 +1267,7 @@ code {
   background-color: #4E3527; }
 
 .bg-progress {
-  background-color: #4d4d4d; }
+  background-color: #776251; }
 
 /* Progressbar Vertical */
 .progress-vertical {
@@ -1334,7 +1334,7 @@ code {
 /* Sweet Alert */
 /* =========== */
 .swal2-modal {
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Leituranews 1", sans-serif; }
   .swal2-modal .swal2-title {
     font-size: 28px; }
   .swal2-modal .swal2-content {
@@ -1342,7 +1342,7 @@ code {
   .swal2-modal .swal2-spacer {
     margin: 10px 0; }
   .swal2-modal .swal2-file, .swal2-modal .swal2-input, .swal2-modal .swal2-textarea {
-    border: 2px solid #a1a7cc;
+    border: 2px solid #D8A77B;
     font-size: 16px;
     box-shadow: none !important; }
   .swal2-modal .swal2-styled {
@@ -1448,7 +1448,7 @@ code {
   z-index: 99; }
 
 .alertify input {
-  border: 2px solid #a1a7cc; }
+  border: 2px solid #D8A77B; }
 
 .alertify-logs > .success {
   background-color: #29b348;
@@ -1501,7 +1501,7 @@ code {
   padding: 10px 12px;
   background: #FCF8C5;
   border: none;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Leituranews 1", sans-serif;
   box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.14); }
   .morris-hover.morris-default-style .morris-hover-point {
     font-weight: 500;
@@ -1536,8 +1536,8 @@ code {
   stroke-dasharray: 3px; }
 
 .ct-chart .ct-label {
-  fill: #a1a7cc;
-  color: #a1a7cc;
+  fill: #D8A77B;
+  color: #D8A77B;
   font-size: 14px;
   line-height: 1; }
 
@@ -1640,7 +1640,7 @@ code {
 .c3-chart-arcs-title {
   font-size: 18px;
   font-weight: 600;
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Leituranews 1", sans-serif; }
 
 .c3-tooltip tr {
   border: none !important; }
@@ -1650,14 +1650,14 @@ code {
 
 .c3-tooltip .value {
   font-weight: 600;
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Leituranews 1", sans-serif; }
 
 .c3-line {
   stroke-width: 2px; }
 
 .c3-legend-item {
   font-size: 13px;
-  font-family: "Work Sans", sans-serif; }
+  font-family: "Leituranews 1", sans-serif; }
 
 /* ==============
   Tables
@@ -1666,14 +1666,19 @@ code {
   margin-bottom: 10px; }
 
 .table thead th {
-  border-top: none !important;
-  border-bottom: 2px solid #D8A77B; }
+  border-top: 1px solid;
+  border-color: rgba(255, 255, 255, 0.5);
+  border-bottom: none !important;
+  color: white; }
 
 .table td {
   border-top: none !important; }
 
 th {
   font-weight: 500; }
+
+.table-icon {
+  color: #fcf8c5; }
 
 .table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {
   padding: 8px 12px;
@@ -2110,7 +2115,7 @@ body {
   width: 95%; }
 
 #topnav {
-  background: black;
+  background: #1C1713;
   position: fixed;
   right: 0;
   left: 0;
@@ -2244,7 +2249,7 @@ body {
       vertical-align: middle;
       width: 25px;
       height: 25px;
-      background-color: #1a1a1a;
+      background-color: #3a3028;
       border-radius: 3px; }
   #topnav .navigation-menu > li > a:hover, #topnav .navigation-menu > li > a:focus {
     background-color: transparent; }
@@ -2440,7 +2445,7 @@ body {
   #topnav .navigation-menu > li {
     display: block; }
   #topnav .navigation-menu > li > a {
-    color: #2F2720;
+    color: #1C1713;
     padding: 15px; }
     #topnav .navigation-menu > li > a i {
       display: inline-block;
@@ -2540,7 +2545,7 @@ body {
 
 .footer {
   left: 0 !important;
-  font-family: "Work Sans", sans-serif;
+  font-family: "Leituranews 1", sans-serif;
   font-size: inherit;
   padding: 20px 0; }
 
@@ -2588,10 +2593,19 @@ label {
   font-weight: 500; }
 
 .form-control {
-  font-size: 14px; }
+  background-color: #4E3527;
+  font-size: 14px;
+  border: 0px !important; }
   .form-control:focus {
     border-color: #4E3527;
     box-shadow: none; }
+
+.form-control::placeholder {
+  color: #fcf8c5; }
+
+.form-control:focus {
+  color: #FCF8C5;
+  background-color: #4E3527; }
 
 .custom-control-input:checked ~ .custom-control-indicator {
   background-color: #4E3527; }
@@ -2614,7 +2628,7 @@ label {
 
 .input-group-addon {
   border-radius: 2px;
-  border: 1px solid #ced4da; }
+  border: 1px solid #fcf8c5; }
 
 /* ==============
   Form-Validation

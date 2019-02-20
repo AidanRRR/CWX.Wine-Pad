@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import WinesEditor from "../../components/wines/editor/WinesEditor";
 import { IWine } from "../../models/Wine";
-import WineForm from "../../components/wines/editor/wineForm/WineForm";
+import WineForm from "../../components/wines/wineForm/WineForm";
 import ModalConfirm from "../../components/ui/modals/ModalConfirm";
 
 export interface IProps {}
