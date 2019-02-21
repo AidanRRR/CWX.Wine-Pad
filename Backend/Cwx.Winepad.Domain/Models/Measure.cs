@@ -1,4 +1,5 @@
-﻿using Cwx.Winepad.Infrastructure.Entities;
+﻿using System;
+using Cwx.Winepad.Infrastructure.Entities;
 
 namespace Cwx.Winepad.Domain.Models
 {
@@ -9,6 +10,5 @@ namespace Cwx.Winepad.Domain.Models
         public decimal Price { get; set; }
         public int WineId { get; set; }
         public Wine Wine { get; set; }
-
     }
 }

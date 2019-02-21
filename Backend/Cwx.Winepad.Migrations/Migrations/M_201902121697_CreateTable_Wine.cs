@@ -23,7 +23,7 @@ namespace Cwx.Winepad.Migrations.Migrations
             Create.ForeignKey("FK_Wine_Type")
                 .BetweenEntities<Wine, WineType>();
 
-            Create.ForeignKey("DK_Wine_Region")
+            Create.ForeignKey("FK_Wine_Region")
                 .BetweenEntities<Wine, Region>();
             
         }

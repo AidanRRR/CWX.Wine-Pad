@@ -24,8 +24,8 @@ namespace Cwx.Winepad.WebApi.Controllers
         {
             var newCountry = new Country()
             {
-                Name = "Argentina",
-                Code = "ARG"
+                Name = "Spain",
+                Code = "ESP"
             };
             _context.Add(newCountry);
             _context.SaveChanges();
@@ -116,6 +116,7 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpPost]
         public void Post([FromBody] Country countryToCreate)
         {
+            
             _context.Add(countryToCreate);
             _context.SaveChanges();
         }
@@ -137,7 +138,30 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            
+            // Country countryToDelete = _context.Country.FirstOrDefault(c => c.Id == id);
+            // _context.Country.Remove(countryToDelete);
+            var someWine = _context.Wine
+                .Include(w => w.Measures)
+                .Include(w => w.Region)
+                .Include(w => w.Region.Country)
+                .FirstOrDefault();
+
+            _context.Remove(someWine);
+            _context.SaveChanges();
+
+            Region someRegion = _context.Region.FirstOrDefault(r => r.Id == id);
+            _context.Remove(someRegion);
+            _context.SaveChanges();
+
+
+
+
+            //_context.RemoveRange(regionToDelete.Wines);            
+
+            //WineType wineTypeToDelete = _context.WineType.FirstOrDefault(wt => wt.Id == id);
+            //_context.WineType.Remove(wineTypeToDelete);
+
+            //_context.SaveChanges();
         }
     }
 }

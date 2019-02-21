@@ -6,8 +6,6 @@ namespace Cwx.Winepad.Domain.Models
     {
         public int Id { get; set; }
         public Wine Wine { get; set; }
-        public int WineId { get; set; }
-        public int SegmentId { get; set; }
         public Segment Segment { get; set; }
     }
 }
