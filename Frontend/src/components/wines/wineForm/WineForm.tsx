@@ -5,10 +5,10 @@ import {
   MultiTextField,
   SelectField,
   TextField
-} from "../../../ui/forms/FormFields";
-import { IWine } from "../../../../models/Wine";
-import { FormikSelect } from "../../../ui/forms/FormikSelect";
-import { CountrySuggestions } from "../../../../models/Country";
+} from "../../ui/forms/FormFields";
+import { IWine } from "../../../models/Wine";
+import { FormikSelect } from "../../ui/forms/FormikSelect";
+import { CountrySuggestions } from "../../../models/Country";
 
 export interface IProps {
   wine: IWine;

@@ -9,11 +9,20 @@ label {
   font-weight: 500;
 }
 .form-control {
+  background-color: $primary;
   font-size: $base-font;
+  border: 0px !important;
   &:focus {
     border-color: $primary;
     box-shadow: none;
   }
+}
+.form-control::placeholder {
+  color: $yellow;
+ }
+.form-control:focus {
+  color: $white;
+  background-color: $primary;
 }
 
 .custom-control-input:checked~.custom-control-indicator {
@@ -48,5 +57,5 @@ label {
 
 .input-group-addon {
   border-radius: 2px;
-  border: 1px solid $gray-400;
+  border: 1px solid $yellow;
 }
