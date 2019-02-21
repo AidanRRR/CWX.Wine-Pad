@@ -28,6 +28,7 @@ import {
 import Wines from "../../../models/Wines.json";
 import { Command, getRowId } from "../../ui/react-grid/Helpers";
 import { IWine } from "../../../models/Wine";
+import { Getter } from "@devexpress/dx-react-core";
 
 interface IProps {
   onEditWine: (wine: IWine) => void;
@@ -43,22 +44,26 @@ interface IState {
   editingWine: IWine | null;
 }
 
-const TableComponent = ({ ...restProps }) => (
-  <Table.Table
-    {...restProps}
-    style={{ borderSpacing: "0 10px", borderCollapse: "inherit" }}
-  />
-);
+const TableComponent = ({ ...restProps }) => {
+  return (
+    <Table.Table
+      {...restProps}
+      style={{ borderSpacing: "0 10px", borderCollapse: "inherit" }}
+    />
+  );
+};
 
-const TableRow = ({ row, ...restProps }) => (
-  // @ts-ignore
-  <Table.Row
-    {...restProps}
-    style={{
-      backgroundColor: "#2F2720"
-    }}
-  />
-);
+const TableRow = ({ row, ...restProps }) => {
+  return (
+    // @ts-ignore
+    <Table.Row
+      {...restProps}
+      style={{
+        backgroundColor: "#2F2720"
+      }}
+    />
+  );
+};
 
 class WinesEditor extends React.Component<IProps, IState> {
   constructor(props) {
@@ -164,6 +169,22 @@ class WinesEditor extends React.Component<IProps, IState> {
           showAddCommand
           showEditCommand
           showDeleteCommand
+        />
+        <Getter
+          name="tableColumns"
+          computed={({ tableColumns }) => {
+            const result = [
+              ...tableColumns.filter(
+                c => c.type !== TableEditColumn.COLUMN_TYPE
+              ),
+              {
+                key: "editCommand",
+                type: TableEditColumn.COLUMN_TYPE,
+                width: 140
+              }
+            ];
+            return result;
+          }}
         />
         <PagingPanel messages={pagingMessages} pageSizes={pageSizes} />
       </Grid>

@@ -33,6 +33,7 @@ export const commandComponentProps = {
     add: {
         icon: 'plus',
         hint: 'Nieuwe toevoegen',
+        color: 'table-icon'
     },
     edit: {
         icon: 'pencil',

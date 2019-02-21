@@ -2,15 +2,22 @@
   Pagination
 ===================*/
 .page-link {
-  color: $primary;
+  color: white;
+  background-color: $primary-dark;
 }
 .page-item.active .page-link {
-  background-color: $primary;
+  background-color: white;
+  color: black;
   border-color: $primary;
 }
 .page-link:focus, .page-link:hover {
   color: $dark;
   background-color: $light;
+}
+
+.page-item.disabled .page-link {
+  color: white;
+  background-color: $primary-dark;
 }
 
 .pagination{

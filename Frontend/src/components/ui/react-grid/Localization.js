@@ -11,7 +11,7 @@ export const headerRowMessages = {
 };
 
 export const searchMessages = {
-    searchPlaceholder: 'Zoeken...'
+    searchPlaceholder: 'ZOEKEN'
 };
 
 export const editColumnMessages = {

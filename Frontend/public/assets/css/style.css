@@ -1232,15 +1232,21 @@ code {
   Pagination
 ===================*/
 .page-link {
-  color: #4E3527; }
+  color: white;
+  background-color: #1C1713; }
 
 .page-item.active .page-link {
-  background-color: #4E3527;
+  background-color: white;
+  color: black;
   border-color: #4E3527; }
 
 .page-link:focus, .page-link:hover {
   color: #2d3b48;
   background-color: #eff3f6; }
+
+.page-item.disabled .page-link {
+  color: white;
+  background-color: #1C1713; }
 
 .pagination .page-link:focus {
   box-shadow: 0 0 0 0.2rem rgba(78, 53, 39, 0.5); }
