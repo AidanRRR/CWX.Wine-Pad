@@ -12,6 +12,7 @@ label {
   background-color: $primary;
   font-size: $base-font;
   border: 0px !important;
+  color: $yellow;
   &:focus {
     border-color: $primary;
     box-shadow: none;

@@ -28,17 +28,10 @@ class Wines extends Component<IProps, IState> {
             toggle={this.handleToggleModal}
             onConfirm={() => {}}
             body={<WineForm wine={editingWine} />}
-            title={"Onderdeel toevoegen"}
+            title={"Wijn toevoegen"}
           />
         )}
 
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="page-title-box text-left">
-              <h4 className="page-title">Overzicht wijnen</h4>
-            </div>
-          </div>
-        </div>
         <div className="row">
           <div className="card">
             <div className="card-body">

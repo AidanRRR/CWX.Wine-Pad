@@ -35,7 +35,9 @@ File: Main Css File
 28. Widgets
 29. Maps
 30. Account pages 
-31. Responsive 
+31. Responsive
+32. Modal
+33. Select
 */
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500,600");
 /* ==============
@@ -44,7 +46,7 @@ File: Main Css File
 body {
   background: #1C1713;
   color: #fcf8c5;
-  font-family: "Leituranews 1", sans-serif;
+  font-family: "Leitura Sans Grot 1", sans-serif;
   margin: 0;
   font-size: 14px; }
 
@@ -60,6 +62,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600; }
 
 h1 {
+  color: white;
   line-height: 43px; }
 
 h2 {
@@ -165,6 +168,10 @@ code {
 @font-face {
   font-family: 'Leituranewsroman 3';
   src: url("../fonts/LeituraNews-Roman 3.otf") format("opentype"); }
+
+@font-face {
+  font-family: 'Leitura Sans Grot 1';
+  src: url("../fonts/Leitura Sans Grot 1.otf") format("opentype"); }
 
 /* ==============
   Loader
@@ -1024,7 +1031,7 @@ code {
   border: 1px solid rgba(45, 59, 72, 0.2); }
 
 .btn-primary {
-  background-color: #4E3527;
+  background-color: #29b348;
   border: 1px solid #4E3527; }
 
 .btn-primary:not(:disabled):not(.disabled).active,
@@ -1035,7 +1042,7 @@ code {
 .open > .dropdown-toggle.btn-primary, .btn-outline-primary.active, .btn-outline-primary:active,
 .show > .btn-outline-primary.dropdown-toggle, .btn-outline-primary:hover, .btn-primary.active,
 .btn-primary:active, .show > .btn-primary.dropdown-toggle {
-  background-color: #3d291f;
+  background-color: #249e40;
   border: 1px solid #3d291f;
   color: #FCF8C5; }
 
@@ -1340,7 +1347,7 @@ code {
 /* Sweet Alert */
 /* =========== */
 .swal2-modal {
-  font-family: "Leituranews 1", sans-serif; }
+  font-family: "Leitura Sans Grot 1", sans-serif; }
   .swal2-modal .swal2-title {
     font-size: 28px; }
   .swal2-modal .swal2-content {
@@ -1507,7 +1514,7 @@ code {
   padding: 10px 12px;
   background: #FCF8C5;
   border: none;
-  font-family: "Leituranews 1", sans-serif;
+  font-family: "Leitura Sans Grot 1", sans-serif;
   box-shadow: 0 5px 25px 5px rgba(0, 0, 0, 0.14); }
   .morris-hover.morris-default-style .morris-hover-point {
     font-weight: 500;
@@ -1646,7 +1653,7 @@ code {
 .c3-chart-arcs-title {
   font-size: 18px;
   font-weight: 600;
-  font-family: "Leituranews 1", sans-serif; }
+  font-family: "Leitura Sans Grot 1", sans-serif; }
 
 .c3-tooltip tr {
   border: none !important; }
@@ -1656,14 +1663,14 @@ code {
 
 .c3-tooltip .value {
   font-weight: 600;
-  font-family: "Leituranews 1", sans-serif; }
+  font-family: "Leitura Sans Grot 1", sans-serif; }
 
 .c3-line {
   stroke-width: 2px; }
 
 .c3-legend-item {
   font-size: 13px;
-  font-family: "Leituranews 1", sans-serif; }
+  font-family: "Leitura Sans Grot 1", sans-serif; }
 
 /* ==============
   Tables
@@ -1671,9 +1678,15 @@ code {
 .table {
   margin-bottom: 10px; }
 
+.d-flex {
+  display: block !important; }
+
+.card-header {
+  padding: 0px !important; }
+
 .table thead th {
   border-top: 1px solid;
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(252, 248, 197, 0.4);
   border-bottom: none !important;
   color: white; }
 
@@ -1685,6 +1698,9 @@ th {
 
 .table-icon {
   color: #fcf8c5; }
+
+.dx-g-bs4-table-cell {
+  font-weight: bold; }
 
 .table > tbody > tr > td, .table > tfoot > tr > td, .table > thead > tr > td {
   padding: 8px 12px;
@@ -2551,7 +2567,7 @@ body {
 
 .footer {
   left: 0 !important;
-  font-family: "Leituranews 1", sans-serif;
+  font-family: "Leitura Sans Grot 1", sans-serif;
   font-size: inherit;
   padding: 20px 0; }
 
@@ -2601,7 +2617,8 @@ label {
 .form-control {
   background-color: #4E3527;
   font-size: 14px;
-  border: 0px !important; }
+  border: 0px !important;
+  color: #fcf8c5; }
   .form-control:focus {
     border-color: #4E3527;
     box-shadow: none; }
@@ -3164,3 +3181,63 @@ File: Responsive
     width: 200px; }
   .notify-details {
     margin-left: 0 !important; } }
+
+.modal-content {
+  background-color: #23222f; }
+
+.modal-header {
+  border-bottom: 1px solid #5d5b6f; }
+
+.css-vj8t7z {
+  background: #4E3527 !important;
+  border: none #4E3527 !important; }
+
+.css-vj8t7z react-select__control {
+  background: #4E3527 !important;
+  border: none; }
+
+.react-select__control {
+  background: #4E3527 !important; }
+
+.react-select__value-container {
+  background: #4E3527 !important;
+  border: none !important; }
+
+.react-select__indicators {
+  background: #4E3527 !important;
+  border: none !important; }
+
+.react-select__single-value {
+  color: #fcf8c5 !important; }
+
+.css-1uq0kb5 {
+  color: #fcf8c5 !important; }
+
+.css-2o5izw {
+  border-color: #fcf8c5 !important;
+  box-shadow: #D8A77B !important; }
+
+.react-select__placeholder {
+  color: #fcf8c5 !important; }
+
+.react-select__value_container react-select__value-container--has-value {
+  border-color: #fcf8c5 !important; }
+
+.react-select__menu {
+  background: #4E3527 !important;
+  border: none !important; }
+
+.react-select__menu-list {
+  background: #4E3527 !important;
+  border: none !important; }
+
+.react-select__option {
+  background: #4E3527 !important;
+  border: none !important; }
+
+.react-select__option:hover {
+  background: #D8A77B !important;
+  border: none !important; }
+
+.react-select__input {
+  color: #fcf8c5 !important; }

@@ -59,10 +59,15 @@ const TableRow = ({ row, ...restProps }) => {
     <Table.Row
       {...restProps}
       style={{
-        backgroundColor: "#2F2720"
+        backgroundColor: "#2F2720",
+        height: 60
       }}
     />
   );
+};
+
+const ToolbarRoot = ({ ...restProps }) => {
+  return <Toolbar.Root style={{ position: "absolute" }} {...restProps} />;
 };
 
 class WinesEditor extends React.Component<IProps, IState> {
@@ -71,19 +76,17 @@ class WinesEditor extends React.Component<IProps, IState> {
 
     this.state = {
       columns: [
-        { name: "title", title: "Naam" },
-        { name: "year", title: "Jaar" },
-        { name: "type", title: "Type" },
-        { name: "region", title: "Regio" },
-        { name: "description", title: "Omschrijving" },
-        { name: "price", title: "Prijs" }
+        { name: "title", title: "NAAM" },
+        { name: "year", title: "JAAR" },
+        { name: "type", title: "TYPE" },
+        { name: "region", title: "REGIO" },
+        { name: "price", title: "PRIJS" }
       ],
       defaultColumnWidths: [
-        { columnName: "title", width: 180 },
-        { columnName: "year", width: 75 },
+        { columnName: "title", width: 300 },
+        { columnName: "year", width: 85 },
         { columnName: "type", width: 100 },
         { columnName: "region", width: 240 },
-        { columnName: "description", width: 400 },
         { columnName: "price", width: 100 }
       ],
       tableColumnExtensions: [{ columnName: "title", width: 300 }],
@@ -159,9 +162,8 @@ class WinesEditor extends React.Component<IProps, IState> {
           messages={tableMessages}
           columnExtensions={tableColumnExtensions}
         />
-        <TableColumnResizing defaultColumnWidths={defaultColumnWidths} />
         <TableHeaderRow messages={headerRowMessages} showSortingControls />
-        <Toolbar />
+        <Toolbar rootComponent={ToolbarRoot} />
         <SearchPanel messages={searchMessages} />
         <TableEditColumn
           messages={editColumnMessages}
