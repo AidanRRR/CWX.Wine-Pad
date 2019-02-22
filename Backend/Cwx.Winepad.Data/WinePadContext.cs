@@ -21,9 +21,7 @@ namespace Cwx.Winepad.Data.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //Hier definieer je de relatie als volgt:
-            //Measure heeft 1 wijn & de wijn kan meerdere measures hebben.
-            //als je de wijn delete wordt de measure mee verwijdert.
+            
 
             //.HasOne(m => m.Wine)
             //.WithMany(m => m.Measures)
@@ -39,9 +37,14 @@ namespace Cwx.Winepad.Data.DAL
                 .HasOne(w => w.Region)
                 .WithMany(r => r.Wines);
 
+            modelBuilder.Entity<Wine>()
+                .HasOne(w => w.Region)
+                .WithMany(r => r.Wines);
+
             modelBuilder.Entity<Region>()
                 .HasOne(r => r.Country)
-                .WithMany(c => c.Regions);
+                .WithMany(c => c.Regions)
+                .OnDelete(DeleteBehavior.Cascade);
             //modelBuilder.Entity<Wine>()
             //    .OwnsOne(w => w.Region)
             //    .HasMany(r => r.Wines)
