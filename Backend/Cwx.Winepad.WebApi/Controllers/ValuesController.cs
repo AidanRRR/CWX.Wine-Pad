@@ -32,8 +32,9 @@ namespace Cwx.Winepad.WebApi.Controllers
 
             var newRegion = new Region()
             {
-                Country = _context.Country.FirstOrDefault(c => c.Code == "ARG"),
+                Country = _context.Country.FirstOrDefault(c => c.Code == "ESP"),
                 Name = "Côte de Blancs"
+                
             };
 
             _context.Add(newRegion);
@@ -138,18 +139,17 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            // Country countryToDelete = _context.Country.FirstOrDefault(c => c.Id == id);
-            // _context.Country.Remove(countryToDelete);
-            var someWine = _context.Wine
-                .Include(w => w.Measures)
-                .Include(w => w.Region)
-                .Include(w => w.Region.Country)
-                .FirstOrDefault();
+//            var someWine = _context.Wine
+//                .Include(w => w.Measures)
+//                .Include(w => w.Region)
+//                .Include(w => w.Region.Country)
+//                .FirstOrDefault(w=>w.Id == id);
+//
+//            _context.Remove(someWine);
+//            _context.SaveChanges();
 
-            _context.Remove(someWine);
-            _context.SaveChanges();
-
-            Region someRegion = _context.Region.FirstOrDefault(r => r.Id == id);
+            Region someRegion = _context.Region.Include(r =>r.Country)
+                .FirstOrDefault(r => r.Id == id);
             _context.Remove(someRegion);
             _context.SaveChanges();
 
