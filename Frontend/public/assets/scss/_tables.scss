@@ -18,15 +18,24 @@
   border-top: 1px solid;
   border-color: rgba(252,248,197, 0.4);
   border-bottom: none !important;
-  color: white
+  color: white;
+  font-weight: 900;
+  vertical-align: top;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0rem;
+  padding-top: 0.75rem;
+}
+
+.table-cell-primary {
+  opacity: 1;
+}
+.table-cell-secondary {
+  opacity: 0.7;
 }
 
 .table td {
   border-top: none !important;
-}
-
-th {
-  font-weight: 500;
 }
 
 .table-icon {

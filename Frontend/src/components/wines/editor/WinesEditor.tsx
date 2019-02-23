@@ -63,6 +63,18 @@ const TableRow = ({ row, ...restProps }) => {
     />
   );
 };
+const TableCell = restProps => {
+  return (
+    <Table.Cell
+      className={
+        restProps.column.name === "title"
+          ? "table-cell-primary"
+          : "table-cell-secondary"
+      }
+      {...restProps}
+    />
+  );
+};
 const ToolbarRoot = ({ ...restProps }) => {
   return <Toolbar.Root style={{ position: "absolute" }} {...restProps} />;
 };
@@ -93,7 +105,7 @@ class WinesEditor extends React.Component<IProps, IState> {
 
     this.state = {
       columns: [
-        { name: "title", title: "NAAM" },
+        { name: "title", title: "WIJN" },
         { name: "year", title: "JAAR" },
         { name: "type", title: "TYPE" },
         { name: "region", title: "REGIO" },
@@ -158,17 +170,20 @@ class WinesEditor extends React.Component<IProps, IState> {
     return (
       <Grid rows={rows} columns={columns} getRowId={getRowId}>
         <SearchState defaultValue={""} />
-        <SortingState />
+        <SortingState
+          defaultSorting={[{ columnName: "title", direction: "asc" }]}
+        />{" "}
         <EditingState
           onCommitChanges={this.commitChanges}
           onEditingRowIdsChange={this.changeEditingRowIds}
         />
-        <PagingState defaultCurrentPage={5} defaultPageSize={10} />
+        <PagingState defaultCurrentPage={0} defaultPageSize={10} />
         <IntegratedPaging />
         <IntegratedSorting />
         <IntegratedFiltering />
         <Table
           tableComponent={TableComponent}
+          cellComponent={TableCell}
           rowComponent={TableRow}
           messages={tableMessages}
           columnExtensions={tableColumnExtensions}

@@ -4,17 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/components/menus/menuEditor/cards/wine/item/WineItemDraggable.tsx" line="16" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen">
-      <change afterPath="$PROJECT_DIR$/src/components/ui/buttons/SaveCancel.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/drawer/Helper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/_extra.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/_extra.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/_general.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/_general.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/scss/_menu.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/scss/_menu.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ui/forms/FormFields.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ui/forms/FormFields.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-    </list>
+    <list default="true" id="bf47d019-b09d-402f-ad5d-2e26ca27bc14" name="Default Changelist" comment="Added wijnen" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -26,30 +16,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/wines/editor/WinesEditor.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            <state relative-caret-position="241">
+              <caret line="179" column="42" selection-start-line="179" selection-start-column="42" selection-end-line="179" selection-end-column="42" />
               <folding>
                 <element signature="n#!!block;n#IProps#0" />
                 <element signature="n#!!block;n#IState#0" />
-                <element signature="e#1000#1109#0" />
-                <element signature="e#1198#1315#0" />
-                <element signature="e#1243#1307#0" />
-                <element signature="e#4413#4723#0" />
-                <element signature="e#4434#4710#0" />
-                <element signature="e#4866#4997#0" />
+                <element signature="e#1806#1979#0" />
+                <element signature="e#1854#1963#0" />
+                <element signature="e#2719#2950#0" />
+                <element signature="n#!!block;n#commitChanges#0;n#WinesEditor#0" />
+                <element signature="e#3312#3558#0" />
+                <element signature="e#3417#3551#0" />
+                <element signature="e#3474#3541#0" />
+                <element signature="e#3576#3684#0" />
+                <element signature="e#3702#3810#0" />
+                <element signature="e#3886#4079#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/assets/scss/_form-elements.scss">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/ui/react-grid/Localization.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="184">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/menus/menuForm/NewMenuForm.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -65,16 +68,8 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.btn-primary:hover</find>
-      <find>ONderdeel</find>
-      <find>react-sele</find>
-      <find>react-select</find>
-      <find>react-select__input</find>
-      <find>h1 {</find>
-      <find>btn-primary {</find>
       <find>OVerzi</find>
       <find>dx-g-bs4-table-cell</find>
-      <find>.table thead th</find>
       <find>toolbar</find>
       <find>&lt;Wineseditor</find>
       <find>styledf</find>
@@ -93,8 +88,16 @@
       <find>open =</find>
       <find>console.log</find>
       <find>console.lo</find>
-      <find>ZOEKEN</find>
       <find>input-group-text {</find>
+      <find>NAAM</find>
+      <find>Naam</find>
+      <find>header</find>
+      <find>.table thead th</find>
+      <find>ZOEKEN</find>
+      <find>tablea</find>
+      <find>sortingst</find>
+      <find>paging</find>
+      <find>pagingstate</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -145,10 +148,8 @@
         <option value="$PROJECT_DIR$/public/assets/scss/_buttons.scss" />
         <option value="$PROJECT_DIR$/public/assets/scss/style.scss" />
         <option value="$PROJECT_DIR$/public/assets/scss/_select.scss" />
-        <option value="$PROJECT_DIR$/public/assets/scss/_fonts.scss" />
         <option value="$PROJECT_DIR$/public/assets/scss/_variables.scss" />
         <option value="$PROJECT_DIR$/src/models/Wines.json" />
-        <option value="$PROJECT_DIR$/public/assets/scss/_tables.scss" />
         <option value="$PROJECT_DIR$/public/assets/scss/_menu.scss" />
         <option value="$PROJECT_DIR$/public/assets/scss/_extra.scss" />
         <option value="$PROJECT_DIR$/src/components/ui/forms/FormFields.tsx" />
@@ -160,8 +161,10 @@
         <option value="$PROJECT_DIR$/src/components/ui/react-grid/Helpers.js" />
         <option value="$PROJECT_DIR$/src/scenes/wines/Wines.tsx" />
         <option value="$PROJECT_DIR$/src/components/ui/react-grid/Localization.js" />
-        <option value="$PROJECT_DIR$/src/components/wines/editor/WinesEditor.tsx" />
         <option value="$PROJECT_DIR$/public/assets/scss/_form-elements.scss" />
+        <option value="$PROJECT_DIR$/public/assets/scss/_tables.scss" />
+        <option value="$PROJECT_DIR$/public/assets/scss/_fonts.scss" />
+        <option value="$PROJECT_DIR$/src/components/wines/editor/WinesEditor.tsx" />
       </list>
     </option>
   </component>
@@ -191,6 +194,24 @@
             <path>
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
               <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Frontend" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="scss" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Frontend" type="b2602c69:ProjectViewProjectNode" />
@@ -305,7 +326,7 @@
       <workItem from="1550178542488" duration="4909000" />
       <workItem from="1550341065675" duration="11604000" />
       <workItem from="1550683588394" duration="5496000" />
-      <workItem from="1550781486332" duration="26399000" />
+      <workItem from="1550781486332" duration="29389000" />
     </task>
     <task id="LOCAL-00001" summary="Added wine types">
       <created>1547244494395</created>
@@ -325,7 +346,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="199078000" />
+    <option name="totallyTimeSpent" value="202068000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="0" width="1389" height="1118" extended-state="0" />
@@ -361,13 +382,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Added wijnen" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/Header.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -529,13 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/scss/_tables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -680,13 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/scss/_fonts.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/scss/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -824,13 +824,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ui/react-grid/Localization.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/menus/menuEditor/cards/wine/list/WineListDraggable.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -857,27 +850,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/wines/editor/WinesEditor.tsx">
+    <entry file="file://$PROJECT_DIR$/public/assets/scss/_form-elements.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="n#!!block;n#IProps#0" />
-            <element signature="n#!!block;n#IState#0" />
-            <element signature="e#1000#1109#0" />
-            <element signature="e#1198#1315#0" />
-            <element signature="e#1243#1307#0" />
-            <element signature="e#4413#4723#0" />
-            <element signature="e#4434#4710#0" />
-            <element signature="e#4866#4997#0" />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/scss/_form-elements.scss">
+    <entry file="file://$PROJECT_DIR$/src/components/ui/react-grid/Localization.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="184">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/scss/_tables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/scss/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/menus/menuForm/NewMenuForm.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="52" column="35" selection-start-line="52" selection-start-column="35" selection-end-line="52" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/wines/editor/WinesEditor.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="179" column="42" selection-start-line="179" selection-start-column="42" selection-end-line="179" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!block;n#IProps#0" />
+            <element signature="n#!!block;n#IState#0" />
+            <element signature="e#1806#1979#0" />
+            <element signature="e#1854#1963#0" />
+            <element signature="e#2719#2950#0" />
+            <element signature="n#!!block;n#commitChanges#0;n#WinesEditor#0" />
+            <element signature="e#3312#3558#0" />
+            <element signature="e#3417#3551#0" />
+            <element signature="e#3474#3541#0" />
+            <element signature="e#3576#3684#0" />
+            <element signature="e#3702#3810#0" />
+            <element signature="e#3886#4079#0" />
+          </folding>
         </state>
       </provider>
     </entry>
