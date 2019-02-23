@@ -28,6 +28,7 @@ import Wines from "../../../models/Wines.json";
 import { Command, getRowId } from "../../ui/react-grid/Helpers";
 import { IWine } from "../../../models/Wine";
 import { Getter } from "@devexpress/dx-react-core";
+import "./ColumnLayout.scss";
 
 interface IProps {
   onEditWine: (wine: IWine) => void;
@@ -38,8 +39,6 @@ interface IState {
   columns: any;
   pageSizes: any;
   grouping: any;
-  tableColumnExtensions: any;
-  defaultColumnWidths: any;
   editingWine: IWine | null;
 }
 
@@ -111,14 +110,6 @@ class WinesEditor extends React.Component<IProps, IState> {
         { name: "region", title: "REGIO" },
         { name: "price", title: "PRIJS" }
       ],
-      defaultColumnWidths: [
-        { columnName: "title", width: 300 },
-        { columnName: "year", width: 85 },
-        { columnName: "type", width: 100 },
-        { columnName: "region", width: 240 },
-        { columnName: "price", width: 100 }
-      ],
-      tableColumnExtensions: [{ columnName: "title", width: 300 }],
       grouping: [{ columnName: "title" }],
       pageSizes: [5, 10, 15, 0],
       rows: Wines.Wines,
@@ -165,7 +156,7 @@ class WinesEditor extends React.Component<IProps, IState> {
   };
 
   render() {
-    const { rows, columns, tableColumnExtensions, pageSizes } = this.state;
+    const { rows, columns, pageSizes } = this.state;
 
     return (
       <Grid rows={rows} columns={columns} getRowId={getRowId}>
@@ -186,7 +177,6 @@ class WinesEditor extends React.Component<IProps, IState> {
           cellComponent={TableCell}
           rowComponent={TableRow}
           messages={tableMessages}
-          columnExtensions={tableColumnExtensions}
         />
         <TableHeaderRow messages={headerRowMessages} showSortingControls />
         <Toolbar rootComponent={ToolbarRoot} />
