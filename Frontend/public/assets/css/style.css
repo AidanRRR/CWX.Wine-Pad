@@ -61,6 +61,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
   font-weight: 600; }
 
+.h1-dark {
+  color: #4E3527; }
+
 h1 {
   color: white;
   line-height: 43px; }
@@ -2136,6 +2139,9 @@ body {
 .container-fluid {
   width: 95%; }
 
+#topnav .navigation-menu > li > a {
+  font-size: 4rem; }
+
 #topnav {
   background: #1C1713;
   position: fixed;
@@ -2611,8 +2617,16 @@ body {
 label {
   font-weight: 500; }
 
+.label-dark {
+  color: #4E3527;
+  font-weight: 900; }
+
 .sub-title {
   font-weight: 500; }
+
+.input-group-text {
+  background: #fcf8c5;
+  border: #fcf8c5; }
 
 .form-control {
   background-color: #4E3527;

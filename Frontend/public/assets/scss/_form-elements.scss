@@ -5,8 +5,16 @@
 label {
   font-weight: 500;
 }
+.label-dark {
+  color: $primary;
+  font-weight: 900;
+}
 .sub-title{
   font-weight: 500;
+}
+.input-group-text {
+  background: $yellow;
+  border: $yellow;
 }
 .form-control {
   background-color: $primary;

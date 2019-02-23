@@ -33,6 +33,9 @@ body {
   width: 95%;
 }
 
+#topnav .navigation-menu > li > a {
+  font-size: 4rem;
+}
 
 #topnav {
   background: $bg-topbar;
@@ -66,7 +69,7 @@ body {
         color: $primary;
         &:before{
           content:"\F12F";
-          font: normal normal normal 24px/1 "Material Design Icons";            
+          font: normal normal normal 24px/1 "Material Design Icons";
           position: absolute;
           font-size: 8px;
           left: 12px;
@@ -79,7 +82,7 @@ body {
 
   .topbar-main {
     .logo {
-      line-height: 60px;      
+      line-height: 60px;
       float: left;
     }
     .logo-large{
@@ -225,7 +228,7 @@ body {
     }
 
     i {
-      
+
     display: inline-block;
     font-size: 18px;
     line-height: 25px;
@@ -586,7 +589,7 @@ body {
     .navbar-header {
       float: left;
     }
-    
+
   }
 
   #navigation {

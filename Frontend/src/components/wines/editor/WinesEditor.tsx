@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   EditingState,
   IntegratedFiltering,
@@ -10,13 +10,12 @@ import {
 } from "@devexpress/dx-react-grid";
 import {
   Grid,
-  Table,
-  TableHeaderRow,
-  TableEditColumn,
   PagingPanel,
   SearchPanel,
-  Toolbar,
-  TableColumnResizing
+  Table,
+  TableEditColumn,
+  TableHeaderRow,
+  Toolbar
 } from "@devexpress/dx-react-grid-bootstrap4";
 import {
   editColumnMessages,
@@ -52,7 +51,6 @@ const TableComponent = ({ ...restProps }) => {
     />
   );
 };
-
 const TableRow = ({ row, ...restProps }) => {
   return (
     // @ts-ignore
@@ -65,9 +63,28 @@ const TableRow = ({ row, ...restProps }) => {
     />
   );
 };
-
 const ToolbarRoot = ({ ...restProps }) => {
   return <Toolbar.Root style={{ position: "absolute" }} {...restProps} />;
+};
+const searchPanelComponent = ({ ...restProps }) => {
+  return (
+    <div className={"input-group"} style={{ width: "40%" }}>
+      <SearchPanel.Input
+        className={"form-control"}
+        value={restProps.value}
+        onValueChange={restProps.onValueChange}
+        getMessage={restProps.getMessage}
+      />
+
+      <div className="input-group-append">
+        <span className="input-group-append">
+          <div className="input-group-text">
+            <i className="ti-search" />
+          </div>
+        </span>
+      </div>
+    </div>
+  );
 };
 
 class WinesEditor extends React.Component<IProps, IState> {
@@ -136,20 +153,14 @@ class WinesEditor extends React.Component<IProps, IState> {
   };
 
   render() {
-    const {
-      rows,
-      defaultColumnWidths,
-      columns,
-      tableColumnExtensions,
-      pageSizes
-    } = this.state;
+    const { rows, columns, tableColumnExtensions, pageSizes } = this.state;
 
     return (
       <Grid rows={rows} columns={columns} getRowId={getRowId}>
         <SearchState defaultValue={""} />
         <SortingState />
         <EditingState
-          onCommitChanges={() => {}}
+          onCommitChanges={this.commitChanges}
           onEditingRowIdsChange={this.changeEditingRowIds}
         />
         <PagingState defaultCurrentPage={5} defaultPageSize={10} />
@@ -164,7 +175,10 @@ class WinesEditor extends React.Component<IProps, IState> {
         />
         <TableHeaderRow messages={headerRowMessages} showSortingControls />
         <Toolbar rootComponent={ToolbarRoot} />
-        <SearchPanel messages={searchMessages} />
+        <SearchPanel
+          inputComponent={searchPanelComponent}
+          messages={searchMessages}
+        />
         <TableEditColumn
           messages={editColumnMessages}
           commandComponent={Command}
@@ -175,7 +189,7 @@ class WinesEditor extends React.Component<IProps, IState> {
         <Getter
           name="tableColumns"
           computed={({ tableColumns }) => {
-            const result = [
+            return [
               ...tableColumns.filter(
                 c => c.type !== TableEditColumn.COLUMN_TYPE
               ),
@@ -185,7 +199,6 @@ class WinesEditor extends React.Component<IProps, IState> {
                 width: 140
               }
             ];
-            return result;
           }}
         />
         <PagingPanel messages={pagingMessages} pageSizes={pageSizes} />

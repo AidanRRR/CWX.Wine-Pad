@@ -4,17 +4,20 @@ import { IFormikFieldInfo } from "./config";
 
 type Props = {
   field: IFormikFieldInfo;
+  dark?: boolean;
   errors: any;
 };
 
 export const TextField: React.FC<Props> = props => {
-  const { field, errors } = props;
+  const { field, errors, dark } = props;
+
+  const labelStyle = dark
+    ? "col-sm-3 col-form-label label-dark"
+    : "col-sm-3 col-form-label";
 
   return (
     <div className="form-group row">
-      <label htmlFor="example-text-input" className="col-sm-3 col-form-label">
-        {field.label}
-      </label>
+      <label className={labelStyle}>{field.label}</label>
       <div className="col-sm-9">
         <Field
           className={
@@ -34,13 +37,15 @@ export const TextField: React.FC<Props> = props => {
 };
 
 export const MultiTextField: React.FC<Props> = props => {
-  const { field, errors } = props;
+  const { field, errors, dark } = props;
+
+  const labelStyle = dark
+    ? "col-sm-3 col-form-label label-dark"
+    : "col-sm-3 col-form-label";
 
   return (
     <div className="form-group row">
-      <label htmlFor="example-text-input" className="col-sm-3 col-form-label">
-        {field.label}
-      </label>
+      <label className={labelStyle}>{field.label}</label>
       <div className="col-sm-9">
         <Field
           className={
