@@ -139,19 +139,30 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-//            var someWine = _context.Wine
-//                .Include(w => w.Measures)
-//                .Include(w => w.Region)
-//                .Include(w => w.Region.Country)
-//                .FirstOrDefault(w=>w.Id == id);
-//
-//            _context.Remove(someWine);
-//            _context.SaveChanges();
+            //            var someWine = _context.Wine
+            //                .Include(w => w.Measures)
+            //                .Include(w => w.Region)
+            //                .Include(w => w.Region.Country)
+            //                .FirstOrDefault(w=>w.Id == id);
+            //
+            //            _context.Remove(someWine);
+            //            _context.SaveChanges();
+            //
+            //Region someRegion = _context.Region.Include(r =>r.Country)
+            //    .FirstOrDefault(r => r.Id == id);
+            //_context.Remove(someRegion);
+            //_context.SaveChanges();
 
-            Region someRegion = _context.Region.Include(r =>r.Country)
-                .FirstOrDefault(r => r.Id == id);
-            _context.Remove(someRegion);
+            //Admin adminDelete = _context.Admin.Find(id);
+            //_context.Admin.Remove(adminDelete);
+            //_context.SaveChanges();
+
+            Card cardDelete = _context.Card.Find(id);
+            _context.Card.Remove(cardDelete);
             _context.SaveChanges();
+
+
+
 
 
 

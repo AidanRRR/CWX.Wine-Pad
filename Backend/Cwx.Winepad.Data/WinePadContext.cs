@@ -33,18 +33,35 @@ namespace Cwx.Winepad.Data.DAL
                 .WithOne(m => m.Wine)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Wine>()
-                .HasOne(w => w.Region)
-                .WithMany(r => r.Wines);
+            modelBuilder.Entity<Region>()
+                .HasMany(r => r.Wines)
+                .WithOne(w => w.Region);
 
             modelBuilder.Entity<Wine>()
                 .HasOne(w => w.Region)
-                .WithMany(r => r.Wines);
+                .WithMany(r => r.Wines)
+                .HasForeignKey("RegionId")
+                .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<Region>()
                 .HasOne(r => r.Country)
                 .WithMany(c => c.Regions)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Card>()
+                .HasMany(c => c.Segments)
+                .WithOne(s => s.Card);
+
+            modelBuilder.Entity<Segment>()
+                .HasOne(s => s.Card)
+                .WithMany(c => c.Segments)
+                .HasForeignKey("CardId")
+                .OnDelete(DeleteBehavior.SetNull);
+
+            
+
+
+
             //modelBuilder.Entity<Wine>()
             //    .OwnsOne(w => w.Region)
             //    .HasMany(r => r.Wines)
