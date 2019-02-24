@@ -3,6 +3,8 @@ import WinesEditor from "../../components/wines/editor/WinesEditor";
 import { IWine } from "../../models/Wine";
 import WineForm from "../../components/wines/wineForm/WineForm";
 import ModalConfirm from "../../components/ui/modals/ModalConfirm";
+import { drawerStyle } from "../../components/ui/drawer/Helper";
+import Drawer from "react-motion-drawer";
 
 export interface IProps {}
 export interface IState {
@@ -23,22 +25,32 @@ class Wines extends Component<IProps, IState> {
 
     return (
       <div>
-        {editingWine && (
-          <ModalConfirm
-            toggle={this.handleToggleModal}
-            onConfirm={() => {}}
-            body={<WineForm wine={editingWine} />}
-            title={"Onderdeel toevoegen"}
-          />
-        )}
-
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="page-title-box text-left">
-              <h4 className="page-title">Overzicht wijnen</h4>
+        <Drawer
+          drawerStyle={drawerStyle}
+          noTouchOpen={true}
+          noTouchClose={true}
+          width={"50%"}
+          open={!!editingWine}
+          onChange={() => {
+            if (editingWine !== null) {
+              this.setState({ editingWine: null });
+            }
+          }}
+        >
+          <div className={"row"}>
+            <div className={"col-md-12"}>
+              {editingWine && (
+                <WineForm
+                  onCancel={() => {
+                    this.setState({ editingWine: null });
+                  }}
+                  wine={editingWine}
+                />
+              )}
             </div>
           </div>
-        </div>
+        </Drawer>
+
         <div className="row">
           <div className="card">
             <div className="card-body">
@@ -53,10 +65,6 @@ class Wines extends Component<IProps, IState> {
       </div>
     );
   }
-
-  handleToggleModal = () => {
-    this.setState({ editingWine: null });
-  };
 }
 
 export default Wines;

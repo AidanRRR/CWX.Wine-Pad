@@ -5,13 +5,22 @@
 label {
   font-weight: 500;
 }
+.label-dark {
+  color: $primary;
+  font-weight: 900;
+}
 .sub-title{
   font-weight: 500;
+}
+.input-group-text {
+  background: $yellow;
+  border: $yellow;
 }
 .form-control {
   background-color: $primary;
   font-size: $base-font;
   border: 0px !important;
+  color: $yellow;
   &:focus {
     border-color: $primary;
     box-shadow: none;

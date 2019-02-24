@@ -29,7 +29,7 @@ export class FormikSelect extends React.Component<IProps, IState> {
 
     return (
       <Select
-        className={"react-select"}
+        className={"react-select-container"}
         classNamePrefix="react-select"
         placeholder={placeholder}
         value={selectedOption}

@@ -94,6 +94,7 @@
       "id": 10,
       "title": " Rousssillon “Centenaire”",
       "region": "Domaine Lafage Roussillon",
+      "year": 2017,
       "price": "34,00",
       "description": "",
       "type": "Wit"
@@ -102,6 +103,7 @@
       "id": 11,
       "title": "2016  Sancerre",
       "region": "Dom. Roland Tissier, Loire",
+      "year": 2017,
       "price": "37,00",
       "description": "",
       "type": "Wit"
@@ -110,6 +112,7 @@
       "id": 12,
       "title": "2015  Chablis “Les Hauts de Milly”",
       "region": "Bernard Defaix, Bourgogne",
+      "year": 2017,
       "price": "49,00",
       "description": "",
       "type": "Wit"
@@ -118,6 +121,7 @@
       "id": 13,
       "title": "2015  Meursault “Charles Maxime”",
       "region": "Latour Guiraud, Bourgogne",
+      "year": 2017,
       "price": "78,00",
       "description": "",
       "type": "Wit"

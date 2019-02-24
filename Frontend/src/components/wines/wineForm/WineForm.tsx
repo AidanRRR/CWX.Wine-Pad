@@ -1,17 +1,15 @@
 import React, { Component } from "react";
-import { Field, Formik } from "formik";
+import { Formik } from "formik";
 import { FieldInfos, initialValues, IValues, validations } from "./config";
-import {
-  MultiTextField,
-  SelectField,
-  TextField
-} from "../../ui/forms/FormFields";
+import { MultiTextField, TextField } from "../../ui/forms/FormFields";
 import { IWine } from "../../../models/Wine";
 import { FormikSelect } from "../../ui/forms/FormikSelect";
 import { CountrySuggestions } from "../../../models/Country";
+import SaveCancel from "../../ui/buttons/SaveCancel";
 
 export interface IProps {
   wine: IWine;
+  onCancel: () => void;
 }
 export interface IState {
   initialValues: IValues;
@@ -28,25 +26,36 @@ class WineForm extends Component<IProps, IState> {
 
   render() {
     const { initialValues } = this.state;
+    const { onCancel } = this.props;
 
     return (
-      <div>
+      <div className={"row"}>
+        {initialValues.title !== "" && (
+          <div className={"col-md-12 mb-4"}>
+            <h1 className={"h1-dark"}>Wijn informatie</h1>
+          </div>
+        )}
+
         <Formik
           initialValues={initialValues}
           validationSchema={validations}
           onSubmit={() => {}}
         >
-          {({ values, errors, setFieldValue, setFieldTouched }) => (
-            <div>
-              <TextField field={FieldInfos.title} errors={errors} />
-              <TextField field={FieldInfos.year} errors={errors} />
-              <TextField field={FieldInfos.type} errors={errors} />
-              <TextField field={FieldInfos.region} errors={errors} />
+          {({ submitForm, values, errors, setFieldValue, setFieldTouched }) => (
+            <div className={"col-md-12"}>
+              <TextField field={FieldInfos.title} errors={errors} dark={true} />
+              <TextField field={FieldInfos.year} errors={errors} dark={true} />
+              <TextField field={FieldInfos.type} errors={errors} dark={true} />
+              <TextField
+                field={FieldInfos.region}
+                errors={errors}
+                dark={true}
+              />
 
               <div className="form-group row">
                 <label
                   htmlFor="example-text-input"
-                  className="col-sm-3 col-form-label"
+                  className="col-sm-3 col-form-label label-dark"
                 >
                   {FieldInfos.country.label}
                 </label>
@@ -63,8 +72,13 @@ class WineForm extends Component<IProps, IState> {
                 </div>
               </div>
 
-              <MultiTextField field={FieldInfos.description} errors={errors} />
-              <TextField field={FieldInfos.price} errors={errors} />
+              <MultiTextField
+                field={FieldInfos.description}
+                errors={errors}
+                dark={true}
+              />
+              <TextField field={FieldInfos.price} errors={errors} dark={true} />
+              <SaveCancel onConfirm={submitForm} onCancel={onCancel} />
             </div>
           )}
         </Formik>

@@ -2,31 +2,53 @@
   Tables
 ===================*/
 
-
 .table {
   margin-bottom: 10px;
 }
 
+// Table searchbar hacks
+.d-flex {
+  display: block !important;
+}
+.card-header {
+  padding: 0px !important;
+}
+
 .table thead th {
   border-top: 1px solid;
-  border-color: rgba(255,255,255,0.5);
+  border-color: rgba(252,248,197, 0.4);
   border-bottom: none !important;
-  // border-bottom: 2px solid $brown-light;
   color: white;
+  font-weight: 900;
+  vertical-align: top;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  padding-bottom: 0rem;
+  padding-top: 0.75rem;
+}
+
+.table-cell-primary {
+  opacity: 1;
+}
+.table-cell-secondary {
+  opacity: 0.7;
 }
 
 .table td {
-  //border-top: 1px solid $brown-light;
   border-top: none !important;
-}
-
-th {
-  font-weight: 500;
 }
 
 .table-icon {
   color: $yellow;
 }
+
+.dx-g-bs4-table-cell {
+  font-weight: bold;
+}
+
+//.p-0:first-of-type {
+//  background: white;
+//}
 
 .table>tbody>tr>td, .table>tfoot>tr>td, .table>thead>tr>td {
   padding: 8px 12px;
