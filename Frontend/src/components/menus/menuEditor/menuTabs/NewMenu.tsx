@@ -11,7 +11,7 @@ class NewMenu extends Component<IProps, IState> {
     const { onClick } = this.props;
 
     return (
-      <div className={"card"} style={{ minHeight: 500 }}>
+      <div className={"card"}>
         <div style={{ background: "red" }} />
         <button
           onClick={onClick}

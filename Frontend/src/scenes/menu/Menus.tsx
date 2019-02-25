@@ -43,26 +43,17 @@ class Menus extends Component<IProps, IState> {
     const { menus, showAddMenu } = this.state;
 
     return (
-      <div className={"mt-5"}>
-        {/*{showAddMenu && (*/}
-        {/*<ModalConfirm*/}
-        {/*toggle={this.handleToggleModal}*/}
-        {/*body={<NewMenuForm onComplete={this.refresh} />}*/}
-        {/*title={"Nieuwe wijnkaart"}*/}
-        {/*/>*/}
-        {/*)}*/}
-        <div className="row">
-          {menus.map((menu, i) => {
-            return (
-              <div key={i} className={"col-sm-3"}>
-                <Menu menu={menu} />
-              </div>
-            );
-          })}
-          <div className={"col-sm-3"}>
-            <NewMenu onClick={this.handleToggleModal} />
-          </div>
+      <div className={"row"}>
+        <div className={"col-md-2"}>
+          <NewMenu onClick={this.handleToggleModal} />
         </div>
+        {menus.map((menu, i) => {
+          return (
+            <div key={i} className={"col-md-2"}>
+              <Menu menu={menu} />
+            </div>
+          );
+        })}
       </div>
     );
   }
