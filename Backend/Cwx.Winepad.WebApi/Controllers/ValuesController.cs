@@ -30,6 +30,7 @@ namespace Cwx.Winepad.WebApi.Controllers
             _context.Add(newCountry);
             _context.SaveChanges();
 
+
             var newRegion = new Region()
             {
                 Country = _context.Country.FirstOrDefault(c => c.Code == "ESP"),
@@ -39,12 +40,14 @@ namespace Cwx.Winepad.WebApi.Controllers
             _context.Add(newRegion);
             _context.SaveChanges();
 
+
             var newWineType = new WineType()
             {
                 Name = "Red"
             };
             _context.Add(newWineType);
             _context.SaveChanges();
+
 
             var newWine = new Wine()
             {
@@ -59,6 +62,7 @@ namespace Cwx.Winepad.WebApi.Controllers
             _context.Add(newWine);
             _context.SaveChanges();
 
+
             var newMeasure = new Measure()
             {
                 Name = "0,5l Carafe",
@@ -68,9 +72,11 @@ namespace Cwx.Winepad.WebApi.Controllers
             _context.Add(newMeasure);
             _context.SaveChanges();
 
+
             var newCard = new Card();
             _context.Add(newCard);
             _context.SaveChanges();
+
 
             var newAdmin = new Admin()
             {
@@ -79,14 +85,33 @@ namespace Cwx.Winepad.WebApi.Controllers
             _context.Add(newAdmin);
             _context.SaveChanges();
 
+
             var newSegment = new Segment()
             {
                 Name = "By the glass",
-                Card = _context.Card.Find(4)
+                Card = _context.Card.Find(1)
             };
             _context.Add(newSegment);
             _context.SaveChanges();
-            
+
+            var cardAdmin = new CardAdmin()
+            {
+                Card = _context.Card.Find(1),
+                Admin = _context.Admin.Find(1)
+            };
+            _context.Add(cardAdmin);
+            _context.SaveChanges();
+
+
+            var segmentWine = new SegmentWine()
+            {
+                Wine = _context.Wine.Find(1),
+                Segment = _context.Segment.Find(1)
+            };
+            _context.Add(segmentWine);
+
+            _context.SaveChanges();
+
             return Ok();
         }
 
@@ -161,36 +186,41 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            //Wijn wordt verwijdert met measure.
+            //Wijn wordt verwijdert met measure EN SegmentWine
             var someWine = _context.Wine
                 .Include(w => w.Measures)
                 .Include(w => w.Region)
                 .Include(w => w.Region.Country)
+                .Include(w => w.SegmentWines)
                 .FirstOrDefault(w => w.Id == id);
 
             _context.Remove(someWine);
+            _context.SaveChanges();
 
-            //verwijdert Admin. Geen dependencies, kan zo.
-            //            Admin adminDelete = _context.Admin.Find(id);
-            //            _context.Admin.Remove(adminDelete);
-            //            _context.SaveChanges();
 
-            //Verwijdert alle segmenten als je een card verwijdert --> Segmenten kunnen niet leven zonder Card.
-            //Card card = _context.Card
-            //    .Include(c => c.Segments)
-            //    .FirstOrDefault(c => c.Id == id);
+            //verwijdert Admin. samen met de rij in CardAdmin
+            Admin adminDelete = _context.Admin
+                .Include(a=>a.CardAdmins)
+                .FirstOrDefault(a=>a.Id == id);
 
-            //_context.Card.Remove(card);
-            //_context.SaveChanges();
+            _context.Remove(adminDelete);
+            _context.SaveChanges();
 
             //verwijdert Segment zonder card
-            //Segment segmentToDelete = _context.Segment.Include(s => s.SegmentWines)
-            //    .Include(s => s.Card)
-            //    .Include(s => s.SegmentWines)
-            //    .FirstOrDefault(s => s.Id == id);
+            Segment segmentToDelete = _context.Segment.Include(s => s.SegmentWines)
+                .Include(s => s.Card)
+                .Include(s => s.SegmentWines)
+                .FirstOrDefault(s => s.Id == id);
 
-            //_context.Segment.Remove(segmentToDelete);
+            _context.Segment.Remove(segmentToDelete);
+            _context.SaveChanges();
 
+            //Verwijdert alle segmenten als je een card verwijdert --> Segmenten kunnen niet leven zonder Card.
+            Card card = _context.Card
+                .Include(c => c.Segments)
+                .FirstOrDefault(c => c.Id == id);
+
+            _context.Card.Remove(card);
             _context.SaveChanges();
 
         }

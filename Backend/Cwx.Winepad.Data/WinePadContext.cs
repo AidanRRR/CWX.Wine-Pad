@@ -62,6 +62,11 @@ namespace Cwx.Winepad.Data.DAL
                 .HasOne(sw => sw.Wine)
                 .WithMany(w => w.SegmentWines)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<CardAdmin>()
+                .HasOne(ca => ca.Admin)
+                .WithMany(a => a.CardAdmins)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         public DbSet<Wine> Wine { get; set; }
