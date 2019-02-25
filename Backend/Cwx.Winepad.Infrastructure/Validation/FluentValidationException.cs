@@ -1,5 +1,5 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+using FluentValidation.Results;
 
 namespace Cwx.Winepad.Infrastructure.Validation
 {
