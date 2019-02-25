@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using Cwx.Winepad.Data.DAL;
 using Cwx.Winepad.Domain.Models;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;

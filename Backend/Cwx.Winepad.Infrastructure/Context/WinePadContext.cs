@@ -1,7 +1,7 @@
 ﻿using Cwx.Winepad.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cwx.Winepad.Data
+namespace Cwx.Winepad.Infrastructure.Context
 {
     public class WinePadContext : DbContext
     {

@@ -1,5 +1,5 @@
-﻿using System;
-using Cwx.Winepad.Data.DAL;
+﻿using Cwx.Winepad.Infrastructure.Context;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +22,11 @@ namespace Cwx.Winepad.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services
+                .AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddMediatR();
 
             services.AddSwaggerGen(c =>
             {
