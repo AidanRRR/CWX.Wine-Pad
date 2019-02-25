@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Interfaces;
+using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,6 +13,14 @@ namespace Cwx.Winepad.Domain.Country.Features
         {
             public string Name { get; set; }
             public string Code { get; set; }
+        }
+
+        public class Validator : AbstractValidator<Request>
+        {
+            public Validator()
+            {
+                RuleFor(r => r.Name).NotEmpty();
+            }
         }
 
         public class Handler : IRequestHandler<Request>

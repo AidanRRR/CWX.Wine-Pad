@@ -1,5 +1,8 @@
-﻿using Cwx.Winepad.Domain.Interfaces;
+﻿using Cwx.Winepad.Domain.Country.Features;
+using Cwx.Winepad.Domain.Interfaces;
 using Cwx.Winepad.Infrastructure.Context;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -25,7 +28,8 @@ namespace Cwx.Winepad.WebApi
         {
             services
                 .AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
+                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IRepository>());
 
             services.AddMediatR();
 
