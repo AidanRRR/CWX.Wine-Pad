@@ -1,7 +1,6 @@
 ﻿    using System.Collections.Generic;
-using Cwx.Winepad.Infrastructure.Entities;
 
-namespace Cwx.Winepad.Domain.Models
+    namespace Cwx.Winepad.Domain.Models
 {
     public class Card : IEntity
     {

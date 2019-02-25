@@ -13,6 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="6.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="6.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.2" />
@@ -20,8 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Cwx.Winepad.Data\Cwx.Winepad.Data.csproj" />
     <ProjectReference Include="..\Cwx.Winepad.Domain\Cwx.Winepad.Domain.csproj" />
+    <ProjectReference Include="..\Cwx.Winepad.Infrastructure\Cwx.Winepad.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

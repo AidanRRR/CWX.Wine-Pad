@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Cwx.Winepad.Infrastructure.Entities;
 
 namespace Cwx.Winepad.Domain.Models
 {

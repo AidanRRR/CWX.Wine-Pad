@@ -1,5 +1,4 @@
 ﻿using System;
-using Cwx.Winepad.Infrastructure.Entities;
 
 namespace Cwx.Winepad.Domain.Models
 {
