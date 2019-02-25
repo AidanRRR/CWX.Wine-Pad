@@ -21,13 +21,7 @@ namespace Cwx.Winepad.Data.DAL
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            
-
-            //.HasOne(m => m.Wine)
-            //.WithMany(m => m.Measures)
-            //.HasForeignKey(m => m.WineId)
-            //.OnDelete(DeleteBehavior.Cascade);
-
+            //Measure wordt mee verwijdert als er een wijn wordt verwijdert.
             modelBuilder.Entity<Wine>()
                 .HasMany(w => w.Measures)
                 .WithOne(m => m.Wine)
@@ -35,30 +29,39 @@ namespace Cwx.Winepad.Data.DAL
 
             modelBuilder.Entity<Wine>()
                 .HasOne(w => w.Region)
-                .WithMany(r => r.Wines);
+                .WithMany(r => r.Wines)
+                .HasForeignKey("RegionId")
+                .OnDelete(DeleteBehavior.SetNull);
 
-            modelBuilder.Entity<Wine>()
-                .HasOne(w => w.Region)
-                .WithMany(r => r.Wines);
+            modelBuilder.Entity<Region>()
+                .HasMany(r => r.Wines)
+                .WithOne(w => w.Region);
 
             modelBuilder.Entity<Region>()
                 .HasOne(r => r.Country)
-                .WithMany(c => c.Regions)
+                .WithMany(c => c.Regions);
+                
+
+           //Alle segmenten worden verwijdert bij het verwijderen van een "Card".     
+            modelBuilder.Entity<Segment>()
+                .HasOne(s => s.Card)
+                .WithMany(c => c.Segments)
                 .OnDelete(DeleteBehavior.Cascade);
-            //modelBuilder.Entity<Wine>()
-            //    .OwnsOne(w => w.Region)
-            //    .HasMany(r => r.Wines)
-            //    .WithOne(w => w.Region)
-            //    .HasForeignKey("RegionId");
 
-            //modelBuilder.Entity<Country>()
-            //    .HasMany(c => c.Regions)
-            //    .WithOne(r => r.Country)
-            //    .OnDelete(DeleteBehavior.Cascade);
+            //Als je een segment verwijdert wordt de rij in SegmentWine ook verwijdert.
+            modelBuilder.Entity<Segment>()
+                .HasMany(s => s.SegmentWines)
+                .WithOne(sg => sg.Segment)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            //modelBuilder.Entity<Region>()
-            //    .HasOne(r => r.Country)
-            //    .WithMany(c => c.Regions);
+            modelBuilder.Entity<SegmentWine>()
+                .HasOne(sw => sw.Segment)
+                .WithMany(s => s.SegmentWines);
+                
+            modelBuilder.Entity<SegmentWine>()
+                .HasOne(sw => sw.Wine)
+                .WithMany(w => w.SegmentWines)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         public DbSet<Wine> Wine { get; set; }
