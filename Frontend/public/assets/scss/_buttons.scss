@@ -40,7 +40,7 @@
 }
 
 .btn-primary{
-  background-color: $success;
+  background-color: $primary;
   border: 1px solid $primary;
 }
 .btn-primary:not(:disabled):not(.disabled).active, 
@@ -51,7 +51,7 @@
 .open > .dropdown-toggle.btn-primary,.btn-outline-primary.active, .btn-outline-primary:active,
 .show>.btn-outline-primary.dropdown-toggle,.btn-outline-primary:hover,.btn-primary.active,
 .btn-primary:active, .show>.btn-primary.dropdown-toggle  {
-  background-color: darken($success, 5%);
+  background-color: lighten($primary, 5%);
   border: 1px solid darken($primary, 5%);
   color: $white;
 }

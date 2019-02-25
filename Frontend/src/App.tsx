@@ -1,5 +1,11 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  withRouter,
+  RouteComponentProps
+} from "react-router-dom";
 
 import "./App.css";
 import "@devexpress/dx-react-grid-bootstrap4/dist/dx-react-grid-bootstrap4.css";

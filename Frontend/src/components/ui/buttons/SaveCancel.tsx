@@ -13,18 +13,18 @@ class SaveCancel extends Component<IProps, IState> {
     return (
       <div className={"pull-right"}>
         <button
+          onClick={onCancel}
+          type="button"
+          className="btn btn-secondary btn-lg m-r-10"
+        >
+          Annuleren
+        </button>
+        <button
           onClick={onConfirm}
           type="button"
           className="btn btn-primary btn-lg"
         >
           Opslaan
-        </button>
-        <button
-          onClick={onCancel}
-          type="button"
-          className="btn btn-secondary btn-lg"
-        >
-          Annuleren
         </button>
       </div>
     );

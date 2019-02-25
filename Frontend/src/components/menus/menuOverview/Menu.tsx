@@ -15,7 +15,7 @@ class Menu extends Component<IProps, IState> {
     return (
       <Fragment>
         <div className={"card"}>
-          <img src={MenuExample} alt="" className="card-img-top img-fluid" />
+          <img src={menu.avatar} alt="" className="card-img-top img-fluid" />
           <div className="card-body">
             <h4 className="card-title font-20 mt-0">{menu.name}</h4>
             <p className="card-text">

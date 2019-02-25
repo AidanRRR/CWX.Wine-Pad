@@ -11,8 +11,8 @@ class NewMenu extends Component<IProps, IState> {
     const { onClick } = this.props;
 
     return (
-      <div className={"card"}>
-        <img src={NewMenuImg} alt="" className="card-img-top img-fluid" />
+      <div className={"card"} style={{ minHeight: 500 }}>
+        <div style={{ background: "red" }} />
         <button
           onClick={onClick}
           className="btn btn-primary waves-effect waves-light"

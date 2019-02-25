@@ -30,11 +30,9 @@ class WineForm extends Component<IProps, IState> {
 
     return (
       <div className={"row"}>
-        {initialValues.title !== "" && (
-          <div className={"col-md-12 mb-4"}>
-            <h1 className={"h1-dark"}>Wijn informatie</h1>
-          </div>
-        )}
+        <div className={"col-md-12 mb-4"}>
+          <h1 className={"h1-dark"}>Wijn informatie</h1>
+        </div>
 
         <Formik
           initialValues={initialValues}
