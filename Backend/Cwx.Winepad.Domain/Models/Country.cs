@@ -7,7 +7,7 @@ namespace Cwx.Winepad.Domain.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Code { get; set; }
-        public ICollection<Region> Regions { get; set; }
+        public ICollection<Region> Regions { get; set; } = new List<Region>();
     }
 
     public class CountryDto

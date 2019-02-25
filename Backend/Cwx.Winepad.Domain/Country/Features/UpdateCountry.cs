@@ -6,10 +6,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Cwx.Winepad.Domain.Country.Features
 {
-    public class AddCountry
+    public class UpdateCountry
     {
         public class Request : IRequest
         {
+            public int Id { get; set; }
             public string Name { get; set; }
             public string Code { get; set; }
         }
@@ -25,13 +26,13 @@ namespace Cwx.Winepad.Domain.Country.Features
 
             public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
             {
-                var country = new Models.Country()
-                {
-                    Code = request.Code,
-                    Name = request.Name
-                };
+                var country = await _repository.Query<Models.Country>()
+                    .FirstOrDefaultAsync(c => c.Id == request.Id, cancellationToken);
 
-                await _repository.InsertAsync(country, cancellationToken);
+                country.Code = request.Code;
+                country.Name = request.Name;
+
+                await _repository.UpdateAsync(country, cancellationToken);
 
                 return Unit.Value;
             }

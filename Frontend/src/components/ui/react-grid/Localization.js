@@ -1,5 +1,5 @@
 export const tableMessages = {
-    noData: 'Geen wijnen',
+    noData: 'Geen wijnen gevonden...',
 };
 
 export const pagingMessages = {

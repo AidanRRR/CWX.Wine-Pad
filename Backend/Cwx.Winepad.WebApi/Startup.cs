@@ -37,6 +37,7 @@ namespace Cwx.Winepad.WebApi
                     Version = "v1",
                     Description = "APi documentation: Winepad",
                 });
+                c.CustomSchemaIds(csi => csi.FullName);
             });
 
             services.AddDbContext<WinePadContext>(options =>
