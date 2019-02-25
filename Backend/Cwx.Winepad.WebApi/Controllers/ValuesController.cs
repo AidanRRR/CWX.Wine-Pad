@@ -36,15 +36,16 @@ namespace Cwx.Winepad.WebApi.Controllers
                 Name = "Côte de Blancs"
                 
             };
-
             _context.Add(newRegion);
             _context.SaveChanges();
+
             var newWineType = new WineType()
             {
                 Name = "Red"
             };
             _context.Add(newWineType);
             _context.SaveChanges();
+
             var newWine = new Wine()
             {
                 Name = "Champagne Grand Cru",
@@ -57,6 +58,7 @@ namespace Cwx.Winepad.WebApi.Controllers
             };
             _context.Add(newWine);
             _context.SaveChanges();
+
             var newMeasure = new Measure()
             {
                 Name = "0,5l Carafe",
@@ -65,19 +67,22 @@ namespace Cwx.Winepad.WebApi.Controllers
             };
             _context.Add(newMeasure);
             _context.SaveChanges();
+
             var newCard = new Card();
             _context.Add(newCard);
             _context.SaveChanges();
+
             var newAdmin = new Admin()
             {
                 Name = "Ronny"
             };
             _context.Add(newAdmin);
             _context.SaveChanges();
+
             var newSegment = new Segment()
             {
                 Name = "By the glass",
-                Card = _context.Card.Find(1)
+                Card = _context.Card.Find(4)
             };
             _context.Add(newSegment);
             _context.SaveChanges();
@@ -124,55 +129,70 @@ namespace Cwx.Winepad.WebApi.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Country updatedCountry)
+        public void Put([FromBody] CountryDto country)
         {
-            Country countryToUpdate = _context.Country.FirstOrDefault(c => c.Id == id);
-            if (countryToUpdate != null)
-            {
-                countryToUpdate.Name = updatedCountry.Name;
-                countryToUpdate.Code = updatedCountry.Code;
-                _context.SaveChanges();
-            }
+            // Stap 1: entity ophalen
+            // Stap 2: entity properties aanpassen, (MAPPEN)
+            // Stap 3: entity saven
+
+            var entity = _context.Country.FirstOrDefault(c => c.Id == country.Id);
+            entity.Name = country.Name;
+            entity.Code = country.Code;
+            
+            _context.SaveChanges();
+
+
+            //Country countryToUpdate = _context.Country.FirstOrDefault(c => c.Id == id);
+            //if (countryToUpdate != null)
+            //{
+            //    countryToUpdate.Name = updatedCountry.Name;
+            //    countryToUpdate.Code = updatedCountry.Code;
+            //    _context.SaveChanges();
+            //}
+
+            //Wine wineToUpdate = _context.Wine.FirstOrDefault(w => w.Id == id);
+            //if (wineToUpdate != null)
+            //{
+
+            //}
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            //            var someWine = _context.Wine
-            //                .Include(w => w.Measures)
-            //                .Include(w => w.Region)
-            //                .Include(w => w.Region.Country)
-            //                .FirstOrDefault(w=>w.Id == id);
-            //
-            //            _context.Remove(someWine);
+            //Wijn wordt verwijdert met measure.
+            var someWine = _context.Wine
+                .Include(w => w.Measures)
+                .Include(w => w.Region)
+                .Include(w => w.Region.Country)
+                .FirstOrDefault(w => w.Id == id);
+
+            _context.Remove(someWine);
+
+            //verwijdert Admin. Geen dependencies, kan zo.
+            //            Admin adminDelete = _context.Admin.Find(id);
+            //            _context.Admin.Remove(adminDelete);
             //            _context.SaveChanges();
-            //
-            //Region someRegion = _context.Region.Include(r =>r.Country)
-            //    .FirstOrDefault(r => r.Id == id);
-            //_context.Remove(someRegion);
+
+            //Verwijdert alle segmenten als je een card verwijdert --> Segmenten kunnen niet leven zonder Card.
+            //Card card = _context.Card
+            //    .Include(c => c.Segments)
+            //    .FirstOrDefault(c => c.Id == id);
+
+            //_context.Card.Remove(card);
             //_context.SaveChanges();
 
-            //Admin adminDelete = _context.Admin.Find(id);
-            //_context.Admin.Remove(adminDelete);
-            //_context.SaveChanges();
+            //verwijdert Segment zonder card
+            //Segment segmentToDelete = _context.Segment.Include(s => s.SegmentWines)
+            //    .Include(s => s.Card)
+            //    .Include(s => s.SegmentWines)
+            //    .FirstOrDefault(s => s.Id == id);
 
-            Card cardDelete = _context.Card.Find(id);
-            _context.Card.Remove(cardDelete);
+            //_context.Segment.Remove(segmentToDelete);
+
             _context.SaveChanges();
 
-
-
-
-
-
-
-            //_context.RemoveRange(regionToDelete.Wines);            
-
-            //WineType wineTypeToDelete = _context.WineType.FirstOrDefault(wt => wt.Id == id);
-            //_context.WineType.Remove(wineTypeToDelete);
-
-            //_context.SaveChanges();
         }
     }
 }
