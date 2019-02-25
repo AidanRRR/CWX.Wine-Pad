@@ -1,14 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Models;
 
 namespace Cwx.Winepad.Domain.Interfaces
 {
     public interface IRepository
     {
-        T GetById<T>(int id) where T : IEntity;
-        List<T> List<T>(ISpecification<T> spec = null) where T : IEntity;
-        T Add<T>(T entity) where T : IEntity;
-        void Update<T>(T entity) where T : IEntity;
-        void Delete<T>(T entity) where T : IEntity;
+        IQueryable<TEntity> Query<TEntity>() where TEntity : class, IEntity;
+        Task InsertAsync<TEntity>(TEntity entity, CancellationToken cancellationToken) where TEntity : class, IEntity;
+        Task UpdateAsync<TEntity>(TEntity entity, CancellationToken cancellationToken) where TEntity : class, IEntity;
     }
 }

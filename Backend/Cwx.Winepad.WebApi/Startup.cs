@@ -1,4 +1,5 @@
-﻿using Cwx.Winepad.Infrastructure.Context;
+﻿using Cwx.Winepad.Domain.Interfaces;
+using Cwx.Winepad.Infrastructure.Context;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -40,6 +41,9 @@ namespace Cwx.Winepad.WebApi
 
             services.AddDbContext<WinePadContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Database")));
+
+            services.AddScoped<IRepository, DbContextRepository>();
+
         }
 
 

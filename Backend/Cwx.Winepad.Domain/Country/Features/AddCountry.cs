@@ -4,8 +4,11 @@ namespace Cwx.Winepad.Domain.Country.Features
 {
     public class AddCountry
     {
-        public AddCountry()
+        private readonly DbContext _dbContext;
+
+        public AddCountry(DbContext dbContext)
         {
+            _dbContext = dbContext;
         }
     }
 }

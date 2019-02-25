@@ -1,4 +1,5 @@
-﻿using Cwx.Winepad.Infrastructure.Entities;
+﻿using Cwx.Winepad.Domain.Models;
+using Cwx.Winepad.Infrastructure.Entities;
 using Cwx.Winepad.Infrastructure.Entities.ModelBuilder;
 using FluentMigrator.Builders;
 using FluentMigrator.Builders.Delete;

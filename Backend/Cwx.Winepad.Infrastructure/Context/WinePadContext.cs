@@ -54,6 +54,8 @@ namespace Cwx.Winepad.Infrastructure.Context
                 .OnDelete(DeleteBehavior.Cascade);
         }
 
+        public DbContext Instance => this;
+
         public DbSet<Wine> Wine { get; set; }
         public DbSet<Card> Card { get; set; }
         public DbSet<Admin> Admin { get; set; }
@@ -63,6 +65,6 @@ namespace Cwx.Winepad.Infrastructure.Context
         public DbSet<Segment> Segment { get; set; }
         public DbSet<WineType> WineType { get; set; }
         public DbSet<CardAdmin> CardAdmin { get; set; }
-        public DbSet<SegmentWine> SegmentWine { get; set; }       
+        public DbSet<SegmentWine> SegmentWine { get; set; }
     }
 }

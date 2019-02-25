@@ -1,4 +1,6 @@
-﻿namespace Cwx.Winepad.Infrastructure.Entities.ModelBuilder
+﻿using Cwx.Winepad.Domain.Models;
+
+namespace Cwx.Winepad.Infrastructure.Entities.ModelBuilder
 {
     public static class TableName
     {
