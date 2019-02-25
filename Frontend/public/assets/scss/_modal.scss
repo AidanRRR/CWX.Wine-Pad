@@ -1,5 +1,14 @@
+.modal {
+  top: 150px;
+  color: $primary;
+}
+
 .modal-content {
-  background-color: $gray-900;
+  background-color: $yellow;
+}
+
+.modal-footer {
+  border-top: 0px;
 }
 
 .modal-header {

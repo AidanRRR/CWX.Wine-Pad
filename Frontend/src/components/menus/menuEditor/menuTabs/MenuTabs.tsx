@@ -27,21 +27,20 @@ class MenuTabs extends Component<IProps, IState> {
 
     return (
       <Fragment>
-        {showAddCard && (
-          <ModalConfirm
-            toggle={this.handleToggleModal}
-            onConfirm={() => {
-              this.setState({ addCardConfirmed: true });
-            }}
-            body={
-              <MenuTabForm
-                confirmed={addCardConfirmed}
-                onComplete={onRefresh}
-              />
-            }
-            title={"Onderdeel toevoegen"}
-          />
-        )}
+        {/*{showAddCard && (*/}
+        {/*<ModalConfirm*/}
+        {/*onConfirm={() => {*/}
+        {/*this.setState({ addCardConfirmed: true });*/}
+        {/*}}*/}
+        {/*body={*/}
+        {/*<MenuTabForm*/}
+        {/*confirmed={addCardConfirmed}*/}
+        {/*onComplete={onRefresh}*/}
+        {/*/>*/}
+        {/*}*/}
+        {/*title={"Onderdeel toevoegen"}*/}
+        {/*/>*/}
+        {/*)}*/}
 
         <ul className="nav nav-tabs">
           {tabs.map((tab, i) => {

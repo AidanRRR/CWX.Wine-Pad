@@ -7,6 +7,7 @@ import ModalConfirm from "../../components/ui/modals/ModalConfirm";
 export interface IMenu {
   id: number;
   name: string;
+  avatar: string;
   items: number;
   activatedOn: number;
 }
@@ -23,8 +24,16 @@ class Menus extends Component<IProps, IState> {
       {
         id: 0,
         name: "Butcher's Dining",
+        avatar: "http://www.rypens.be/upload/files/Path_9.png",
         items: 96,
         activatedOn: 2
+      },
+      {
+        id: 1,
+        name: "De Vettigen Os",
+        avatar: "http://www.rypens.be/upload/files/Template.png",
+        items: 21,
+        activatedOn: 1
       }
     ],
     showAddMenu: false
@@ -34,21 +43,14 @@ class Menus extends Component<IProps, IState> {
     const { menus, showAddMenu } = this.state;
 
     return (
-      <Fragment>
-        {showAddMenu && (
-          <ModalConfirm
-            toggle={this.handleToggleModal}
-            body={<NewMenuForm onComplete={this.refresh} />}
-            title={"Nieuwe wijnkaart"}
-          />
-        )}
-        <div className="row">
-          <div className="col-sm-12">
-            <div className="page-title-box text-left">
-              <h4 className="page-title">Overzicht wijnkaarten</h4>
-            </div>
-          </div>
-        </div>
+      <div className={"mt-5"}>
+        {/*{showAddMenu && (*/}
+        {/*<ModalConfirm*/}
+        {/*toggle={this.handleToggleModal}*/}
+        {/*body={<NewMenuForm onComplete={this.refresh} />}*/}
+        {/*title={"Nieuwe wijnkaart"}*/}
+        {/*/>*/}
+        {/*)}*/}
         <div className="row">
           {menus.map((menu, i) => {
             return (
@@ -61,7 +63,7 @@ class Menus extends Component<IProps, IState> {
             <NewMenu onClick={this.handleToggleModal} />
           </div>
         </div>
-      </Fragment>
+      </div>
     );
   }
 

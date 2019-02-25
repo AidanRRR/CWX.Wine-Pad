@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import WinesEditor from "../../components/wines/editor/WinesEditor";
 import { IWine } from "../../models/Wine";
 import WineForm from "../../components/wines/wineForm/WineForm";
-import ModalConfirm from "../../components/ui/modals/ModalConfirm";
 import { drawerStyle } from "../../components/ui/drawer/Helper";
 import Drawer from "react-motion-drawer";
 
@@ -24,7 +23,7 @@ class Wines extends Component<IProps, IState> {
     const { editingWine } = this.state;
 
     return (
-      <div>
+      <div className={"mt-5"}>
         <Drawer
           drawerStyle={drawerStyle}
           noTouchOpen={true}

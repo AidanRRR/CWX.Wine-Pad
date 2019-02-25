@@ -16,7 +16,7 @@ class Topnav extends Component {
                 </div>
               </div>
               <div className={"col-md-4 text-center"}>
-                <h1>WINEPAD</h1>
+                <h1>Winepad</h1>
               </div>
               <div className={"col-md-4"} />
             </div>

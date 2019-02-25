@@ -2,13 +2,13 @@ import * as Yup from 'yup';
 import {FieldInfosType, FormikFieldInfo} from "../../ui/forms/config";
 
 export type IValues = {
-    title: string;
-    year: number;
-    type: string;
-    region: string;
-    country: string;
-    description: string;
-    price: number;
+    title: string | null;
+    year: number | null;
+    type: string | null;
+    region: string | null;
+    country: string | null;
+    description: string | null;
+    price: number | null;
 }
 
 export const FieldInfos: FieldInfosType<IValues> = {
@@ -33,9 +33,9 @@ export const validations = Yup.object().shape({
 export const initialValues: IValues = {
     title: '',
     description: '',
-    price: 0,
+    price: null,
     region: '',
     type: '',
-    year: 0,
+    year: null,
     country: ''
 };

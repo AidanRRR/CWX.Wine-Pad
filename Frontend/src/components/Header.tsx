@@ -2,10 +2,13 @@ import React, { Component } from "react";
 import Topnav from "./Topnav";
 import Navbar from "./Navbar";
 
-class Header extends Component {
+interface IProps {}
+interface IState {}
+
+class Header extends Component<IProps, IState> {
   render() {
     return (
-      <header id="topnav">
+      <header>
         <Topnav />
         <Navbar />
       </header>

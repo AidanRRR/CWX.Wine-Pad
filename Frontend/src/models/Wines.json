@@ -5,6 +5,7 @@
       "title": "Roussillon “Centenaire”",
       "region": "Domaine Lafage",
       "year": 2017,
+      "colorId": 1,
       "price": "6,00",
       "description": "Een verleider: zacht, mollig en toch mooie zuren.",
       "type": "Wit"
@@ -14,6 +15,7 @@
       "title": "Soave Classico",
       "region": "Suavia, Veneto",
       "year": 2017,
+      "colorId": 1,
       "price": "7,50",
       "description": "De vulkanische bodem geeft een elegante, complexe en lichtvoetige klasbak.",
       "type": "Wit"
@@ -23,6 +25,7 @@
       "title": "Gascogne “Grand Héron”",
       "region": "Vignerons de Plaimont",
       "year": 2017,
+      "colorId": 1,
       "price": "4,50",
       "description": "Een pittige, zuivere en elegante rosé. De ideale lentewijn.",
       "type": "Rosé"
@@ -32,6 +35,7 @@
       "title": "Bierzo “El Castro de Valtuille”",
       "region": "Raul Perez, Galicia 2017",
       "year": 2017,
+      "colorId": 1,
       "price": "5,50",
       "description": "Veel finesse in deze soepele en fruitige allemansvriend. Het Bourgogne van Spanje.",
       "type": "Rood"
@@ -41,6 +45,7 @@
       "title": "Roussillon “Les Sorcières”",
       "region": "Clos des Fées, Roussillon",
       "year": 2017,
+      "colorId": 1,
       "price": "7,00",
       "description": "Warm, zacht en licht kruidig: pure charme uit het zuiden.",
       "type": "Rood"
@@ -49,7 +54,8 @@
       "id": 5,
       "title": "Barbera d’Alba “Grillaia”",
       "region": "Collina Serragrilli, Piemonte",
-      "year": 2016,
+      "year": 2017,
+      "colorId": 0,
       "price": "8,50",
       "description": "Veel kersen in deze bergwijn uit de beste wijnstreek van Italië.",
       "type": "Rood"
@@ -59,6 +65,7 @@
       "title": "Muscat de Riversaltes",
       "region": "Domaine Lafage, Roussillon",
       "year": 2017,
+      "colorId": 0,
       "price": "8,50",
       "description": "Een exotisch fruitboeket, een volle, ronde smaak en een frisse, fijne afdronk.",
       "type": "Zoet"
@@ -67,7 +74,8 @@
       "id": 7,
       "title": "Maury",
       "region": "Domaine Lafage, Roussillon",
-      "year": 2016,
+      "year": 2017,
+      "colorId": 0,
       "price": "8,50",
       "description": "Deze rode, zoete wijn combineert perfect met Chocola en aanverwanten.",
       "type": "Zoet"
@@ -77,6 +85,7 @@
       "title": "Barolo “Chinato”",
       "region": "Cocchi, Piemonte",
       "year": 2017,
+      "colorId": 0,
       "price": "9,50",
       "description": "Deze rode, kruidige en lichtzoete wijn is de ideale afsluiter.",
       "type": "Zoet"
@@ -86,6 +95,7 @@
       "title": " Sauvignon de Touraine",
       "region": "Domaine de Corbillières, Loire",
       "year": 2017,
+      "colorId": 3,
       "price": "28,00",
       "description": "",
       "type": "Wit"
@@ -95,6 +105,7 @@
       "title": " Rousssillon “Centenaire”",
       "region": "Domaine Lafage Roussillon",
       "year": 2017,
+      "colorId": 3,
       "price": "34,00",
       "description": "",
       "type": "Wit"
@@ -104,6 +115,7 @@
       "title": "2016  Sancerre",
       "region": "Dom. Roland Tissier, Loire",
       "year": 2017,
+      "colorId": 3,
       "price": "37,00",
       "description": "",
       "type": "Wit"
@@ -113,6 +125,7 @@
       "title": "2015  Chablis “Les Hauts de Milly”",
       "region": "Bernard Defaix, Bourgogne",
       "year": 2017,
+      "colorId": 3,
       "price": "49,00",
       "description": "",
       "type": "Wit"
@@ -122,6 +135,7 @@
       "title": "2015  Meursault “Charles Maxime”",
       "region": "Latour Guiraud, Bourgogne",
       "year": 2017,
+      "colorId": 3,
       "price": "78,00",
       "description": "",
       "type": "Wit"
@@ -130,6 +144,8 @@
       "id": 14,
       "title": "2015  Mineral",
       "region": "Bergdolt, Pfalz",
+      "year": 2017,
+      "colorId": 0,
       "price": "29,00",
       "description": "",
       "type": "Wit"
@@ -138,6 +154,8 @@
       "id": 15,
       "title": "2017  Ribolla Gialla",
       "region": "Villa Chiopris, Friuli",
+      "year": 2017,
+      "colorId": 0,
       "price": "28,00",
       "description": "",
       "type": "Wit"

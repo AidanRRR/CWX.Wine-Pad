@@ -8,7 +8,7 @@ body {
 }
 
 .wrapper {
-  padding-top: 120px;
+  padding-top: 20px;
 }
 
 .page-title-box {
@@ -23,7 +23,7 @@ body {
   .breadcrumb {
     .breadcrumb-item {
       a {
-        color: $gray-700;
+        color: $yellow;
       }
     }
   }
@@ -31,6 +31,26 @@ body {
 
 .container-fluid {
   width: 95%;
+}
+
+.menu-container {
+  height: 50px;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.menu-choose {
+  border-top: 1px solid $yellow;
+}
+.menu-choose-item {
+  width: 100%
+}
+.menu-choose-active {
+  border-top: 4px solid $yellow;
+}
+
+.clickable-link {
+  color: $yellow;
 }
 
 #topnav .navigation-menu > li > a {
@@ -108,11 +128,11 @@ body {
       text-align: center;
       border-radius: 50%;
       margin: 12px 8px;
-      color: rgba($dark,0.7);
+      color: $yellow;
 
       &:focus,&:hover {
         background-color: rgba($dark,0.1);
-        color: $dark;
+        color: $yellow;
       }
     }
     .navbar-nav > .open > a {
@@ -248,7 +268,6 @@ body {
     background-color: transparent;
   }
 }
-
 
 /* Notification */
 .notification-list {
@@ -473,7 +492,7 @@ body {
       clear: both;
       white-space: nowrap;
       font-size: $base-font;
-      color: $dark;
+      color: $yellow;
       -webkit-transition: all .35s ease;
       transition: all .35s ease;
     }
@@ -503,7 +522,7 @@ body {
 }
 @media (max-width: 991px) {
   .wrapper {
-    padding-top: 60px;
+    padding-top: 15px;
   }
   .container-fluid {
     width: 100%;
