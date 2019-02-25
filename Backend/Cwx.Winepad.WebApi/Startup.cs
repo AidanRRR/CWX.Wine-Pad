@@ -1,6 +1,10 @@
-﻿using Cwx.Winepad.Domain.Country.Features;
+﻿using System;
+using Castle.Windsor.MsDependencyInjection;
+using Cwx.Winepad.Domain.Country.Features;
 using Cwx.Winepad.Domain.Interfaces;
 using Cwx.Winepad.Infrastructure.Context;
+using Cwx.Winepad.WebApi.Code.Container;
+using Cwx.Winepad.WebApi.Code.Filters;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
@@ -24,14 +28,15 @@ namespace Cwx.Winepad.WebApi
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services
                 .AddMvc()
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IRepository>());
-
-            services.AddMediatR();
+                .AddMvcOptions(mvc =>
+                {
+                    mvc.Filters.Add(new ValidationExceptionFilter());
+                })
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddSwaggerGen(c =>
             {
@@ -44,13 +49,15 @@ namespace Cwx.Winepad.WebApi
                 c.CustomSchemaIds(csi => csi.FullName);
             });
 
-            services.AddDbContext<WinePadContext>(options =>
+            services.AddTransient<IRepository, DbContextRepository>();
+            services.AddDbContext<DbContext, WinePadContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("Database")));
 
-            services.AddScoped<IRepository, DbContextRepository>();
+            var windsorContainer = WindsorContainerFactory.GetContainer(typeof(Startup).Assembly);
+            var windsorServiceProvider = WindsorRegistrationHelper.CreateServiceProvider(windsorContainer, services);
 
+            return windsorServiceProvider;
         }
-
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
