@@ -20,14 +20,11 @@ namespace Cwx.Winepad.WebApi.Controllers
         public Task AddCountry([FromBody] AddCountry.Request request) => _mediator.Send(request);
 
         [HttpPut("country")]
-                                    // FromBody Haalt  de data uit de request body van de http request (na de header) --> Osi model
+        // FromBody Haalt  de data uit de request body van de http request (na de header) --> Osi model
         public Task UpdateCountry([FromBody] UpdateCountry.Request request) => _mediator.Send(request);
 
         [HttpGet("country")]
-                                                //FromQuery haalt de parameters uit de URL
+        //FromQuery haalt de parameters uit de URL
         public Task<GetCountry.Response> GetCountry([FromQuery] GetCountry.Request request) => _mediator.Send(request);
-//
-//        [HttpGet("country") //[FromUri] id moet  je niet definieeren,  is by default. De rest is wel uit body request, wel definieeren
-//        public Task<GetCountry.Response> GetCountryWithId(int id,[FromBody] GetCountry.Request request) => _mediator.Send(request);
-//    }
-//}
+    }
+}

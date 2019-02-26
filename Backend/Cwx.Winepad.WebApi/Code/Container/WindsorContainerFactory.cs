@@ -29,7 +29,6 @@ namespace Cwx.Winepad.WebApi.Code.Container
 
             container.Install(FromAssembly.Instance(applicationAssembly));
 
-
             return container;
         }
     }
