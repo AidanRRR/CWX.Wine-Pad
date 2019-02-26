@@ -10,9 +10,9 @@ namespace Cwx.Winepad.Infrastructure.Context
 {
     public class DbContextRepository : IRepository
     {
-        private readonly WinePadContext _context;
+        private readonly DbContext _context;
 
-        public DbContextRepository(WinePadContext context)
+        public DbContextRepository(DbContext context)
         {
             _context = context;
         }

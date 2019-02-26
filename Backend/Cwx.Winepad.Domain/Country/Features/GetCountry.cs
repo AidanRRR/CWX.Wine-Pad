@@ -29,7 +29,6 @@ namespace Cwx.Winepad.Domain.Country.Features
             public Validator()
             {
                 RuleFor(r => r.Id).NotEmpty();
-                RuleFor(r => r.Id).GreaterThan(5);
             }
         }
 

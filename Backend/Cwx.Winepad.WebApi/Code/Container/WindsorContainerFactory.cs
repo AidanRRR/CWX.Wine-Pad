@@ -22,8 +22,8 @@ namespace Cwx.Winepad.WebApi.Code.Container
 
             container.AddFacility<TypedFactoryFacility>();
 
-            container.Kernel.Resolver.AddSubResolver(new ArrayResolver(container.Kernel, allowEmptyArray: true));
-            container.Kernel.Resolver.AddSubResolver(new CollectionResolver(container.Kernel, allowEmptyCollections: true));
+            container.Kernel.Resolver.AddSubResolver(new ArrayResolver(container.Kernel, true));
+            container.Kernel.Resolver.AddSubResolver(new CollectionResolver(container.Kernel, true));
 
             container.Register(Component.For<IWindsorContainer>().Instance(container));
 

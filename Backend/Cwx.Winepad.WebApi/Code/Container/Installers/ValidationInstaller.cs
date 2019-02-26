@@ -6,7 +6,7 @@ using FluentValidation;
 
 namespace Cwx.Winepad.WebApi.Code.Container.Installers
 {
-    public class ValidationInstaller
+    public class ValidationInstaller : IWindsorInstaller
     {
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
