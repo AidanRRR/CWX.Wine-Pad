@@ -14,6 +14,7 @@ namespace Cwx.Winepad.Migrations.Migrations
                 .WithColumn("Name").AsString().NotNullable()
                 .WithColumn("Price").AsDecimal().NotNullable()
                 .WithColumnForForeignKeyTo<Wine>().NotNullable();
+                
 
             Create.ForeignKey("FK_Measure_Wine")
                 .BetweenEntities<Measure, Wine>();

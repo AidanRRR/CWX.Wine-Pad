@@ -12,10 +12,14 @@ namespace Cwx.Winepad.Migrations.Migrations
             Create.TableForEntity<Region>()
                 .WithPrimaryKeyColumn()
                 .WithColumn("Name").AsString().NotNullable()
-                .WithColumnForForeignKeyTo<Country>().NotNullable();
+                .WithColumnForForeignKeyTo<Country>().NotNullable()
+                .WithColumnForForeignKeyTo<Admin>().Nullable();
 
             Create.ForeignKey("FK_Region_Country")
                 .BetweenEntities<Region, Country>();
+
+            Create.ForeignKey("FK_Region_Admin")
+                .BetweenEntities<Region, Admin>();
         }
 
         public override void Down()

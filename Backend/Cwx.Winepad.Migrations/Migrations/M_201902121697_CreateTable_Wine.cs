@@ -18,14 +18,18 @@ namespace Cwx.Winepad.Migrations.Migrations
                 .WithColumn("BottlePrice").AsDecimal().Nullable()
                 .WithColumn("CarafePrice").AsDecimal().Nullable()
                 .WithColumnForForeignKeyTo<WineType>().NotNullable()
-                .WithColumnForForeignKeyTo<Region>().Nullable();
+                .WithColumnForForeignKeyTo<Region>().Nullable()
+                .WithColumnForForeignKeyTo<Admin>().NotNullable();
 
             Create.ForeignKey("FK_Wine_Type")
                 .BetweenEntities<Wine, WineType>();
 
             Create.ForeignKey("FK_Wine_Region")
                 .BetweenEntities<Wine, Region>();
-            
+
+            Create.ForeignKey("FK_Wine_Admin")
+                .BetweenEntities<Wine, Admin>();
+
         }
 
         public override void Down()

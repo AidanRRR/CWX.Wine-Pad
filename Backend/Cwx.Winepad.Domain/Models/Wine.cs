@@ -13,6 +13,7 @@ namespace Cwx.Winepad.Domain.Models
         public decimal? CarafePrice { get; set; }
         public decimal GlassPrice { get; set; }
         public decimal BottlePrice { get; set; }
+        public Admin Admin { get; set; }
         public virtual ICollection<SegmentWine> SegmentWines { get; set; }
         public virtual ICollection<Measure> Measures { get; set; }
     }
