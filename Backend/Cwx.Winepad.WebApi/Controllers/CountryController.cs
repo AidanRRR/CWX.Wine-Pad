@@ -26,5 +26,9 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpGet("country")]
         //FromQuery haalt de parameters uit de URL
         public Task<GetCountry.Response> GetCountry([FromQuery] GetCountry.Request request) => _mediator.Send(request);
+
+        [HttpGet("countries")] //[FromUri] id moet  je niet definieeren,  is by default. De rest is wel uit body request, wel definieeren
+        public Task<GetCountries.Response> GetCountries() => _mediator.Send(new GetCountries.Request());
+
     }
 }

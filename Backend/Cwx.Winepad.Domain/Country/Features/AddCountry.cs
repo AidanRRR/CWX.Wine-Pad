@@ -34,7 +34,7 @@ namespace Cwx.Winepad.Domain.Country.Features
 
             public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
             {
-                var country = new Models.Country()
+                var country = new Models.Country
                 {
                     Code = request.Code,
                     Name = request.Name

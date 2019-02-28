@@ -22,6 +22,7 @@ namespace Cwx.Winepad.Domain.Country.Features
             {
                 RuleFor(r => r.Id).NotEmpty();
                 RuleFor(r => r.Name).NotEmpty();
+                RuleFor(r => r.Code).NotEmpty();
             }
         }
 
