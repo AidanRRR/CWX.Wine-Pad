@@ -10,14 +10,12 @@ namespace Cwx.Winepad.Domain.Admin.Features
 {
     public class GetAdmins
     {
-        public class Request : IRequest<Response>
-        {
-
-        }
+        public class Request : IRequest<Response> { }
 
         public class Response
         {
             public List<Models.Admin> Admins { get; set; }
+
             public Response(List<Models.Admin> admins)
             {
                 Admins = admins;

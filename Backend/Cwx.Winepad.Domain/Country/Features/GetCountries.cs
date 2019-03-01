@@ -13,15 +13,11 @@ namespace Cwx.Winepad.Domain.Country.Features
 {
     public class GetCountries
     {
-        public class Request : IRequest<Response>
-        {
-            //Hier schrijven wat er meegegeven moet worden bij de request.
-            //Gezien we alle countries nodig hebben hoeft er niks meegegeven worden bij de request.
-        }
+        public class Request : IRequest<Response> { }
 
         public class Response
         {
-            //wat moet de response zijn van de request? Hier willen we alle countries krijgen.
+            
             public Response(List<Models.Country> countries)
             {
                 Country = countries;

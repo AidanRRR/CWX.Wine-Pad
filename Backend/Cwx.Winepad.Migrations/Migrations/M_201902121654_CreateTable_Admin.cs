@@ -11,7 +11,8 @@ namespace Cwx.Winepad.Migrations.Migrations
         {
             Create.TableForEntity<Admin>()
                 .WithPrimaryKeyColumn()
-                .WithColumn("Name").AsString().NotNullable();
+                .WithColumn("Name").AsString().NotNullable()
+                .WithColumn("MailAddress").AsString().NotNullable();
         }
 
         public override void Down()
