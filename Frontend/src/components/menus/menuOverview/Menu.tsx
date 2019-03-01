@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { IMenu } from "../../../scenes/menu/Menus";
-import MenuExample from "../../../assets/images/menu-example.jpg";
 import { Link } from "react-router-dom";
+import CardAddPlaceholder from "../../../assets/images/NewMenuPlaceholder.svg";
 
 interface IProps {
   menu: IMenu;
@@ -15,7 +15,11 @@ class Menu extends Component<IProps, IState> {
     return (
       <Fragment>
         <div className={"card"}>
-          <img src={menu.avatar} alt="" className="card-img-top img-fluid" />
+          <img
+            src={menu.avatar ? menu.avatar : CardAddPlaceholder}
+            alt=""
+            className="card-img-top img-fluid"
+          />
           <div className="card-body">
             <h4 className="card-title font-20 mt-0">{menu.name}</h4>
             <p className="card-text">

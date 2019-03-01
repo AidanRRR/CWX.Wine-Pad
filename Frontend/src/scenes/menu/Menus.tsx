@@ -1,13 +1,14 @@
 import React, { Component, Fragment } from "react";
 import Menu from "../../components/menus/menuOverview/Menu";
 import NewMenu from "../../components/menus/menuEditor/menuTabs/NewMenu";
-import NewMenuForm from "../../components/menus/menuForm/NewMenuForm";
-import ModalConfirm from "../../components/ui/modals/ModalConfirm";
+import { drawerStyle } from "../../components/ui/drawer/Helper";
+import Drawer from "react-motion-drawer";
+import MenuForm from "../../components/menus/menuForm/MenuForm";
 
 export interface IMenu {
   id: number;
   name: string;
-  avatar: string;
+  avatar?: string;
   items: number;
   activatedOn: number;
 }
@@ -15,7 +16,7 @@ export interface IMenu {
 interface IProps {}
 interface IState {
   menus: IMenu[];
-  showAddMenu: boolean;
+  addingMenu: boolean;
 }
 
 class Menus extends Component<IProps, IState> {
@@ -24,42 +25,57 @@ class Menus extends Component<IProps, IState> {
       {
         id: 0,
         name: "Butcher's Dining",
-        avatar: "http://www.rypens.be/upload/files/Path_9.png",
         items: 96,
         activatedOn: 2
       },
       {
         id: 1,
         name: "De Vettigen Os",
-        avatar: "http://www.rypens.be/upload/files/Template.png",
         items: 21,
         activatedOn: 1
       }
     ],
-    showAddMenu: false
+    addingMenu: false
   };
 
   render() {
-    const { menus, showAddMenu } = this.state;
+    const { menus, addingMenu } = this.state;
 
     return (
-      <div className={"row"}>
-        <div className={"col-md-2"}>
-          <NewMenu onClick={this.handleToggleModal} />
-        </div>
-        {menus.map((menu, i) => {
-          return (
-            <div key={i} className={"col-md-2"}>
-              <Menu menu={menu} />
+      <div>
+        <Drawer
+          drawerStyle={drawerStyle}
+          noTouchOpen={true}
+          noTouchClose={true}
+          width={"50%"}
+          open={!!addingMenu}
+          onChange={() => {}}
+        >
+          <div className={"row"}>
+            <div className={"col-md-12"}>
+              <MenuForm onComplete={() => {}} />
             </div>
-          );
-        })}
+          </div>
+        </Drawer>
+
+        <div className={"row"}>
+          <div className={"col-md-2"}>
+            <NewMenu onClick={this.handleToggleModal} />
+          </div>
+          {menus.map((menu, i) => {
+            return (
+              <div key={i} className={"col-md-2"}>
+                <Menu menu={menu} />
+              </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
 
   handleToggleModal = () => {
-    this.setState({ showAddMenu: !this.state.showAddMenu });
+    this.setState({ addingMenu: !this.state.addingMenu });
   };
 
   refresh = async () => {};

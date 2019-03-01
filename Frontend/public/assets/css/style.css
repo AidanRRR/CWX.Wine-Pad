@@ -143,6 +143,9 @@ code {
 .header-title {
   font-size: 16px; }
 
+.pointer {
+  cursor: pointer; }
+
 /* Social */
 .social-links li a {
   background: #fcfdfd;

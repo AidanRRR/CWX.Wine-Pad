@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="204" height="321.18" viewBox="0 0 204 321.18">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="0.842" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#2f2720"/>
+      <stop offset="0.444" stop-opacity="0.176"/>
+      <stop offset="1" stop-color="#2f2720" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_80" data-name="Group 80" transform="translate(-864 430)">
+    <rect id="Rectangle_2" data-name="Rectangle 2" width="204" height="321.18" rx="6" transform="translate(864 -430)" fill="#fcf8c5"/>
+    <rect id="Rectangle_12" data-name="Rectangle 12" width="204" height="321.18" rx="6" transform="translate(1068 -108.82) rotate(180)" fill="url(#linear-gradient)"/>
+    <g id="Group_5" data-name="Group 5" transform="translate(919.324 -351.852)">
+      <path id="Path_2" data-name="Path 2" d="M64.6,82.905a24.8,24.8,0,0,0,9.229-16.719c1.458-10.621-.613-19.287-3.993-29.1H67.764c2.8,8.036,4.772,15.194,4.573,23.363l-1.988-1.408c-14.631-11.2-21.342,9.975-34.5.8,0,0-1.839,16.039,6.943,22.352-5.534-3.314-9.18-9.511-10.107-16.271C31.228,55.35,33.4,46.866,36.812,37.09H34.774c-3.38,9.809-5.451,18.459-4.01,29.1A24.791,24.791,0,0,0,40.01,82.905c5.683,4.126,10.406,8.285,10.422,15.89V128.6c-.05,8.351-7.489,11.135-12.841,11.069a.838.838,0,1,0,0,1.674H67.052a.838.838,0,1,0-.017-1.674c-5.352.066-12.792-2.717-12.841-11.069V98.8C54.194,91.173,58.916,87.014,64.6,82.905Z" transform="translate(19.906 24.367)" fill="#fff"/>
+      <path id="Path_3" data-name="Path 3" d="M31.217,45.1v-.017a8.829,8.829,0,0,1-3.6-7.108V11.416c0-1.342,1.558-.828,1.558-2V3.662a.463.463,0,0,0-.464-.464h-2.4V0H16.288V3.2h-2.1a.435.435,0,0,0-.464.464V9.428c0,1.176,1.558.646,1.558,2V37.994a8.866,8.866,0,0,1-3.6,7.108v.017A21.367,21.367,0,0,0,0,64.174H.033A2.246,2.246,0,0,0,0,64.506v96.435A4.766,4.766,0,0,0,4.755,165.7H38.143a4.766,4.766,0,0,0,4.755-4.755V64.489a2.03,2.03,0,0,0-.033-.315H42.9A21.472,21.472,0,0,0,31.217,45.1Z" fill="#fff"/>
+    </g>
+  </g>
+</svg>

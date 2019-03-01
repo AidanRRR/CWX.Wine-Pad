@@ -5,6 +5,7 @@ import { IFormikFieldInfo } from "./config";
 type Props = {
   field: IFormikFieldInfo;
   dark?: boolean;
+  height?: number;
   errors: any;
 };
 
@@ -37,7 +38,7 @@ export const TextField: React.FC<Props> = props => {
 };
 
 export const MultiTextField: React.FC<Props> = props => {
-  const { field, errors, dark } = props;
+  const { field, height, errors, dark } = props;
 
   const labelStyle = dark
     ? "col-sm-3 col-form-label label-dark"
@@ -51,7 +52,7 @@ export const MultiTextField: React.FC<Props> = props => {
           className={
             errors[field.name] ? "form-control parsley-error" : "form-control"
           }
-          style={{ height: 200 }}
+          style={height ? { height } : { height: 200 }}
           type="text"
           component={"textarea"}
           name={field.name}
