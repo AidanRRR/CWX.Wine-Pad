@@ -23,6 +23,9 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpGet("admin")]
         public Task<GetAdmin.Response> getCountry([FromQuery] GetAdmin.Request request) => _mediator.Send(request);
 
+        [HttpPut("admin")]
+        public Task UpdateAdmin([FromBody] UpdateAdmin.Request request) => _mediator.Send(request);
+
 
     }
 }

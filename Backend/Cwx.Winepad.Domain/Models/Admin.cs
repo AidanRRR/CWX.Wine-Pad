@@ -7,7 +7,7 @@ namespace Cwx.Winepad.Domain.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public MailAddress MailAddress { get; set; }
+        public string MailAddress { get; set; }
         public ICollection<CardAdmin> CardAdmins { get; set; }
     }
 }

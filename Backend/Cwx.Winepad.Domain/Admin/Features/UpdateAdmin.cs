@@ -1,17 +1,20 @@
-﻿using System.Threading;
+﻿using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Interfaces;
 using FluentValidation;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cwx.Winepad.Domain.Admin.Features
 {
-    public class AddAdmin 
+    public class UpdateAdmin
     {
         public class Request : IRequest
         {
+            public int Id { get; set; }
             public string Name { get; set; }
-            public string MailAddress { get; set; }
+            public string Mailaddress { get; set; }
         }
 
         public class Validator : AbstractValidator<Request>
@@ -19,7 +22,7 @@ namespace Cwx.Winepad.Domain.Admin.Features
             public Validator()
             {
                 RuleFor(r => r.Name).NotEmpty();
-                RuleFor(r => r.MailAddress).NotEmpty();
+                RuleFor(r => r.Mailaddress).NotEmpty();
             }
         }
 
@@ -31,18 +34,18 @@ namespace Cwx.Winepad.Domain.Admin.Features
             {
                 _repository = repository;
             }
-
             public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
             {
-                var admin = new Models.Admin
-                {
-                    Name = request.Name,
-                    MailAddress = request.MailAddress
-                };
+                var admin = await _repository
+                    .Query<Models.Admin>()
+                    .FirstOrDefaultAsync(a => a.Id == request.Id, cancellationToken);
 
-                await _repository.InsertAsync(admin, cancellationToken);
+                admin.Name = request.Name;
+                admin.MailAddress = request.Mailaddress;
 
-               return Unit.Value;
+                await _repository.UpdateAsync(admin, cancellationToken);
+
+                return Unit.Value;
             }
         }
     }
