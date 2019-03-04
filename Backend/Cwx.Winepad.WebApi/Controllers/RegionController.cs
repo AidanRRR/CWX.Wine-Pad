@@ -16,5 +16,14 @@ namespace Cwx.Winepad.WebApi.Controllers
 
         [HttpPost("region")]
         public Task AddRegion([FromBody] AddRegion.Request request) => _mediator.Send(request);
+
+        [HttpPut("region")]
+        public Task UpdateRegion([FromBody] UpdateRegion.Request request) => _mediator.Send(request);
+
+        [HttpGet("region")]
+        public Task<GetRegion.Response> GetRegion([FromQuery] GetRegion.Request request) => _mediator.Send(request);
+
+        [HttpGet("regions")]
+        public Task<GetRegions.Response> GetRegions() => _mediator.Send(new GetRegions.Request());
     }
-}   
+} 

@@ -1,27 +1,24 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Interfaces;
 using FluentValidation;
 using MediatR;
-using Microsoft.AspNetCore.Mvc.Internal;
 using Microsoft.EntityFrameworkCore;
-using Newtonsoft.Json;
 
-namespace Cwx.Winepad.Domain.Country.Features
+namespace Cwx.Winepad.Domain.Region.Features
 {
-    public class GetCountries
+    public class GetRegions
     {
         public class Request : IRequest<Response> { }
 
         public class Response
         {
-            public List<Models.Country> Countries { get; set; }
+            public List<Models.Region> Regions { get; set; }
 
-            public Response(List<Models.Country> countries)
+            public Response(List<Models.Region> regions)
             {
-                Countries = countries;
+                Regions = regions;
             }
         }
 
@@ -33,14 +30,13 @@ namespace Cwx.Winepad.Domain.Country.Features
             {
                 _repository = repository;
             }
-
             public async Task<Response> Handle(Request request, CancellationToken cancellationToken)
             {
-                var countries = await _repository
-                    .Query<Models.Country>()
+                var regions = await _repository
+                    .Query<Models.Region>()
                     .ToListAsync(cancellationToken);
 
-                return new Response(countries);
+                return new Response(regions);
             }
         }
     }
