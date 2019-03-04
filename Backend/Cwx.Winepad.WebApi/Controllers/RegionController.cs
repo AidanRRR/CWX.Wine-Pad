@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cwx.Winepad.WebApi.Controllers
 {
-    public class RegionController
+    public class RegionController : Controller
     {
         private readonly IMediator _mediator;
 

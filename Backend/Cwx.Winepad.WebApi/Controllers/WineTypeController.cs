@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Cwx.Winepad.WebApi.Controllers
 {
-    public class WineTypeController
+    public class WineTypeController : Controller
     {
         private readonly IMediator _mediator;
 
