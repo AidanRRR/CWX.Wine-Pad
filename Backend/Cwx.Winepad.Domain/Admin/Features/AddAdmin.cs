@@ -11,7 +11,7 @@ namespace Cwx.Winepad.Domain.Admin.Features
         public class Request : IRequest
         {
             public string Name { get; set; }
-            public string MailAddress { get; set; }
+            public string Email { get; set; }
         }
 
         public class Validator : AbstractValidator<Request>
@@ -19,7 +19,7 @@ namespace Cwx.Winepad.Domain.Admin.Features
             public Validator()
             {
                 RuleFor(r => r.Name).NotEmpty();
-                RuleFor(r => r.MailAddress).NotEmpty();
+                RuleFor(r => r.Email).NotEmpty();
             }
         }
 
@@ -37,7 +37,7 @@ namespace Cwx.Winepad.Domain.Admin.Features
                 var admin = new Models.Admin
                 {
                     Name = request.Name,
-                    MailAddress = request.MailAddress
+                    Email = request.Email
                 };
 
                 await _repository.InsertAsync(admin, cancellationToken);

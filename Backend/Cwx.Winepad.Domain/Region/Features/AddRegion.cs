@@ -1,20 +1,19 @@
-﻿using System.Linq;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Interfaces;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Cwx.Winepad.Domain.Admin.Features
+namespace Cwx.Winepad.Domain.Region.Features
 {
-    public class UpdateAdmin
+    public class AddRegion
     {
         public class Request : IRequest
         {
-            public int Id { get; set; }
             public string Name { get; set; }
-            public string Mailaddress { get; set; }
+            public int CountryId { get; set; }
+            public int AdminId { get; set; }
         }
 
         public class Validator : AbstractValidator<Request>
@@ -22,7 +21,7 @@ namespace Cwx.Winepad.Domain.Admin.Features
             public Validator()
             {
                 RuleFor(r => r.Name).NotEmpty();
-                RuleFor(r => r.Mailaddress).NotEmpty();
+                RuleFor(r => r.CountryId).NotEmpty();
             }
         }
 
@@ -36,14 +35,22 @@ namespace Cwx.Winepad.Domain.Admin.Features
             }
             public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
             {
+                var country = await _repository
+                    .Query<Models.Country>()
+                    .FirstOrDefaultAsync(r => r.Id == request.CountryId);
+
                 var admin = await _repository
                     .Query<Models.Admin>()
-                    .FirstOrDefaultAsync(a => a.Id == request.Id, cancellationToken);
+                    .FirstOrDefaultAsync(r => r.Id == request.AdminId);
 
-                admin.Name = request.Name;
-                admin.Email = request.Mailaddress;
+                var region = new Models.Region()
+                {
+                    Name = request.Name,
+                    Country = country,
+                    Admin = admin
+                };
 
-                await _repository.UpdateAsync(admin, cancellationToken);
+                await _repository.InsertAsync(region, cancellationToken);
 
                 return Unit.Value;
             }
