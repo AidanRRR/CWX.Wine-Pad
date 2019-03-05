@@ -20,6 +20,12 @@ namespace Cwx.Winepad.WebApi.Controllers
         [HttpPost("wine")]
         public Task AddWine([FromBody] AddWine.Request request) => _mediator.Send(request);
 
-        
+        [HttpPut("wine")]
+        public Task UpdateWine([FromBody] UpdateWine.Request request) => _mediator.Send(request);
+
+        [HttpGet("wines")]
+        public Task<GetWines.Response> GetWines([FromQuery] GetWines.Request request) => _mediator.Send(request);
+
+
     }
 }
