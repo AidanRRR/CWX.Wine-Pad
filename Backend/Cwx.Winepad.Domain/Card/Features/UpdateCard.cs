@@ -12,6 +12,7 @@ namespace Cwx.Winepad.Domain.Card.Features
         public class Request : IRequest
         {
             public int Id { get; set; }
+            public string Name { get; set; }
         }
 
         public class Response
@@ -45,10 +46,13 @@ namespace Cwx.Winepad.Domain.Card.Features
             {
                 var card = await _repository
                     .Query<Models.Card>()
+                    .Include(c=>c.Segments)
                     .FirstOrDefaultAsync(c => c.Id == request.Id, cancellationToken);
 
                 card.Id = request.Id;
-                //hier ook nog segments kunnen toevoegen. De card kan je wel targetten.
+                card.Name = request.Name;
+
+                await _repository.UpdateAsync(card, cancellationToken);
 
                 return  Unit.Value;
             }

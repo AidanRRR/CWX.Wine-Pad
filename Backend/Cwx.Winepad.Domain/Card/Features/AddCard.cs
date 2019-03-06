@@ -11,7 +11,6 @@ namespace Cwx.Winepad.Domain.Card.Features
     {
         public class Request : IRequest
         {
-            public int Id { get; set; }
             public string Name { get; set; }
         }
 
@@ -19,7 +18,7 @@ namespace Cwx.Winepad.Domain.Card.Features
         {
             public Validator()
             {
-                RuleFor(r => r.Id).NotEmpty();
+                RuleFor(r => r.Name).NotEmpty();
             }
         }
 
@@ -35,7 +34,7 @@ namespace Cwx.Winepad.Domain.Card.Features
             {
                 var card = new Models.Card()
                 {
-                    Id = request.Id
+                    Name = request.Name
                 };
 
                 await _repository.InsertAsync(card, cancellationToken);
