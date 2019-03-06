@@ -19,5 +19,11 @@ namespace Cwx.Winepad.WebApi.Controllers
 
         [HttpGet("measure")]
         public Task<GetMeasure.Response> GetMeasure([FromQuery] GetMeasure.Request request) => _mediator.Send(request);
+
+        [HttpPut("measure")]
+        public Task UpdateMeasure([FromBody] UpdateMeasure.Request request) => _mediator.Send(request);
+
+        [HttpGet("measures")]
+        public Task<GetMeasures.Response> GetMeasures([FromQuery]GetMeasures.Request request) => _mediator.Send(request);
     }
 }

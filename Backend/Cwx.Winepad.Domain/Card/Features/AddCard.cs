@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Interfaces;
 using FluentValidation;
 using MediatR;
+using Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal;
 
 namespace Cwx.Winepad.Domain.Card.Features
 {
@@ -10,7 +11,8 @@ namespace Cwx.Winepad.Domain.Card.Features
     {
         public class Request : IRequest
         {
-            public int Id { get; set; }   
+            public int Id { get; set; }
+            public string Name { get; set; }
         }
 
         public class Validator : AbstractValidator<Request>
@@ -39,6 +41,7 @@ namespace Cwx.Winepad.Domain.Card.Features
                 await _repository.InsertAsync(card, cancellationToken);
                 return Unit.Value;
             }
+            
         }
     }
 }

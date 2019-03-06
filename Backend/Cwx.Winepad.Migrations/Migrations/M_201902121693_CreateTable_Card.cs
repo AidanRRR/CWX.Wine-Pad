@@ -10,7 +10,8 @@ namespace Cwx.Winepad.Migrations.Migrations
         public override void Up()
         {
             Create.TableForEntity<Card>()
-                .WithPrimaryKeyColumn();
+                .WithPrimaryKeyColumn()
+                .WithColumn("Name").AsString();
         }
 
         public override void Down()
