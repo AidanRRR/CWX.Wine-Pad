@@ -37,7 +37,7 @@ namespace Cwx.Winepad.Domain.Admin.Features
                 var admin = new Models.Admin
                 {
                     Name = request.Name,
-                    Email = request.Email
+                    Email = request.Email,
                 };
 
                 await _repository.InsertAsync(admin, cancellationToken);

@@ -34,6 +34,7 @@ namespace Cwx.Winepad.Domain.Card.Features
             {
                 var cards = await _repository
                     .Query<Models.Card>()
+                    .Include(c=>c.Segments)
                     .ToListAsync(cancellationToken);
 
                 return new Response(cards);

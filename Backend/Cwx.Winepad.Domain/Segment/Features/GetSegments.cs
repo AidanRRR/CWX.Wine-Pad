@@ -24,7 +24,6 @@ namespace Cwx.Winepad.Domain.Segment.Features
         public class Handler : IRequestHandler<Request, Response>
         {
             private readonly IRepository _repository;
-            private IRequestHandler<Request, Response> _requestHandlerImplementation;
 
             public Handler(IRepository repository)
             {
@@ -36,6 +35,7 @@ namespace Cwx.Winepad.Domain.Segment.Features
             {
                 var segments = await _repository
                     .Query<Models.Segment>()
+                    .Include(s=>s.Card)
                     .ToListAsync(cancellationToken);
 
                 return new Response(segments);

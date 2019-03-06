@@ -17,9 +17,11 @@ namespace Cwx.Winepad.Migrations.Migrations
                 .WithColumn("GlassPrice").AsDecimal().Nullable()
                 .WithColumn("BottlePrice").AsDecimal().Nullable()
                 .WithColumn("CarafePrice").AsDecimal().Nullable()
+                //.WithColumn("IsDeleted").AsBoolean().NotNullable()
                 .WithColumnForForeignKeyTo<WineType>().NotNullable()
                 .WithColumnForForeignKeyTo<Region>().Nullable()
                 .WithColumnForForeignKeyTo<Admin>().NotNullable();
+                
 
             Create.ForeignKey("FK_Wine_Type")
                 .BetweenEntities<Wine, WineType>();

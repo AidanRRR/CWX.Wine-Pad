@@ -16,6 +16,9 @@ namespace Cwx.Winepad.Infrastructure.Context
                 .WithOne(m => m.Wine)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            //modelBuilder.Entity<Wine>()
+            //    .Property<bool>("IsDeleted");
+
             modelBuilder.Entity<Wine>()
                 .HasOne(w => w.Region)
                 .WithMany(r => r.Wines)
