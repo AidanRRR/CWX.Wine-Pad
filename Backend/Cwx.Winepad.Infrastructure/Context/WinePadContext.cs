@@ -55,6 +55,12 @@ namespace Cwx.Winepad.Infrastructure.Context
                 .HasOne(ca => ca.Admin)
                 .WithMany(a => a.CardAdmins)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            ///////////////////////////////
+            modelBuilder.Entity<Country>()
+                .Ignore(c => c.Regions);
+
+            ///////////////////////////////
         }
 
         public DbContext Instance => this;

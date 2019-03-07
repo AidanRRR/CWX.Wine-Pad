@@ -44,6 +44,7 @@ namespace Cwx.Winepad.Domain.Region.Features
             {
                 var region = await _repository
                     .Query<Models.Region>()
+                    .Include(r => r.Country)
                     .FirstOrDefaultAsync(r => r.Id == request.Id);
 
                 return new Response(region);

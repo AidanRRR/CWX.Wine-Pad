@@ -1,9 +1,11 @@
-﻿using System.Threading;
+﻿using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Interfaces;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Remotion.Linq.Clauses;
 
 namespace Cwx.Winepad.Domain.Card.Features
 {
@@ -45,7 +47,11 @@ namespace Cwx.Winepad.Domain.Card.Features
             {
                 var card = await _repository
                     .Query<Models.Card>()
-                    .Include(c=>c.Segments)
+                    .Include(c=>c.CardAdmins)
+                    .ThenInclude(ca=>ca.AdminId)
+                    
+                    //.Include(c=>c.Segments)
+                    //.ThenInclude(s=>s.Name)
                     .FirstOrDefaultAsync(c => c.Id == request.Id, cancellationToken);
 
                 return new Response(card);

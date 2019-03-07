@@ -6,6 +6,7 @@
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public ICollection<CardAdmin> CardAdmins { get; set; }
         public ICollection<Segment> Segments { get; set; }
     }
 }

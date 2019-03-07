@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Cwx.Winepad.Domain.Interfaces;
 using FluentValidation;
@@ -13,6 +14,7 @@ namespace Cwx.Winepad.Domain.Card.Features
         {
             public int Id { get; set; }
             public string Name { get; set; }
+            public int AdminId { get; set; }
         }
 
         public class Response
@@ -44,6 +46,9 @@ namespace Cwx.Winepad.Domain.Card.Features
 
             public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
             {
+                var admin = _repository.Query<Models.CardAdmin>()
+                    .FirstOrDefaultAsync(ca => ca.AdminId == request.AdminId);
+
                 var card = await _repository
                     .Query<Models.Card>()
                     .Include(c=>c.Segments)

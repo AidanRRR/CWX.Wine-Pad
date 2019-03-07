@@ -5,6 +5,7 @@ using Cwx.Winepad.Domain.Country.Features;
 using Cwx.Winepad.Domain.Interfaces;
 using FluentValidation;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Cwx.Winepad.Domain.Admin.Features
 {
@@ -48,6 +49,10 @@ namespace Cwx.Winepad.Domain.Admin.Features
             {
                 var admin = _repository
                     .Query<Models.Admin>()
+                    .Include(a => a.CardAdmins)
+                    .Where(ca=>ca.Id == request.Id)
+                        //.ThenInclude(ca => ca.Admin)
+                    
                     .FirstOrDefault(a => a.Id == request.Id);
                 return new Response(admin);
             }
