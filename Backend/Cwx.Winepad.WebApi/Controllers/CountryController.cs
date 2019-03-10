@@ -2,6 +2,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
+using System.Web.Http.Cors;
 using Cwx.Winepad.Domain.Models;
 
 namespace Cwx.Winepad.WebApi.Controllers

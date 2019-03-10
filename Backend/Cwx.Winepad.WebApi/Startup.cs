@@ -34,11 +34,7 @@ namespace Cwx.Winepad.WebApi
                 })
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddCors(options =>
-                {
-                    /////
-                }
-            );
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Info
@@ -72,10 +68,10 @@ namespace Cwx.Winepad.WebApi
                 app.UseHsts();
             }
 
+            app.UseCors(builder => { builder.AllowAnyOrigin(); });
+
             app.UseHttpsRedirection();
             app.UseMvc();
-
-            app.UseCors();
 
             app.UseSwagger();
             app.UseSwaggerUI(c =>
