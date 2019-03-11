@@ -29,7 +29,6 @@ function toUrlEncoded(data: any, parent: string | null = null): string {
 const get = <TResponse>(relative: string): Promise<TResponse> => {
     const url = createUrl(relative);
     const fetchOptions: RequestInit = {
-        credentials: 'include',
         headers: {
             'Accept': 'application/json'
         }
@@ -39,7 +38,6 @@ const get = <TResponse>(relative: string): Promise<TResponse> => {
 };
 
 const postFile = async (data?: any): Promise<string> => {
-    debugger;
     const url = config.filesApi;
     const formData = new FormData();
     formData.append('data', data);

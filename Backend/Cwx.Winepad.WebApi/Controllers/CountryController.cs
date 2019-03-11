@@ -27,6 +27,5 @@ namespace Cwx.Winepad.WebApi.Controllers
 
         [HttpGet("countries")] 
         public Task<GetCountries.Response> GetCountries() => _mediator.Send(new GetCountries.Request());
-
     }
 }

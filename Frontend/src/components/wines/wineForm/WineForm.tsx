@@ -4,11 +4,12 @@ import { FieldInfos, initialValues, IValues, validations } from "./config";
 import { MultiTextField, TextField } from "../../ui/forms/FormFields";
 import { IWine } from "../../../models/Wine";
 import { FormikSelect } from "../../ui/forms/FormikSelect";
-import { CountrySuggestions } from "../../../models/Country";
+import { ICountrySuggestion } from "../../../models/Country";
 import SaveCancel from "../../ui/buttons/SaveCancel";
 
 export interface IProps {
   wine: IWine;
+  countrySuggestions: ICountrySuggestion[];
   onCancel: () => void;
 }
 export interface IState {
@@ -26,7 +27,7 @@ class WineForm extends Component<IProps, IState> {
 
   render() {
     const { initialValues } = this.state;
-    const { onCancel } = this.props;
+    const { onCancel, countrySuggestions } = this.props;
 
     return (
       <div className={"row"}>
@@ -60,7 +61,7 @@ class WineForm extends Component<IProps, IState> {
                 <div className="col-sm-9">
                   <FormikSelect
                     value={values.country}
-                    suggestions={CountrySuggestions}
+                    suggestions={countrySuggestions}
                     error={errors.country}
                     field={FieldInfos.country.name}
                     onChange={setFieldValue}

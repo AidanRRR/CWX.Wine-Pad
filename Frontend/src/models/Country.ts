@@ -3,6 +3,11 @@ export interface ICountry {
     name: string
 }
 
+export interface ICountrySuggestion {
+    value: number,
+    label: string
+}
+
 export const Countries: ICountry[] = [
     {
         id: 0,
@@ -12,9 +17,4 @@ export const Countries: ICountry[] = [
         id: 1,
         name: "Frankrijk"
     }
-];
-
-export const CountrySuggestions = [
-    { value: 0, label: 'België' },
-    { value: 1, label: 'Frankrijk' },
 ];
