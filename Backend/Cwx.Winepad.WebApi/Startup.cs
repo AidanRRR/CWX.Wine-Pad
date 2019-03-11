@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System;   
 using Castle.Windsor.MsDependencyInjection;
 using Cwx.Winepad.Domain.Interfaces;
 using Cwx.Winepad.Infrastructure.Context;
@@ -70,7 +70,7 @@ namespace Cwx.Winepad.WebApi
                 app.UseHsts();
             }
 
-            app.UseCors(builder => { builder.AllowAnyOrigin(); });
+            app.UseCors(builder => { builder.AllowAnyOrigin(); } );
 
             app.UseHttpsRedirection();
             app.UseMvc();

@@ -16,9 +16,6 @@ namespace Cwx.Winepad.Infrastructure.Context
                 .WithOne(m => m.Wine)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            //modelBuilder.Entity<Wine>()
-            //    .Property<bool>("IsDeleted");
-
             modelBuilder.Entity<Wine>()
                 .HasOne(w => w.Region)
                 .WithMany(r => r.Wines)
@@ -56,24 +53,8 @@ namespace Cwx.Winepad.Infrastructure.Context
                 .WithMany(a => a.CardAdmins)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            ///////////////////////////////
-            //modelBuilder.Entity<Country>()
-            //    .Ignore(c => c.Regions);
-
-            ///////////////////////////////
+            modelBuilder.Entity<Country>();
         }
 
-        public DbContext Instance => this;
-
-        public DbSet<Wine> Wine { get; set; }
-        public DbSet<Card> Card { get; set; }
-        public DbSet<Admin> Admin { get; set; }
-        public DbSet<Country> Country { get; set; }
-        public DbSet<Measure> Measure { get; set; }
-        public DbSet<Region> Region { get; set; }
-        public DbSet<Segment> Segment { get; set; }
-        public DbSet<WineType> WineType { get; set; }
-        public DbSet<CardAdmin> CardAdmin { get; set; }
-        public DbSet<SegmentWine> SegmentWine { get; set; }
     }
 }

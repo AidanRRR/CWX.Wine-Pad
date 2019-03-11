@@ -47,7 +47,7 @@ namespace Cwx.Winepad.Domain.Card.Features
             public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
             {
                 var admin = _repository.Query<Models.CardAdmin>()
-                    .FirstOrDefaultAsync(ca => ca.AdminId == request.AdminId);
+                    .FirstOrDefaultAsync(ca => ca.Admin.Id == request.AdminId);
 
                 var card = await _repository
                     .Query<Models.Card>()

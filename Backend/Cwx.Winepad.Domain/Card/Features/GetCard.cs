@@ -48,7 +48,6 @@ namespace Cwx.Winepad.Domain.Card.Features
                 var card = await _repository
                     .Query<Models.Card>()
                     .Include(c=>c.CardAdmins)
-                    .ThenInclude(ca=>ca.AdminId)
                     
                     //.Include(c=>c.Segments)
                     //.ThenInclude(s=>s.Name)
