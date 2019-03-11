@@ -38,6 +38,7 @@ File: Main Css File
 31. Responsive
 32. Modal
 33. Select
+34. Dropzone
 */
 @import url("https://fonts.googleapis.com/css?family=Work+Sans:400,500,600");
 /* ==============
@@ -3305,3 +3306,6 @@ File: Responsive
 
 .react-select__input {
   color: #fcf8c5 !important; }
+
+.file-uploader {
+  color: #1C1713; }

@@ -1,0 +1,5 @@
+{
+  "appBase": "",
+  "apiBaseUrl": "https://localhost:44336/",
+  "filesApi": "https://cwx-files.azurewebsites.net/api/Upload"
+}

@@ -57,8 +57,8 @@ namespace Cwx.Winepad.Infrastructure.Context
                 .OnDelete(DeleteBehavior.Cascade);
 
             ///////////////////////////////
-            modelBuilder.Entity<Country>()
-                .Ignore(c => c.Regions);
+            //modelBuilder.Entity<Country>()
+            //    .Ignore(c => c.Regions);
 
             ///////////////////////////////
         }

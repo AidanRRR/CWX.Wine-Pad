@@ -3,6 +3,7 @@ import { Field, Formik } from "formik";
 import { MultiTextField, TextField } from "../../ui/forms/FormFields";
 import { IMenu } from "../../../scenes/menu/Menus";
 import { FieldInfos, initialValues, IValues, validations } from "./config";
+import { FileUploader } from "../../ui/dropzone/Dropzone";
 
 interface IState {}
 interface IProps {
@@ -36,6 +37,15 @@ class MenuForm extends Component<IProps, IState> {
                 errors={errors}
                 dark={true}
               />
+
+              <div className="form-group row">
+                <label className={"col-sm-3 col-form-label label-dark"}>
+                  Cover foto
+                </label>
+                <div className="col-sm-9">
+                  <FileUploader onFileUploaded={() => {}} />
+                </div>
+              </div>
             </div>
           )}
         </Formik>
