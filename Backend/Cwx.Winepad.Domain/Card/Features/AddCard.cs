@@ -8,6 +8,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Query.ExpressionVisitors.Internal;
+using Remotion.Linq.Clauses;
 
 namespace Cwx.Winepad.Domain.Card.Features
 {
@@ -38,38 +39,76 @@ namespace Cwx.Winepad.Domain.Card.Features
             }
             public async Task<Unit> Handle(Request request, CancellationToken cancellationToken)
             {
-                var card = new Models.Card()
+                // Card entiteit aanmaken
+                var card = new Models.Card { Name = request.Name };
+
+                // Als er admins meegeven zijn, deze toevoegen
+                if (request.AdminIds != null)
                 {
-                    Name = request.Name,
-                };
+                    AddAdminsToCard(request.AdminIds, card, cancellationToken);
+                }
 
-                var owner = await _repository.Query<Models.Admin>()
-                    .FirstOrDefaultAsync(a => a.Id == request.OwnerId, cancellationToken);
+                // Owner toevoegen aan card
+                AddOwnerToCard(card, request.OwnerId, cancellationToken);
 
-                var cardAdmins = new List<CardAdmin>();
-
-                // Hier een lijst van admins die uit onze database komt die gelijk zijn aan (containen) de ids die uit de request komen
-
-                var admins = new List<Models.Admin>();
-                admins.ForEach(admin =>
-                {
-                    var cardAdmin = new CardAdmin()
-                    {
-                        Admin = admin,
-                        Card = card
-                    };
-
-                    cardAdmins.Add(cardAdmin);
-                });
-
-                card.CardAdmins = cardAdmins;
-                card.Owner = owner;
-
+                // Card toevoegen in onze database
                 await _repository.InsertAsync(card, cancellationToken);
 
                 return Unit.Value;
             }
-            
+
+            private async void AddOwnerToCard(Models.Card card, int ownerId, CancellationToken cancellationToken)
+            {
+                var cardOwner = await GetOwner(ownerId, cancellationToken);
+
+                card.Owner = cardOwner;
+                card.CardAdmins.Add(new CardAdmin
+                {
+                    Admin = cardOwner,
+                    Card = card
+                });
+            }
+
+            private async void AddAdminsToCard(List<int> adminIds, Models.Card card, CancellationToken cancellationToken)
+            {
+                var admins = await GetAdmins(adminIds, cancellationToken);
+                var cardAdmins = MapAdminsToCardAdmins(card, admins);
+
+                card.CardAdmins = cardAdmins;
+            }
+
+            private Task<Models.Admin> GetOwner(int id, CancellationToken cancellationToken)
+            {
+                return _repository
+                    .Query<Models.Admin>()
+                    .FirstOrDefaultAsync(a => a.Id == id, cancellationToken);
+            }
+
+            private Task<List<Models.Admin>> GetAdmins(List<int> adminIds, CancellationToken cancellationToken)
+            {
+                return _repository
+                    .Query<Models.Admin>()
+                    .Where(a => adminIds.Contains(a.Id))
+                    .ToListAsync(cancellationToken);
+            }
+
+            private List<CardAdmin> MapAdminsToCardAdmins(Models.Card card, List<Models.Admin> admins)
+            {
+                var cardAdmins = new List<CardAdmin>();
+
+                foreach (var admin in admins)
+                {
+                    var cardAdmin = new CardAdmin()
+                    {
+                        Card = card,
+                        Admin = admin
+                    };
+
+                    cardAdmins.Add(cardAdmin);
+                }
+
+                return cardAdmins;
+            }
         }
     }
 }
